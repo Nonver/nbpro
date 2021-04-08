@@ -1087,23 +1087,26 @@ textarea {
 }
 
 .TpContent>div:nth-child(2)>h3 {
-	position: absolute;
-	top: -8px;
+	margin-top: 10px;
 }
 
 .TpContent>div:nth-child(2)>div {
 
 	display: flex;
 	flex-direction: row;
-	margin-top: 35px;
+	margin-top: -15px;
 }
 
-.TpContent>div:nth-child(2)>div>span {
+.TpContent>div:nth-child(2)>div>p {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+	overflow: hidden;
+	margin-top: 10px;
 	font-size: 15px;
 	flex: 1;
 	justify-content: center;
 	align-items: center;
-	display: flex;
 	flex-direction: row;
 }
 
@@ -3298,10 +3301,10 @@ textarea {
 }
 
 .cooperation {
-    display: flex;
-    flex-direction: row;
-    font-size: 15px;
-    line-height: 25px;
+	display: flex;
+	flex-direction: row;
+	font-size: 15px;
+	line-height: 25px;
 }
 
 .cooperation>div:nth-child(1) {
@@ -3317,6 +3320,6 @@ textarea {
 	flex: 1;
 }
 
-.cooper{
+.cooper {
 	margin-bottom: 30px;
 }

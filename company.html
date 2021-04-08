@@ -94,7 +94,12 @@
 							</div>
 							<div class="right">
 								<p>{{items.name}}</p>
-								<p><span><img src="img/companypeople.png"/>{{items.size}}</span><span v-if="items.type == 1"><img src="img/companyqiye.png"/>民营企业</span><span v-else><img src="img/companyqiye.png"/>国营企业</span><span><img src="img/companyhangye.png"/>{{items.industry}}</span></p>
+								<p>
+									<span>
+										<img src="img/companypeople.png"/>{{items.size}}
+									</span>
+									<span v-if="items.type == 1">
+										<img src="img/companyqiye.png"/>民营企业</span><span v-else><img src="img/companyqiye.png"/>国营企业</span><span><img src="img/companyhangye.png"/>{{items.industry}}</span></p>
 							</div>
 							</a>
 						</li>
