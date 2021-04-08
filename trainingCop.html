@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>实训工厂</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script src="js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/paginathing.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/paginathing.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	</head>
+
+	<body>
+		<div class="tranCop" id="tranCop">
+			<div class="ding">
+				<div class="left">
+					<p>登录</p>
+					<p>注册</p>
+				</div>
+				<div class="right">
+					<p>微信公众号</p>
+				</div>
+			</div>
+			<div class="nav">
+				<ul>
+					<li>
+						<a href="wrap.html">首页</a>
+					</li>
+					<li>
+						<a href="news.html">学院动态</a>
+					</li>
+					<li>
+						<a href="mechanism.html">赋能机构</a>
+					</li>
+					<li>
+						<a href="company.html">合作伙伴</a>
+					</li>
+					<li>
+						<a href="trainingCop.html" class="active">实训工厂</a>
+					</li>
+					<li>
+						<a href="cyTalent.html">产业人才</a>
+					</li>
+					<li>
+						<a href="talentPolicy.html">人才政策</a>
+					</li>
+					<li>
+						<a href="lookNinghai.html">乐看宁海</a>
+					</li>
+					<li>
+						<a href="aboutXueyuan.html">关于学院</a>
+					</li>
+				</ul>
+			</div>
+			<div class="banner">
+				<img src="img/trainingbanner.png" />
+				<div class="title">
+					<h2>实训工厂</h2>
+					<p>TRAINING FACTORY</p>
+					<span>实训工厂</span>
+				</div>
+			</div>
+			<div class="center">
+				<div class="box1 boxs">
+					<!-- <ul>
+						<li >
+							{{items}}
+						</li>
+					</ul> -->
+					<ul class="uls">
+						<li class="lis" v-for="(item,val) in alls">
+							<div class="imgbox">
+								<video width="100%" height="400" controls="controls">
+									<source :src="item.video" type="video/mp4"></source>
+
+								</video>
+							</div>
+							<div class="txts">
+								<div class="txts1">
+									<h3>{{item.companyName}}</h3>
+									<p v-html="item.introduce">{{item.introduce}}</p>
+								</div>
+								<div class="txts2">
+									<h6><img src="img/menuheise.png"/>工场信息</h6>
+									<!--<p>公司名称：<span>宁波东陵电器有限公司</span></p>-->
+									<p>公司规模：<span>{{item.size}}</span></p>
+									<p>实训专业：<span>{{item.speciality}}</span></p>
+									<p>教职人员：<span>{{item.personnel}}</span></p>
+									<p>建立时间：<span>{{item.foundTime}}</span></p>
+									<p>公司地点：<span>{{item.address}}</span></p>
+								</div>
+							</div>
+							<div class="btns" @click="clickgongc(val)">
+								<a href="trainingCopXiangqing.html">
+									<p>READ MORE</p>
+								</a>
+							</div>
+						</li>
+
+					</ul>
+				</div>
+
+			</div>
+			<div class="footer">
+				<img src="img/footer.png" />
+				<div class="left">
+					<h3>宁海县产业人才学院</h3>
+					<p>有中心无边界，没有围墙的大学</p>
+					<ul>
+						<li>
+							<p><img src="img/footerphone.png" />0574-88888888</p>
+						</li>
+						<li>
+							<p><img src="img/footeremil.png" />webmaster@tsinghua.edu.cn</p>
+						</li>
+						<li>
+							<p><img src="img/footerdizhi.png" />宁海县技工学校</p>
+						</li>
+					</ul>
+				</div>
+				<div class="right">
+					<p>关注公众号</p>
+					<ul>
+						<li>
+							<img src="img/ewm.png" alt="" />
+							<p>微信扫码关注订阅号</p>
+						</li>
+						<li>
+							<img src="img/ewm.png" alt="" />
+							<p>微信扫码关注订阅号</p>
+						</li>
+					</ul>
+				</div>
+				<!--<div style="width:300px;margin:0 auto; padding:20px 0;">
+						<a target="_blank" href=" " style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+							< img src="" style="float:left;" />
+							<p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">浙公网安备 33022602000429号</p>
+							</ a>
+					</div>-->
+				<div class="down">
+					<div class="text">
+						<a href="###" target="_blank">版权所有 © 宁波软通教育科技公司</a>
+						<a href="###" target="_blank"><img src="img/beian.png" />浙公网安备 33022602000429号</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(document).ready(function($) {
+			$('.uls').paginathing({
+				perPage: 3,
+				containerClass: 'boxs',
+				limitPagination: 3,
+				pageNumbers: true,
+			})
+		});
+		var ve = new Vue({
+			el: "#tranCop",
+			data: {
+				alls: '',
+				times: [],
+			},
+			mounted() {
+				
+			},
+			created() {
+				this.getgongc();
+			},
+			methods: {
+				getgongc() {
+					var that = this;
+					axios.get('http://192.168.3.5:8082/web/findByTrainingFactoryAll').then(function(res) {
+						that.alls = res.data.data;
+						for(var j = 0;j <that.alls.length; j++) { 
+							var data = new Date(that.alls[j].foundTime);
+							
+							var Y = data.getFullYear() + '-'
+							var M = (data.getMonth()+1 < 10 ? '0'+(data.getMonth()+1) : data.getMonth()+1) + '-';
+							var D = data.getDate() + ' ';
+							var tit = Y+M+D;
+							that.alls[j].foundTime = tit;
+						};
+						console.log(that.alls)
+						console.log(that.times)
+					})
+				},
+				clickgongc(e) {
+					console.log(e);
+					sessionStorage.setItem("xiabiao", e);
+
+				}
+			}
+
+		})
+	</script>
+
+</html>

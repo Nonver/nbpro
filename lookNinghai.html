@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>乐看宁海</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+	</head>
+
+	<body>
+		<div class="looks" id="Looks">
+			<div class="ding">
+				<div class="left">
+					<p>登录</p>
+					<p>注册</p>
+				</div>
+				<div class="right">
+					<p>微信公众号</p>
+				</div>
+			</div>
+			<div class="nav">
+				<ul>
+					<li>
+						<a href="wrap.html">首页</a>
+					</li>
+					<li>
+						<a href="news.html">学院动态</a>
+					</li>
+					<li>
+						<a href="mechanism.html">赋能机构</a>
+					</li>
+					<li>
+						<a href="company.html">合作伙伴</a>
+					</li>
+					<li>
+						<a href="trainingCop.html">实训工厂</a>
+					</li>
+					<li>
+						<a href="cyTalent.html">产业人才</a>
+					</li>
+					<li>
+						<a href="talentPolicy.html">人才政策</a>
+					</li>
+					<li>
+						<a href="lookNinghai.html" class="active">乐看宁海</a>
+					</li>
+					<li>
+						<a href="aboutXueyuan.html">关于学院</a>
+					</li>
+				</ul>
+			</div>
+			<div class="banner">
+				<img src="img/lookbanner.png" />
+				<div class="title">
+					<h2>乐看宁海</h2>
+					<p>HAPPY TO SEE NINGHAI</p>
+					<span>乐看宁海</span>
+				</div>
+			</div>
+			<div class="center">
+				<!--//人文景观-->
+				<div class="box1 boxs">
+					<div class="title">
+						<h3>人文景观</h3>
+						<p>HUMANITY SCENERY</p>
+						<a href="scenic.html">MORE</a>
+					</div>
+
+					<ul>
+						<li v-for="(item,val) in alls.slice(0,8)" @click="clickmeishi(item)">
+							<div class="imgboxs">
+								<img :src="item.img" />
+							</div>
+							
+							<div class="texts">
+								<a href="scenicXiangqing.html">
+									<p>{{item.name}}</p>
+								</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="box2 boxs">
+					<div class="title">
+						<h3>美食娱乐</h3>
+						<p>FOOD AND ENTERTAINMENT</p>
+						<a href="foodHappy.html">MORE</a>
+					</div>
+					<ul>
+						<li v-for="(items,vals) in allsfood.slice(0,4)" @click="clickmeishi(items)">
+							<div class="left">
+								<img :src="items.img" />
+							</div>
+							<div class="right">
+								<h4>{{items.name}}</h4>
+								<p v-html="items.text">{{items.text}}</p>
+								<strong><span>1512浏览</span></strong>
+								<a href="foodHappyXiangqing.html">MORE</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer">
+				<img src="img/footer.png" />
+				<div class="left">
+					<h3>宁海县产业人才学院</h3>
+					<p>有中心无边界，没有围墙的大学</p>
+					<ul>
+						<li>
+							<p><img src="img/footerphone.png" />0574-88888888</p>
+						</li>
+						<li>
+							<p><img src="img/footeremil.png" />webmaster@tsinghua.edu.cn</p>
+						</li>
+						<li>
+							<p><img src="img/footerdizhi.png" />宁海县技工学校</p>
+						</li>
+					</ul>
+				</div>
+				<div class="right">
+					<p>关注公众号</p>
+					<ul>
+						<li>
+							<img src="img/ewm.png" alt="" />
+							<p>微信扫码关注订阅号</p>
+						</li>
+						<li>
+							<img src="img/ewm.png" alt="" />
+							<p>微信扫码关注订阅号</p>
+						</li>
+					</ul>
+				</div>
+				<div class="down">
+					<div class="text">
+						<a href="###" target="_blank">版权所有 © 宁波软通教育科技公司</a>
+						<a href="###" target="_blank"><img src="img/beian.png" />浙公网安备 33022602000429号</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var ve = new Vue({
+			el: "#Looks",
+			data: {
+				alls: '',
+				allsfood: "",
+			},
+			mounted() {
+				//				this.getrenwen();
+
+			},
+			created() {
+				this.getrenwen();
+				this.getmeishi();
+			},
+			methods: {
+
+				//				人文景观
+				getrenwen() {
+					var that = this;
+					axios.get('http://192.168.3.5:8082/web/findAllSceneryHumanity').then(function(res) {
+						var data = res.data;
+						that.alls = res.data.data;
+						console.log(that.alls)
+					})
+				},
+				//				美食娱乐数据
+				getmeishi() {
+					var that = this;
+					axios.get('http://192.168.3.5:8082/web/findAllEntertainmentFood').then(function(res) {
+						var data = res.data;
+						that.allsfood = res.data.data;
+						console.log(that.allsfood)
+						console.log("美食")
+					})
+				},
+				clickrenwen(e){
+					console.log(e.id);
+					sessionStorage.setItem("idrenwen", e.id);
+					sessionStorage.setItem("lat", e.lat);
+					sessionStorage.setItem("lng", e.lng);
+				},
+				clickmeishi(e){
+					console.log(e.id);
+					sessionStorage.setItem("idrenwen", e.id);
+					sessionStorage.setItem("lat", e.lat);
+					sessionStorage.setItem("lng", e.lng);
+				}
+			}
+
+		})
+	</script>
+
+</html>

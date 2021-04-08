@@ -1,0 +1,22 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+ul,li {
+	list-style: none;
+}
+html,body{
+	font-size: 63.5%;
+}
+a{
+	text-decoration: none;
+}
+img{
+	vertical-align: middle;
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+}
+.clear{
+	clear: both;
+}

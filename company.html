@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>合作伙伴</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script src="js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/paginathing.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/paginathing.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	</head>
+
+	<body>
+		<div class="company" id="company">
+			<div class="ding">
+				<div class="left">
+					<p>登录</p>
+					<p>注册</p>
+				</div>
+				<div class="right">
+					<p>微信公众号</p>
+				</div>
+			</div>
+			<div class="nav">
+				<ul>
+					<li>
+						<a href="wrap.html">首页</a>
+					</li>
+					<li>
+						<a href="news.html">学院动态</a>
+					</li>
+					<li>
+						<a href="mechanism.html">赋能机构</a>
+					</li>
+					<li>
+						<a href="company.html" class="active">合作伙伴</a>
+					</li>
+					<li>
+						<a href="trainingCop.html">实训工厂</a>
+					</li>
+					<li>
+						<a href="cyTalent.html">产业人才</a>
+					</li>
+					<li>
+						<a href="talentPolicy.html">人才政策</a>
+					</li>
+					<li>
+						<a href="lookNinghai.html">乐看宁海</a>
+					</li>
+					<li>
+						<a href="aboutXueyuan.html" >关于学院</a>
+					</li>
+				</ul>
+			</div>
+			<div class="banner">
+				<img src="img/companybanner.png" />
+				<div class="title">
+					<h2>合作伙伴</h2>
+					<p>COOPERATIVE PARTNER</p>
+					<span>合作伙伴</span>
+				</div>
+			</div>
+			<div class="center">
+				<div class="top">
+					<ul>
+						<li>
+							<p>用人单位</p>
+						</li>
+						<li class="active">
+							<p>合作高校</p>
+						</li>
+						<li>
+							<p>合作部门</p>
+						</li>
+
+					</ul>
+				</div>
+				
+				<div class="boxs boxone">
+					<ul class="ulone">
+						
+						<li class="lione" v-for="(items,vals) in allsone" @click="click(items,vals)">
+							<a href="EmployerXiangqing.html">
+							<div class="left">
+								<video width="100%" height="300" controls="controls">
+									<source :src="items.video" type="video/mp4"></source>
+								</video>
+							</div>
+							<div class="right">
+								<p>{{items.name}}</p>
+								<p><span><img src="img/companypeople.png"/>{{items.size}}</span><span v-if="items.type == 1"><img src="img/companyqiye.png"/>民营企业</span><span v-else><img src="img/companyqiye.png"/>国营企业</span><span><img src="img/companyhangye.png"/>{{items.industry}}</span></p>
+							</div>
+							</a>
+						</li>
+						
+					</ul>
+				</div>
+				<div class="boxtwo boxs active">
+					<div class="title">
+						<h2>合作高校接洽培训</h2>
+						<p>与多所高校达成长期合作 学院培训</p>
+					</div>
+
+					<ul class="ultwo">
+						<li class="litwo">
+							<div class="left">
+								<img src="img/companymimg.png" />
+							</div>
+							<div class="right">
+								<h2>吉林工商学院1</h2>
+								<p><span><img src="img/companyDizhi.png"/>地址：</span><span>吉林省长春市</span></p>
+								<p><span><img src="img/companymj.png"/>占地面积：</span><span>1025487㎡</span></p>
+								<p><span><img src="img/companyobj.png"/>招生对象：</span><span>工学院-计算机科学与技术 网络工程 通信工程 电子信息工程</span></p>
+								<p><span><img src="img/companyfx.png"/>培训方向：</span><span>JAVA程序员 数据测试 全栈开发程序员</span></p>
+								<p><span><img src="img/companyzq.png"/>培训周期：</span><span>三个月理论 三个月跟岗实训 三个月顶岗实训</span></p>
+								<p>赵安琪是一个名副其实的小勺小大人，自1026一笔订单赵安琪是一个名副其026日进入基地，11月10日就完成了第一笔订单赵安琪是一个名副其实的小勺小大人，自1026日进入基地，11月10日就完成了第一笔订单赵安琪是一个名副其实的小勺小大人，自1026日进入基地，11月10日就完成了第一笔订单赵安琪是一个名副其实的小勺小大人，自1026日进入基地，11月10日就完成了第一笔订单赵安琪是一个名副其实的小勺小大人，自1026日进入基地，11月10日就完成了第一笔订单</p>
+							</div>
+						</li>
+						<li class="litwo">
+							<div class="left">
+								<img src="img/companymimg.png" />
+							</div>
+							<div class="right">
+								<h2>吉林工商学院1</h2>
+								<p><span><img src="img/companyDizhi.png"/>地址：</span><span>吉林省长春市</span></p>
+								<p><span><img src="img/companymj.png"/>占地面积：</span><span>1025487㎡</span></p>
+								<p><span><img src="img/companyobj.png"/>招生对象：</span><span>工学院-计算机科学与技术 网络工程 通信工程 电子信息工程</span></p>
+								<p><span><img src="img/companyfx.png"/>培训方向：</span><span>JAVA程序员 数据测试 全栈开发程序员</span></p>
+								<p><span><img src="img/companyzq.png"/>培训周期：</span><span>三个月理论 三个月跟岗实训 三个月顶岗实训</span></p>
+								<p>赵安琪是一个名副其实的小勺小大人，自1026一笔订单赵安琪是一个名副其026日进入基地，11月10日就完成了第一笔订单赵安琪是一个名副其实的小勺小大人，自1026日进入基地，11月10日就完成了第一笔订单赵安琪是一个名副其实的小勺小大人，自1026日进入基地，11月10日就完成了第一笔订单赵安琪是一个名副其实的小勺小大人，自1026日进入基地，11月10日就完成了第一笔订单赵安琪是一个名副其实的小勺小大人，自1026日进入基地，11月10日就完成了第一笔订单</p>
+							</div>
+						</li>
+						<li class="litwo">
+							<div class="left">
+								<img src="img/companymimg.png" />
+							</div>
+							<div class="right">
+								<h2>吉林工商学院2</h2>
+								<p><span><img src="img/companyDizhi.png"/>地址：</span><span>吉林省长春市</span></p>
+								<p><span><img src="img/companymj.png"/>占地面积：</span><span>1025487㎡</span></p>
+								<p><span><img src="img/companyobj.png"/>招生对象：</span><span>工学院-计算机科学与技术 网络工程 通信工程 电子信息工程</span></p>
+								<p><span><img src="img/companyfx.png"/>培训方向：</span><span>JAVA程序员 数据测试 全栈开发程序员</span></p>
+								<p><span><img src="img/companyzq.png"/>培训周期：</span><span>三个月理论 三个月跟岗实训 三个月顶岗实训</span></p>
+								<p>赵安琪是一个名副其实的小勺小大人，自1026一笔订单赵安琪是一个名副其026日进入基地，11月10日就完成了第一笔订单赵安琪是一个名副其实的小勺小大人，自1026日进入基地，11月10日就完成了第一笔订单赵安琪是一个名副其实的小勺小大人，自1026日进入基地，11月10日就完成了第一笔订单赵安琪是一个名副其实的小勺小大人，自1026日进入基地，11月10日就完成了第一笔订单赵安琪是一个名副其实的小勺小大人，自1026日进入基地，11月10日就完成了第一笔订单</p>
+							</div>
+						</li>
+						<li class="litwo">
+							<div class="left">
+								<img src="img/companymimg.png" />
+							</div>
+							<div class="right">
+								<h2>吉林工商学院3</h2>
+								<p><span><img src="img/companyDizhi.png"/>地址：</span><span>吉林省长春市</span></p>
+								<p><span><img src="img/companymj.png"/>占地面积：</span><span>1025487㎡</span></p>
+								<p><span><img src="img/companyobj.png"/>招生对象：</span><span>工学院-计算机科学与技术 网络工程 通信工程 电子信息工程</span></p>
+								<p><span><img src="img/companyfx.png"/>培训方向：</span><span>JAVA程序员 数据测试 全栈开发程序员</span></p>
+								<p><span><img src="img/companyzq.png"/>培训周期：</span><span>三个月理论 三个月跟岗实训 三个月顶岗实训</span></p>
+								<p>赵安琪是一个名副其实的小勺小大人，自1026一笔订单赵安琪是一个名副其026日进入基地，11月10日就完成了第一笔订单赵安琪是一个名副其实的小勺小大人，自1026日进入基地，11月10日就完成了第一笔订单赵安琪是一个名副其实的小勺小大人，自1026日进入基地，11月10日就完成了第一笔订单赵安琪是一个名副其实的小勺小大人，自1026日进入基地，11月10日就完成了第一笔订单赵安琪是一个名副其实的小勺小大人，自1026日进入基地，11月10日就完成了第一笔订单</p>
+							</div>
+						</li>
+						<li class="litwo">
+							<div class="left">
+								<img src="img/companymimg.png" />
+							</div>
+							<div class="right">
+								<h2>吉林工商学院4</h2>
+								<p><span><img src="img/companyDizhi.png"/>地址：</span><span>吉林省长春市</span></p>
+								<p><span><img src="img/companymj.png"/>占地面积：</span><span>1025487㎡</span></p>
+								<p><span><img src="img/companyobj.png"/>招生对象：</span><span>工学院-计算机科学与技术 网络工程 通信工程 电子信息工程</span></p>
+								<p><span><img src="img/companyfx.png"/>培训方向：</span><span>JAVA程序员 数据测试 全栈开发程序员</span></p>
+								<p><span><img src="img/companyzq.png"/>培训周期：</span><span>三个月理论 三个月跟岗实训 三个月顶岗实训</span></p>
+								<p>赵安琪是一个名副其实的小勺小大人，自1026一笔订单赵安琪是一个名副其026日进入基地，11月10日就完成了第一笔订单赵安琪是一个名副其实的小勺小大人，自1026日进入基地，11月10日就完成了第一笔订单赵安琪是一个名副其实的小勺小大人，自1026日进入基地，11月10日就完成了第一笔订单赵安琪是一个名副其实的小勺小大人，自1026日进入基地，11月10日就完成了第一笔订单赵安琪是一个名副其实的小勺小大人，自1026日进入基地，11月10日就完成了第一笔订单</p>
+							</div>
+						</li>
+						<li class="litwo">
+							<div class="left">
+								<img src="img/companymimg.png" />
+							</div>
+							<div class="right">
+								<h2>吉林工商学院5</h2>
+								<p><span><img src="img/companyDizhi.png"/>地址：</span><span>吉林省长春市</span></p>
+								<p><span><img src="img/companymj.png"/>占地面积：</span><span>1025487㎡</span></p>
+								<p><span><img src="img/companyobj.png"/>招生对象：</span><span>工学院-计算机科学与技术 网络工程 通信工程 电子信息工程</span></p>
+								<p><span><img src="img/companyfx.png"/>培训方向：</span><span>JAVA程序员 数据测试 全栈开发程序员</span></p>
+								<p><span><img src="img/companyzq.png"/>培训周期：</span><span>三个月理论 三个月跟岗实训 三个月顶岗实训</span></p>
+								<p>赵安琪是一个名副其实的小勺小大人，自1026一笔订单赵安琪是一个名副其026日进入基地，11月10日就完成了第一笔订单赵安琪是一个名副其实的小勺小大人，自1026日进入基地，11月10日就完成了第一笔订单赵安琪是一个名副其实的小勺小大人，自1026日进入基地，11月10日就完成了第一笔订单赵安琪是一个名副其实的小勺小大人，自1026日进入基地，11月10日就完成了第一笔订单赵安琪是一个名副其实的小勺小大人，自1026日进入基地，11月10日就完成了第一笔订单</p>
+							</div>
+						</li>
+						<li class="litwo">
+							<div class="left">
+								<img src="img/companymimg.png" />
+							</div>
+							<div class="right">
+								<h2>吉林工商学院6</h2>
+								<p><span><img src="img/companyDizhi.png"/>地址：</span><span>吉林省长春市</span></p>
+								<p><span><img src="img/companymj.png"/>占地面积：</span><span>1025487㎡</span></p>
+								<p><span><img src="img/companyobj.png"/>招生对象：</span><span>工学院-计算机科学与技术 网络工程 通信工程 电子信息工程</span></p>
+								<p><span><img src="img/companyfx.png"/>培训方向：</span><span>JAVA程序员 数据测试 全栈开发程序员</span></p>
+								<p><span><img src="img/companyzq.png"/>培训周期：</span><span>三个月理论 三个月跟岗实训 三个月顶岗实训</span></p>
+								<p>赵安琪是一个名副其实的小勺小大人，自1026一笔订单赵安琪是一个名副其026日进入基地，11月10日就完成了第一笔订单赵安琪是一个名副其实的小勺小大人，自1026日进入基地，11月10日就完成了第一笔订单赵安琪是一个名副其实的小勺小大人，自1026日进入基地，11月10日就完成了第一笔订单赵安琪是一个名副其实的小勺小大人，自1026日进入基地，11月10日就完成了第一笔订单赵安琪是一个名副其实的小勺小大人，自1026日进入基地，11月10日就完成了第一笔订单</p>
+							</div>
+						</li>
+						<li class="litwo">
+							<div class="left">
+								<img src="img/companymimg.png" />
+							</div>
+							<div class="right">
+								<h2>吉林工商学院</h2>
+								<p><span><img src="img/companyDizhi.png"/>地址：</span><span>吉林省长春市</span></p>
+								<p><span><img src="img/companymj.png"/>占地面积：</span><span>1025487㎡</span></p>
+								<p><span><img src="img/companyobj.png"/>招生对象：</span><span>工学院-计算机科学与技术 网络工程 通信工程 电子信息工程</span></p>
+								<p><span><img src="img/companyfx.png"/>培训方向：</span><span>JAVA程序员 数据测试 全栈开发程序员</span></p>
+								<p><span><img src="img/companyzq.png"/>培训周期：</span><span>三个月理论 三个月跟岗实训 三个月顶岗实训</span></p>
+								<p>赵安琪是一个名副其实的小勺小大人，自1026一笔订单赵安琪是一个名副其026日进入基地，11月10日就完成了第一笔订单赵安琪是一个名副其实的小勺小大人，自1026日进入基地，11月10日就完成了第一笔订单赵安琪是一个名副其实的小勺小大人，自1026日进入基地，11月10日就完成了第一笔订单赵安琪是一个名副其实的小勺小大人，自1026日进入基地，11月10日就完成了第一笔订单赵安琪是一个名副其实的小勺小大人，自1026日进入基地，11月10日就完成了第一笔订单</p>
+							</div>
+						</li>
+						<li class="litwo">
+							<div class="left">
+								<img src="img/companymimg.png" />
+							</div>
+							<div class="right">
+								<h2>吉林工商学院</h2>
+								<p><span><img src="img/companyDizhi.png"/>地址：</span><span>吉林省长春市</span></p>
+								<p><span><img src="img/companymj.png"/>占地面积：</span><span>1025487㎡</span></p>
+								<p><span><img src="img/companyobj.png"/>招生对象：</span><span>工学院-计算机科学与技术 网络工程 通信工程 电子信息工程</span></p>
+								<p><span><img src="img/companyfx.png"/>培训方向：</span><span>JAVA程序员 数据测试 全栈开发程序员</span></p>
+								<p><span><img src="img/companyzq.png"/>培训周期：</span><span>三个月理论 三个月跟岗实训 三个月顶岗实训</span></p>
+								<p>赵安琪是一个名副其实的小勺小大人，自1026一笔订单赵安琪是一个名副其026日进入基地，11月10日就完成了第一笔订单赵安琪是一个名副其实的小勺小大人，自1026日进入基地，11月10日就完成了第一笔订单赵安琪是一个名副其实的小勺小大人，自1026日进入基地，11月10日就完成了第一笔订单赵安琪是一个名副其实的小勺小大人，自1026日进入基地，11月10日就完成了第一笔订单赵安琪是一个名副其实的小勺小大人，自1026日进入基地，11月10日就完成了第一笔订单</p>
+							</div>
+						</li>
+						<li class="litwo">
+							<div class="left">
+								<img src="img/companymimg.png" />
+							</div>
+							<div class="right">
+								<h2>吉林工商学院</h2>
+								<p><span><img src="img/companyDizhi.png"/>地址：</span><span>吉林省长春市</span></p>
+								<p><span><img src="img/companymj.png"/>占地面积：</span><span>1025487㎡</span></p>
+								<p><span><img src="img/companyobj.png"/>招生对象：</span><span>工学院-计算机科学与技术 网络工程 通信工程 电子信息工程</span></p>
+								<p><span><img src="img/companyfx.png"/>培训方向：</span><span>JAVA程序员 数据测试 全栈开发程序员</span></p>
+								<p><span><img src="img/companyzq.png"/>培训周期：</span><span>三个月理论 三个月跟岗实训 三个月顶岗实训</span></p>
+								<p>赵安琪是一个名副其实的小勺小大人，自1026一笔订单赵安琪是一个名副其026日进入基地，11月10日就完成了第一笔订单赵安琪是一个名副其实的小勺小大人，自1026日进入基地，11月10日就完成了第一笔订单赵安琪是一个名副其实的小勺小大人，自1026日进入基地，11月10日就完成了第一笔订单赵安琪是一个名副其实的小勺小大人，自1026日进入基地，11月10日就完成了第一笔订单赵安琪是一个名副其实的小勺小大人，自1026日进入基地，11月10日就完成了第一笔订单</p>
+							</div>
+						</li>
+						<li class="litwo">
+							<div class="left">
+								<img src="img/companymimg.png" />
+							</div>
+							<div class="right">
+								<h2>吉林工商学院</h2>
+								<p><span><img src="img/companyDizhi.png"/>地址：</span><span>吉林省长春市</span></p>
+								<p><span><img src="img/companymj.png"/>占地面积：</span><span>1025487㎡</span></p>
+								<p><span><img src="img/companyobj.png"/>招生对象：</span><span>工学院-计算机科学与技术 网络工程 通信工程 电子信息工程</span></p>
+								<p><span><img src="img/companyfx.png"/>培训方向：</span><span>JAVA程序员 数据测试 全栈开发程序员</span></p>
+								<p><span><img src="img/companyzq.png"/>培训周期：</span><span>三个月理论 三个月跟岗实训 三个月顶岗实训</span></p>
+								<p>赵安琪是一个名副其实的小勺小大人，自1026一笔订单赵安琪是一个名副其026日进入基地，11月10日就完成了第一笔订单赵安琪是一个名副其实的小勺小大人，自1026日进入基地，11月10日就完成了第一笔订单赵安琪是一个名副其实的小勺小大人，自1026日进入基地，11月10日就完成了第一笔订单赵安琪是一个名副其实的小勺小大人，自1026日进入基地，11月10日就完成了第一笔订单赵安琪是一个名副其实的小勺小大人，自1026日进入基地，11月10日就完成了第一笔订单</p>
+							</div>
+						</li>
+						<li class="litwo">
+							<div class="left">
+								<img src="img/companymimg.png" />
+							</div>
+							<div class="right">
+								<h2>吉林工商学院11</h2>
+								<p><span><img src="img/companyDizhi.png"/>地址：</span><span>吉林省长春市</span></p>
+								<p><span><img src="img/companymj.png"/>占地面积：</span><span>1025487㎡</span></p>
+								<p><span><img src="img/companyobj.png"/>招生对象：</span><span>工学院-计算机科学与技术 网络工程 通信工程 电子信息工程</span></p>
+								<p><span><img src="img/companyfx.png"/>培训方向：</span><span>JAVA程序员 数据测试 全栈开发程序员</span></p>
+								<p><span><img src="img/companyzq.png"/>培训周期：</span><span>三个月理论 三个月跟岗实训 三个月顶岗实训</span></p>
+								<p>赵安琪是一个名副其实的小勺小大人，自1026一笔订单赵安琪是一个名副其026日进入基地，11月10日就完成了第一笔订单赵安琪是一个名副其实的小勺小大人，自1026日进入基地，11月10日就完成了第一笔订单赵安琪是一个名副其实的小勺小大人，自1026日进入基地，11月10日就完成了第一笔订单赵安琪是一个名副其实的小勺小大人，自1026日进入基地，11月10日就完成了第一笔订单赵安琪是一个名副其实的小勺小大人，自1026日进入基地，11月10日就完成了第一笔订单</p>
+							</div>
+						</li>
+						<li class="litwo">
+							<div class="left">
+								<img src="img/companymimg.png" />
+							</div>
+							<div class="right">
+								<h2>吉林工商学院12</h2>
+								<p><span><img src="img/companyDizhi.png"/>地址：</span><span>吉林省长春市</span></p>
+								<p><span><img src="img/companymj.png"/>占地面积：</span><span>1025487㎡</span></p>
+								<p><span><img src="img/companyobj.png"/>招生对象：</span><span>工学院-计算机科学与技术 网络工程 通信工程 电子信息工程</span></p>
+								<p><span><img src="img/companyfx.png"/>培训方向：</span><span>JAVA程序员 数据测试 全栈开发程序员</span></p>
+								<p><span><img src="img/companyzq.png"/>培训周期：</span><span>三个月理论 三个月跟岗实训 三个月顶岗实训</span></p>
+								<p>赵安琪是一个名副其实的小勺小大人，自1026一笔订单赵安琪是一个名副其026日进入基地，11月10日就完成了第一笔订单赵安琪是一个名副其实的小勺小大人，自1026日进入基地，11月10日就完成了第一笔订单赵安琪是一个名副其实的小勺小大人，自1026日进入基地，11月10日就完成了第一笔订单赵安琪是一个名副其实的小勺小大人，自1026日进入基地，11月10日就完成了第一笔订单赵安琪是一个名副其实的小勺小大人，自1026日进入基地，11月10日就完成了第一笔订单</p>
+							</div>
+						</li>
+
+					</ul>
+				</div>
+				<div class="boxs boxthree">
+					<ul class="ulthree">
+						<li class="lithree" v-for="(item,val) in allsthree">
+							<div class="left">
+								<img :src="item.img"/>
+							</div>
+							<div class="right">
+								<p>{{item.name}}</p>
+							</div>
+						</li>
+
+					</ul>
+				</div>
+
+			</div>
+			<div class="footer">
+				<img src="img/footer.png" />
+				<div class="left">
+					<h3>宁海县产业人才学院</h3>
+					<p>有中心无边界，没有围墙的大学</p>
+					<ul>
+						<li>
+							<p><img src="img/footerphone.png" />0574-88888888</p>
+						</li>
+						<li>
+							<p><img src="img/footeremil.png" />webmaster@tsinghua.edu.cn</p>
+						</li>
+						<li>
+							<p><img src="img/footerdizhi.png" />宁海县技工学校</p>
+						</li>
+					</ul>
+				</div>
+				<div class="right">
+					<p>关注公众号</p>
+					<ul>
+						<li>
+							<img src="img/ewm.png" alt="" />
+							<p>微信扫码关注订阅号</p>
+						</li>
+						<li>
+							<img src="img/ewm.png" alt="" />
+							<p>微信扫码关注订阅号</p>
+						</li>
+					</ul>
+				</div>
+				<!--<div style="width:300px;margin:0 auto; padding:20px 0;">
+						<a target="_blank" href=" " style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+							< img src="" style="float:left;" />
+							<p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">浙公网安备 33022602000429号</p>
+							</ a>
+					</div>-->
+				<div class="down">
+					<div class="text">
+						<a href="###" target="_blank">版权所有 © 宁波软通教育科技公司</a>
+						<a href="###" target="_blank"><img src="img/beian.png" />浙公网安备 33022602000429号</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var ve = new Vue({
+			el:"#company",
+			data:{
+				allsone:"",
+				allsthree:"",
+			},
+			created(){
+				this.getone();
+			},
+			mounted() {
+				
+			},
+			methods:{
+				
+				getone(){
+					var that = this;
+					axios.post('http://192.168.3.5:8082/web/findAllCompany').then(function(res) {
+						that.allsone = res.data.data;
+//						console.log("合作企业")
+						console.log(that.allsone);
+//						console.log("合作企业")
+					});
+					axios.get('http://192.168.3.5:8082/web/findByCooperativeAll').then(function(res) {
+						that.allsthree = res.data.data;
+//						console.log("合作部门");
+//						console.log(that.allsthree);
+//						console.log("合作部门");
+					})
+				},
+				click(e,ind){
+					console.log(e.id);
+					sessionStorage.setItem("idqy", e.id);
+					sessionStorage.setItem("xiabiao", ind);
+				},
+
+				
+			}
+		});
+		$(document).ready(function($) {
+			$('.ulone').paginathing({
+				perPage: 6,
+				containerClass: 'boxone',
+				limitPagination: 3,
+				pageNumbers: false,
+			});
+			$('.ultwo').paginathing({
+				perPage: 3,
+				containerClass: 'boxtwo',
+				limitPagination: 3,
+				pageNumbers: false,
+			});
+			$('.ulthree').paginathing({
+				perPage: 8,
+				containerClass: 'boxthree',
+				limitPagination: 3,
+				pageNumbers: false,
+			})
+		});
+		$(".center .top li").click(function() {
+			var cl = $(this).index();
+			$(".center .top li").removeClass("active").eq(cl).addClass("active");
+			$(".company .center .boxs").removeClass("active").eq(cl).addClass("active");
+		});
+		
+	</script>
+
+</html>

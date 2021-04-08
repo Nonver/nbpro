@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>产业人才</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script src="js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/paginathing.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/paginathing.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	</head>
+
+	<body>
+		<div class="cyTalent" id="cyTalent">
+			<div class="ding">
+				<div class="left">
+					<p>登录</p>
+					<p>注册</p>
+				</div>
+				<div class="right">
+					<p>微信公众号</p>
+				</div>
+			</div>
+			<div class="nav">
+				<ul>
+					<li>
+						<a href="wrap.html">首页</a>
+					</li>
+					<li>
+						<a href="news.html">学院动态</a>
+					</li>
+					<li>
+						<a href="mechanism.html">赋能机构</a>
+					</li>
+					<li>
+						<a href="company.html">合作伙伴</a>
+					</li>
+					<li>
+						<a href="trainingCop.html">实训工厂</a>
+					</li>
+					<li>
+						<a href="cyTalent.html" class="active">产业人才</a>
+					</li>
+					<li>
+						<a href="talentPolicy.html">人才政策</a>
+					</li>
+					<li>
+						<a href="lookNinghai.html">乐看宁海</a>
+					</li>
+					<li>
+						<a href="aboutXueyuan.html">关于学院</a>
+					</li>
+				</ul>
+			</div>
+			<div class="banner">
+				<img src="img/lookbanner.png" />
+				<div class="title">
+					<h2>乐看宁海</h2>
+					<p>HAPPY TO SEE NINGHAI</p>
+					<span>乐看宁海>人文景观</span>
+				</div>
+			</div>
+			<div class="center">
+				<div class="top">
+					<ul>
+						<li>
+							<p>在职员工</p>
+						</li>
+						<li class="active">
+							<p>高校学生</p>
+						</li>
+						<!--<li>
+							<p>退伍军人</p>
+						</li>-->
+
+					</ul>
+				</div>
+				<!--//人文景观-->
+				<div class="boxs boxone">
+					<ul class="ulone">
+						<li class="lione" v-for="(itemone,valone) in allsone">
+							<div class="left">
+								<img :src="itemone.video"/>
+							</div>
+							<div class="right">
+								<h4>{{itemone.name}}</h4>
+								<p class="right-p">所属职位：<span>{{itemone.speciality}}</span></p>
+								<p class="right-p">所属部门：<span>{{itemone.department}}</span></p>
+								<p class="right-p">工作年限：<span>{{itemone.workingSeniority}}</span></p>
+								<span><p v-html="itemone.introduce">{{itemone.introduce}}</p></span>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="boxtwo boxs active">
+
+					<ul class="ultwo">
+						<li class="litwo" v-for="(itemtwo,valtwo) in allstwo">
+							<div class="left">
+								<img :src="itemtwo.video"/>
+							</div>
+							<div class="right">
+								<h4>{{itemtwo.name}}</h4>
+								<p>跨境电商</p>
+								<span><p v-html="itemtwo.introduce">{{itemtwo.introduce}}</p></span>
+								</div>
+						</li>
+
+						
+						
+					</ul>
+				</div>
+				<!--<div class="boxs boxthree">
+					<ul class="ulthree">
+						<li class="lithree" v-for="(itemthree,valthree) in allsthree">
+							<div class="left">
+								<img :src="itemthree.video"/>
+							</div>
+							<div class="right">
+								<h4>{{itemthree.name}}</h4>
+								<p>所属部队：<span>{{itemthree.speciality}}</span></p>
+								<p>服役时间：<span>{{itemthree.department}}</span></p>
+								<p>服役兵种：<span>{{itemthree.workingSeniority}}</span></p>
+								<span><p v-html="itemthree.introduce">{{itemthree.introduce}}</p></span>
+								</div>
+						</li>
+						
+
+						
+
+					</ul>
+				</div>-->
+
+			</div>
+			<div class="footer">
+				<img src="img/footer.png" />
+				<div class="left">
+					<h3>宁海县产业人才学院</h3>
+					<p>有中心无边界，没有围墙的大学</p>
+					<ul>
+						<li>
+							<p><img src="img/footerphone.png" />0574-88888888</p>
+						</li>
+						<li>
+							<p><img src="img/footeremil.png" />webmaster@tsinghua.edu.cn</p>
+						</li>
+						<li>
+							<p><img src="img/footerdizhi.png" />宁海县技工学校</p>
+						</li>
+					</ul>
+				</div>
+				<div class="right">
+					<p>关注公众号</p>
+					<ul>
+						<li>
+							<img src="img/ewm.png" alt="" />
+							<p>微信扫码关注订阅号</p>
+						</li>
+						<li>
+							<img src="img/ewm.png" alt="" />
+							<p>微信扫码关注订阅号</p>
+						</li>
+					</ul>
+				</div>
+				<!--<div style="width:300px;margin:0 auto; padding:20px 0;">
+						<a target="_blank" href=" " style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+							< img src="" style="float:left;" />
+							<p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">浙公网安备 33022602000429号</p>
+							</ a>
+					</div>-->
+				<div class="down">
+					<div class="text">
+						<a href="###" target="_blank">版权所有 © 宁波软通教育科技公司</a>
+						<a href="###" target="_blank"><img src="img/beian.png" />浙公网安备 33022602000429号</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var ve = new Vue({
+			el:"#cyTalent",
+			data:{
+				allsone:"",
+				allstwo:"",
+//				allsthree:"",
+			},
+			mounted(){
+				this.getone();
+				this.gettwo();
+//				this.getthree();
+			},
+			created(){
+				
+			},
+			methods:{
+				getone() {
+					var that = this;
+					axios.get('http://192.168.3.5:8082/web/getByAllTalents/0').then(function(res) {
+						var data = res.data;
+						that.allsone = res.data.data;
+						console.log(that.allsone)
+						console.log("第一个数据")
+					})
+				},
+				gettwo() {
+					var that = this;
+					axios.get('http://192.168.3.5:8082/web/getByAllTalents/1').then(function(res) {
+						var data = res.data;
+						that.allstwo = res.data.data;
+						console.log(that.allstwo)
+						console.log("第二个数据")
+					})
+				},
+//				getthree() {
+//					var that = this;
+//					axios.get('http://192.168.3.5:8082/web/getByAllTalents/2').then(function(res) {
+//						var data = res.data;
+//						that.allsthree = res.data.data;
+//						console.log(that.allsthree)
+//						console.log("第三个数据")
+//					})
+//				},
+			}
+			
+		});
+		$(document).ready(function($) {
+			$('.ulone').paginathing({
+				perPage: 4,
+				containerClass: 'boxone',
+				limitPagination: 4,
+				pageNumbers: false,
+			});
+			$('.ultwo').paginathing({
+				perPage: 4,
+				containerClass: 'boxtwo',
+				limitPagination: 4,
+				pageNumbers: false,
+			});
+//			$('.ulthree').paginathing({
+//				perPage: 4,
+//				containerClass: 'boxthree',
+//				limitPagination: 4,
+//				pageNumbers: false,
+//			})
+		});
+		$(".center .top li").click(function() {
+			var cl = $(this).index();
+			$(".center .top li").removeClass("active").eq(cl).addClass("active");
+			$(".cyTalent .center .boxs").removeClass("active").eq(cl).addClass("active");
+		});
+		
+	</script>
+
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>用人单位详情</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script src="js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/paginathing.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/paginathing.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=lj4hFlBMGOp0vMLOzHmT5ZGHezlCVEEE"></script>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	</head>
+
+	<body>
+		<div class="employer" id="employer">
+			<div class="ding">
+				<div class="left">
+					<p>登录</p>
+					<p>注册</p>
+				</div>
+				<div class="right">
+					<p>微信公众号</p>
+				</div>
+			</div>
+			<div class="nav">
+				<ul>
+					<li>
+						<a href="wrap.html">首页</a>
+					</li>
+					<li>
+						<a href="news.html">学院动态</a>
+					</li>
+					<li>
+						<a href="mechanism.html">赋能机构</a>
+					</li>
+					<li>
+						<a href="company.html" class="active">合作伙伴</a>
+					</li>
+					<li>
+						<a href="trainingCop.html">实训工厂</a>
+					</li>
+					<li>
+						<a href="cyTalent.html">产业人才</a>
+					</li>
+					<li>
+						<a href="talentPolicy.html">人才政策</a>
+					</li>
+					<li>
+						<a href="lookNinghai.html">乐看宁海</a>
+					</li>
+					<li>
+						<a href="aboutXueyuan.html" >关于学院</a>
+					</li>
+				</ul>
+			</div>
+			<div class="banner">
+				<img src="img/companybanner.png" />
+				<div class="title">
+					<h2>合作伙伴</h2>
+					<p>COOPERATIVE PARTNER</p>
+					<span>合作伙伴 > 用人单位详情</span>
+				</div>
+			</div>
+			<div class="center">
+				<div class="box1">
+					<div class="left">
+						<img src="img/companyoneimg.png" />
+					</div>
+					<div class="right">
+						<div class="box1s">
+							<div class="boxl">
+								
+							</div>
+							<div class="boxr">
+								<p>{{allsone.name}}</p>
+								<p><span><img src="img/companypeople.png"/>{{allsone.size}}</span>
+									<span v-if="allsone.type == 2"><img src="img/companyqiye.png"/>民营企业</span>
+									<span v-if="allsone.type == 1"><img src="img/companyqiye.png"/>国有企业</span>
+									<span v-if="allsone.type == 3"><img src="img/companyqiye.png"/>民营企业</span>
+									<span v-if="allsone.type == 4"><img src="img/companyqiye.png"/>民营企业</span>
+									<span v-if="allsone.type == 5"><img src="img/companyqiye.png"/>民营企业</span>
+								</p>
+							</div>
+						</div>
+						<div class="box1s2">
+							<p><img src="img/companyhangye.png"/>{{allsone.industry}}</p>
+							
+							<p><img src="img/companyhangye.png">{{allsone.address}}</p>
+						</div>
+						<p class="txt">{{allsone.introduce}}</p>
+					</div>
+				</div>
+				<div class="box2">
+					<h4>岗位介绍</h4>
+					<ul>
+						<li v-for="(item,iis) in alls">
+							<div class="txt1">
+								<p>{{item.name}}</p>
+								<p>{{item.minSalary}}-{{item.maxSalary}}</p>
+							</div>
+							<div class="txt2">
+								<div class="left">
+									<p><img src="img/dizhihei.png"/><img src="img/dizhibai.png"/>{{item.address}}</p>
+								</div>
+								<div class="right">
+									<p><span><img src="img/jinglihei.png"/><img src="img/jinglibai.png"/>{{item.workYear}}年</span><span><img src="img/xuelihei.png"/><img src="img/xuelibai.png"/>{{item.education}}</span></p>
+								</div>
+							</div>
+						</li>
+						
+					</ul>
+				</div>
+			</div>
+			<div class="footer">
+				<img src="img/footer.png" />
+				<div class="left">
+					<h3>宁海县产业人才学院</h3>
+					<p>有中心无边界，没有围墙的大学</p>
+					<ul>
+						<li>
+							<p><img src="img/footerphone.png" />0574-88888888</p>
+						</li>
+						<li>
+							<p><img src="img/footeremil.png" />webmaster@tsinghua.edu.cn</p>
+						</li>
+						<li>
+							<p><img src="img/footerdizhi.png" />宁海县技工学校</p>
+						</li>
+					</ul>
+				</div>
+				<div class="right">
+					<p>关注公众号</p>
+					<ul>
+						<li>
+							<img src="img/ewm.png" alt="" />
+							<p>微信扫码关注订阅号</p>
+						</li>
+						<li>
+							<img src="img/ewm.png" alt="" />
+							<p>微信扫码关注订阅号</p>
+						</li>
+					</ul>
+				</div>
+				<!--<div style="width:300px;margin:0 auto; padding:20px 0;">
+						<a target="_blank" href=" " style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+							< img src="" style="float:left;" />
+							<p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">浙公网安备 33022602000429号</p>
+							</ a>
+					</div>-->
+				<div class="down">
+					<div class="text">
+						<a href="###" target="_blank">版权所有 © 宁波软通教育科技公司</a>
+						<a href="###" target="_blank"><img src="img/beian.png" />浙公网安备 33022602000429号</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+//		/web/CompanyIdByJob/{id}
+		var ve = new Vue({
+			el:"#employer",
+			data:{
+				alls:'',
+				allsone:'',
+				arr:""
+			},
+			methods: {
+				getgs() {
+				var that = this;
+					axios.get('http://192.168.3.5:8082/web/CompanyIdByJob/' + sessionStorage.getItem("idqy")).then(function(res) {
+						that.alls = res.data.data;
+						console.log(that.alls)
+						console.log("git")
+					})
+//					请求的所有数据
+					axios.post('http://192.168.3.5:8082/web/findAllCompany').then(function(res) {
+						that.allsone = res.data.data[sessionStorage.getItem("xiabiao")];
+					});
+				}
+			},
+			created() {
+				this.getgs();
+			},
+			
+		})
+	</script>
+
+</html>
