@@ -112,10 +112,10 @@
 						<p>与多所高校达成长期合作 学院培训</p>
 					</div>
 					<ul class="ultwo">
-						<li class="litwo" v-for="item in 12">
-							<div class="left">
+						<li class="litwo" v-for="item in allsone">
+							<div class="left" :data-key="item.id" @click="an">
 								<a href="universities.html">
-									<img src="img/aboutbox2.png" />
+									<img :src="item.img" />
 								</a>
 							</div>
 						</li>
@@ -195,13 +195,14 @@
 				
 			},
 			methods:{
-				
+				an(e){
+					let key = e.path[2].dataset.key;
+					localStorage.setItem("key", key);
+				},
 				getone(){
 					var that = this;
 					// 合作高校
 					axios.get('http://192.168.3.5:8082/web/findByPartnerAll').then(function(res) {
-						console.log(res)
-						return false;
 						var data = JSON.parse(res.request.response)
 						that.allsone = data.data
 						console.log(that.allsone)
