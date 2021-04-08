@@ -113,28 +113,7 @@
 					</div>
 
 					<ul class="ultwo">
-						<li class="litwo">
-							<div class="left">
-								<a href="universities.html">
-									<img src="img/aboutbox2.png" />
-								</a>
-							</div>
-						</li>
-						<li class="litwo">
-							<div class="left">
-								<a href="universities.html">
-									<img src="img/aboutbox2.png" />
-								</a>
-							</div>
-						</li>
-						<li class="litwo">
-							<div class="left">
-								<a href="universities.html">
-									<img src="img/aboutbox2.png" />
-								</a>
-							</div>
-						</li>
-						<li class="litwo">
+						<li class="litwo" v-for="item in 12">
 							<div class="left">
 								<a href="universities.html">
 									<img src="img/aboutbox2.png" />
@@ -254,7 +233,7 @@
 				pageNumbers: false,
 			});
 			$('.ultwo').paginathing({
-				perPage: 8,
+				perPage: 9,
 				containerClass: 'boxtwo',
 				limitPagination: 3,
 				pageNumbers: false,
