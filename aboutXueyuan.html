@@ -13,8 +13,7 @@
 	</head>
 
 	<body>
-		<div class="aboutyx">
-
+		<div id="aboutyx" class="aboutyx">
 			<div class="ding">
 				<div class="left">
 					<p>登录</p>
@@ -134,7 +133,6 @@
 							</div>
 							<h3>联系我们</h3>
 							<div class="xian">
-
 								<div class="left"></div>
 								<div class="right"></div>
 							</div>
@@ -144,17 +142,19 @@
 					<div class="forms">
 						<div class="left">
 							<div class="inps">
-								<p>姓名</p><input type="text" placeholder="请填写姓名" />
+								<p>姓名</p>
+								<input type="text" placeholder="请填写姓名" class="inp1" />
 							</div>
 							<div class="inps">
-								<p>联系方式</p><input type="text" name="" id="" value="" placeholder="请填写手机号" />
+								<p>联系方式</p>
+								<input type="text" placeholder="请填写手机号" class="inp2" />
 							</div>
 							<div class="textarea">
-								<textarea placeholder="具体内容描述（500字以内）" name="" id="" cols="30" rows="10" maxlength="500"></textarea>
-
+								<textarea placeholder="具体内容描述（500字以内）" class="inp3" cols="30" rows="10"
+									maxlength="500"></textarea>
 							</div>
 							<div class="btns">
-								<p>发送</p>
+								<p @click="btn">发送</p>
 							</div>
 						</div>
 						<div class="right">
@@ -222,15 +222,71 @@
 				<div class="down">
 					<div class="text">
 						<a href="###" target="_blank">版权所有 © 宁波软通教育科技公司</a>
-						<a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank"><img src="img/beian.png" />浙公网安备 33022602000429号</a>
+						<a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank"><img
+								src="img/beian.png" />浙公网安备 33022602000429号</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</body>
+	<script src="js/wyq.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/axios.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var ve = new Vue({
+			el: "#aboutyx",
+			data: {},
+			created() {
 
+			},
+			methods: {
+				btn() {
+					let Y = new Date().getFullYear();
+					let M = new Date().getMonth() + 1;
+					let D = new Date().getDate();
+					if (M < 10) {
+						M = '0' + M
+					}
+					if (D < 10) {
+						D = '0' + D
+					}
+					if ($(".inp1").val() == "" || $(".inp2").val() == "") {
+						console.log("请填写完整信息")
+					} else {
+						var that = this;
+						var data = {
+							name: $(".inp1").val(),
+							phone: $(".inp2").val(),
+							content: $(".inp3").val(),
+							time: Y + '-' + M + '-' + D
+						}
+
+						axios.put(wyq.config.url + 'addByUserConsultation/', data
+						).then(function(res) {
+							console.log(res.data)
+						});
+					}
+				}
+
+			},
+		})
+		// $(".an").click(function() {
+		// 	let name = $("#name")
+		// 	let phone = $("#phone")
+		// 	let cont = $("#cont")
+		// 	var data = {
+		// 		name: name[0].value,
+		// 		phone: phone[0].value,
+		// 		content: cont[0].value,
+		// 		time: new Date()
+		// 	}
+		// 	console.log(data)
+		// 	wyq.ajax(function(ret, err, dat) {
+		// 		console.log(ret)
+		// 	}, "addByUserConsultation", "put",data, {});
+		// })
+	</script>
 </html>
 <!---->
