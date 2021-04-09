@@ -45,7 +45,7 @@
 						<a href="trainingCop.html">实训工厂</a>
 					</li>
 					<li>
-						<a href="cyTalent.html">产业人才</a>
+						<a href="cyTalent.html">人才风采</a>
 					</li>
 					<li>
 						<a href="talentPolicy.html">人才政策</a>
@@ -174,12 +174,13 @@
 				<div class="down">
 					<div class="text">
 						<a href="###" target="_blank">版权所有 © 宁波软通教育科技公司</a>
-						<a href="###" target="_blank"><img src="img/beian.png" />浙公网安备 33022602000429号</a>
+						<a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank"><img src="img/beian.png" />浙公网安备 33022602000429号</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</body>
+	<script src="js/wyq.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
 		var ve = new Vue({
 			el:"#company",
@@ -207,19 +208,13 @@
 				getone(){
 					var that = this;
 					// 合作高校
-					axios.get('http://192.168.3.5:8082/web/findByPartnerAll').then(function(res) {
-						var data = JSON.parse(res.request.response)
-						that.allsone = data.data
-						console.log(that.allsone)
-//						console.log("合作企业")
-//						console.log("合作企业")
-					});
-					axios.get('http://192.168.3.5:8082/web/findByCooperativeAll').then(function(res) {
-						that.allsthree = res.data.data;
-//						console.log("合作部门");
-//						console.log(that.allsthree);
-//						console.log("合作部门");
-					})
+					wyq.ajax(function(ret, err, dat) {
+						that.allsone = ret
+					}, "findByPartnerAll", "get", {}, {});
+					wyq.ajax(function(ret, err, dat) {
+						that.allsthree = ret
+					}, "findByCooperativeAll", "get", {}, {});
+					
 				},
 				click(e,ind){
 					console.log(e.id);

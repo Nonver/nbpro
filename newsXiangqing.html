@@ -45,7 +45,7 @@
 						<a href="trainingCop.html">实训工厂</a>
 					</li>
 					<li>
-						<a href="cyTalent.html">产业人才</a>
+						<a href="cyTalent.html">人才风采</a>
 					</li>
 					<li>
 						<a href="talentPolicy.html">人才政策</a>
@@ -80,7 +80,7 @@
 				<h3>相关新闻</h3>
 				<ul>
 					<li v-for="(v,i) in arrs" @click="clicks(v)">
-						<a href="#newsxq">
+						
 						<div class="left">
 							<p>{{v.day}}</p>
 							<p>{{v.mond}}</p>
@@ -88,7 +88,7 @@
 						<div class="right">
 							<p>{{v.name}}</p>
 						</div>
-						</a>
+						
 					</li>
 				</ul>
 			</div>
@@ -125,12 +125,13 @@
 				<div class="down">
 					<div class="text">
 						<a href="###" target="_blank">版权所有 © 宁波软通教育科技公司</a>
-						<a href="###" target="_blank"><img src="img/beian.png" />浙公网安备 33022602000429号</a>
+						<a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank"><img src="img/beian.png" />浙公网安备 33022602000429号</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</body>
+	<script src="js/wyq.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
 		$(document).ready(function($) {
 			$('.ultwo').paginathing({
@@ -159,25 +160,30 @@
 			methods: {
 				xwxq() {
 					var that = this;
-					axios.post('http://192.168.3.5:8082/web/getIdByCollegeNews/' + sessionStorage.getItem("xwid")).then(function(res) {
-						that.alls = res.data.data[0];
+					wyq.ajax(function(ret, err, dat) {
+						console.log(ret)
+						that.alls = ret[0];
 						console.log(that.alls)
 						var data = new Date(that.alls.uploadTime);
-
+						
 						var Y = data.getFullYear() + '-'
 						var M = (data.getMonth() + 1 < 10 ? '0' + (data.getMonth() + 1) : data.getMonth() + 1) + '-';
 						var D = data.getDate();
 						var tit = Y + M + D;
 						that.alls.uploadTime = tit;
-					})
+					}, "getIdByCollegeNews/" + sessionStorage.getItem("xwid") , "post", {
+						
+					}, {});
+					
 				},
 				clicks(e){
 					sessionStorage.setItem("xwid", e.id);
+					window.location="newsXiangqing.html";
 				},
 				gongcim() {
 					var that = this;
-					axios.get('http://192.168.3.5:8082/web/findByCollegeNewsAll').then(function(res) {
-						that.alls = res.data.data;
+					wyq.ajax(function(ret, err, dat) {
+						that.alls = ret;
 						for(var j = 0; j < that.alls.length; j++) { 
 							var data = new Date(that.alls[j].uploadTime);
 							var Y = data.getFullYear() + '-'
@@ -191,18 +197,14 @@
 								id:that.alls[j].id
 							}
 							that.arrs[j] = arr;
-							
 						}
 						for(var i = 0; i < that.arrs.length; i++) {
 							if(that.arrs[i].id == sessionStorage.getItem("xwid")) {
 								that.arrs.splice(i, 1);
 							}
-							
 						};
-						console.log(that.alls)
-						console.log(that.arrs)
-						
-					})
+					}, "findByCollegeNewsAll", "get", {},{});
+					
 				},
 			}
 		})

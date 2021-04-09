@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 	<head>
 		<meta charset="UTF-8">
 		<title>人文景观详情</title>
@@ -59,7 +58,7 @@
 						<a href="trainingCop.html">实训工厂</a>
 					</li>
 					<li>
-						<a href="cyTalent.html">产业人才</a>
+						<a href="cyTalent.html">人才风采</a>
 					</li>
 					<li>
 						<a href="talentPolicy.html">人才政策</a>
@@ -164,12 +163,13 @@
 				<div class="down">
 					<div class="text">
 						<a href="###" target="_blank">版权所有 © 宁波软通教育科技公司</a>
-						<a href="###" target="_blank"><img src="img/beian.png" />浙公网安备 33022602000429号</a>
+						<a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank"><img src="img/beian.png" />浙公网安备 33022602000429号</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</body>
+	<script src="js/wyq.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
 		$(".img1").outerWidth((1 / 2) * $(".box3").outerWidth());
 		$(".img2").outerWidth((1 / 5) * $(".box3").outerWidth());
@@ -209,11 +209,10 @@
 				getrenwen() {
 					var that = this;
 					//					/web/getByIdSceneryHumanity/{id}
-					axios.get('http://192.168.3.5:8082/web/getById/' + sessionStorage.getItem("idrenwen")).then(function(res) {
-						var data = res.data;
-						that.alls = res.data.data;
-						console.log(that.alls)
-					})
+					wyq.ajax(function(ret, err, dat) {
+						that.alls = ret;
+					}, "getById/"+ sessionStorage.getItem("idrenwen"), "get", {}, {});
+					
 				},
 			}
 

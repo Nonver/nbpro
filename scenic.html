@@ -13,6 +13,7 @@
 		<script src="js/paginathing.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/paginathing.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<script src="js/wyq.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
 		<div class="scenic" id="scenic">
@@ -43,7 +44,7 @@
 						<a href="trainingCop.html">实训工厂</a>
 					</li>
 					<li>
-						<a href="cyTalent.html">产业人才</a>
+						<a href="cyTalent.html">人才风采</a>
 					</li>
 					<li>
 						<a href="talentPolicy.html">人才政策</a>
@@ -133,7 +134,7 @@
 				<div class="down">
 					<div class="text">
 						<a href="###" target="_blank">版权所有 © 宁波软通教育科技公司</a>
-						<a href="###" target="_blank"><img src="img/beian.png" />浙公网安备 33022602000429号</a>
+						<a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank"><img src="img/beian.png" />浙公网安备 33022602000429号</a>
 					</div>
 				</div>
 			</div>
@@ -177,15 +178,17 @@
 //				人文景观
 				getrenwen() {
 					var that = this;
-					axios.get('http://192.168.3.5:8082/web/findAllSceneryHumanity').then(function(res) {
-						var data = res.data;
-						that.alls = res.data.data;
-						console.log(that.alls) 
-					})
+					wyq.ajax(function(ret, err, dat) {
+						var data = ret;
+						console.log(data)
+						that.alls = data;
+					}, "findAllSceneryHumanity", "get", {
+						
+					}, {});
+					
 				},
 //				点击获取当前||
 				clickrenwen(e){
-					console.log(e.id);
 					sessionStorage.setItem("idrenwen", e.id);
 					sessionStorage.setItem("lat", e.lat);
 					sessionStorage.setItem("lng", e.lng);

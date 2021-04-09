@@ -70,7 +70,7 @@
 							<a href="trainingCop.html">实训工厂</a>
 						</li>
 						<li>
-							<a href="cyTalent.html">产业人才</a>
+							<a href="cyTalent.html">人才风采</a>
 						</li>
 						<li>
 							<a href="talentPolicy.html">人才政策</a>
@@ -182,7 +182,9 @@
 				</div>
 				<div class="right">
 					<h2>学院动态</h2>
-					<p v-html="arrs[0].introduce">{{arrs[0].introduce}}</p>
+					<p v-html="item.introduce" v-for="(item,val) in arrs.slice(0,1)">
+						{{item.introduce}}
+					</p>
 					<div class="btns">
 						<span>MORE</span>
 					</div>
@@ -297,34 +299,29 @@
 						</li>
 					</ul>
 				</div>
-				<!--<div style="width:300px;margin:0 auto; padding:20px 0;">
-						<a target="_blank" href=" " style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
-							< img src="" style="float:left;" />
-							<p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">浙公网安备 33022602000429号</p>
-							</ a>
-					</div>-->
+				
 				<div class="down">
 					<div class="text">
 						<a href="###" target="_blank">版权所有 © 宁波软通教育科技公司</a>
-						<a href="###" target="_blank"><img src="img/beian.png" />浙公网安备 33022602000429号</a>
+						<a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank"><img src="img/beian.png" />浙公网安备 33022602000429号</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</body>
+	<script src="js/wyq.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
-		
 		var ve = new Vue({
 			el:"#wrap",
 			data:{
-				alls:'',
+				alls:"",
 				arrs:"",
 			},
 			created(){
 				this.getgongc();
 			},
 			updated() {
-				var mySwiper = new Swiper('.swipers1', {
+				var mySwiper1 = new Swiper('.swipers1', {
 					direction: 'horizontal', // 垂直切换选项
 					loop: true, // 循环模式选项
 					speed: 1000,
@@ -332,8 +329,8 @@
 						delay: 2000,
 						disableOnInteraction: false,
 					},
-				})
-				var mySwiper = new Swiper('.swipers2', {
+				});
+				var mySwiper2 = new Swiper('.swipers2', {
 					direction: 'horizontal', // 垂直切换选项
 					loop: true, // 循环模式选项
 					speed: 1000,
@@ -347,37 +344,31 @@
 						el: '.swiper-pagination',
 						clickable: true,
 					},
-				})
+				});
 			},
 			methods: {
 				getgongc() {
 					var that = this;
-					axios.get('http://192.168.3.5:8082/web/findByTrainingFactoryAll').then(function(res) {
-						that.alls = res.data.data;
-						for(var j = 0;j <that.alls.length; j++) { 
-							var data = new Date(that.alls[j].foundTime);
-							
+					wyq.ajax(function(ret, err, dat) {
+						for(var j = 0;j <ret.length; j++) {
+							var data = new Date(ret[j].foundTime);
 							var Y = data.getFullYear() + '-'
 							var M = (data.getMonth()+1 < 10 ? '0'+(data.getMonth()+1) : data.getMonth()+1) + '-';
 							var D = data.getDate() + ' ';
 							var tit = Y+M+D;
-							that.alls[j].foundTime = tit;
+							ret[j].foundTime = tit;
 						};
-						console.log(that.alls)
-						console.log(that.times)
-					});
-					axios.get('http://192.168.3.5:8082/web/findByCollegeNewsAll').then(function(res) {
-						that.arrs = res.data.data;
-						console.log("学院动态");
-						console.log(that.arrs);
-						
-					})
+						that.alls = ret;
+					}, "findByTrainingFactoryAll", "get", {}, {});
+					wyq.ajax(function(ret, err, dat) {
+						that.arrs = ret;
+					}, "findByCollegeNewsAll", "get", {}, {});
 				},
 				clickgongc(e) {
 					console.log(e);
 					sessionStorage.setItem("xiabiao", e);
 
-				}
+				},
 			}
 			
 		})
