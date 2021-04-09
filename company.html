@@ -84,7 +84,6 @@
 				
 				<div class="boxs boxone">
 					<ul class="ulone">
-						
 						<li class="lione" v-for="(items,vals) in allsone" @click="click(items,vals)">
 							<a href="EmployerXiangqing.html">
 							<div class="left">
@@ -99,7 +98,7 @@
 										<img src="img/companypeople.png"/>{{items.size}}
 									</span>
 									<span v-if="items.type == 1">
-										<img src="img/companyqiye.png"/>民营企业</span><span v-else><img src="img/companyqiye.png"/>国营企业</span><span><img src="img/companyhangye.png"/>{{items.industry}}</span></p>
+									<img src="img/companyqiye.png"/>民营企业</span><span v-else><img src="img/companyqiye.png"/>国营企业</span><span><img src="img/companyhangye.png"/>{{items.industry}}</span></p>
 							</div>
 							</a>
 						</li>
@@ -197,7 +196,13 @@
 			methods:{
 				an(e){
 					let key = e.path[2].dataset.key;
-					localStorage.setItem("key", key);
+					for(let i=0;i<this.allsone.length;i++){
+						if(this.allsone[i].id == key){
+							console.log(this.allsone[i])
+							localStorage.setItem("data", JSON.stringify(this.allsone[i]));
+						}
+					}
+					
 				},
 				getone(){
 					var that = this;
@@ -227,19 +232,19 @@
 		});
 		$(document).ready(function($) {
 			$('.ulone').paginathing({
-				perPage: 6,
+				perPage: 9,
 				containerClass: 'boxone',
 				limitPagination: 3,
 				pageNumbers: false,
 			});
 			$('.ultwo').paginathing({
-				perPage: 9,
+				perPage: 6,
 				containerClass: 'boxtwo',
 				limitPagination: 3,
 				pageNumbers: false,
 			});
 			$('.ulthree').paginathing({
-				perPage: 8,
+				perPage: 9,
 				containerClass: 'boxthree',
 				limitPagination: 3,
 				pageNumbers: false,

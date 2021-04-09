@@ -72,23 +72,23 @@
 					<div class="row">
 						<div class="col-lg-12" style="background-color:#e6e6e6;padding-left:0px;">
 							<div class="col-lg-4">
-								<img src="img/dax.jpg" class="img-rounded">
+								<img :src="allsone.img" class="img-rounded">
 							</div>
 							<div class="col-lg-8 xy">
-								<h3>长春工业大学</h3>
+								<h3>{{allsone.name}}</h3>
 								<div>
 									<div>
 										<span class="glyphicon glyphicon glyphicon-tags" aria-hidden="true"></span>
 										<span>&nbsp;&nbsp;学校地址：</span>
 									</div>
-									<div>吉林省长春市</div>
+									<div>{{allsone.address}}</div>
 								</div>
 								<div>
 									<div>
 										<span class="glyphicon glyphicon glyphicon-tags" aria-hidden="true"></span>
 										<span>&nbsp;&nbsp;学生人数：</span>
 									</div>
-									<div>5000</div>
+									<div>{{allsone.recruitStudents}}</div>
 								</div>
 								<div>
 									<div>
@@ -96,7 +96,7 @@
 										<span>&nbsp;&nbsp;师资概况：</span>
 									</div>
 									<div>
-										专任教师1122人外聘教师268人生师比为17.57:1。专任教师队伍平均年龄41.01周岁，45周岁以下中青年教师占教师总数的71.03%，高级职称教师占47.80%
+										{{allsone.course}}
 									</div>
 								</div>
 								<div>
@@ -105,7 +105,7 @@
 										<span>&nbsp;&nbsp;学校院系：</span>
 									</div>
 									<div style="color: #38aea2;">
-										机电工程系&nbsp;&nbsp;计算机科学与工程学院&nbsp;&nbsp;化学与生命科学学院&nbsp;&nbsp;公共管理学院(人文学院）&nbsp;&nbsp;国际教育学院&nbsp;&nbsp;材料科学与工程学院&nbsp;&nbsp;经济管理学院&nbsp;&nbsp;艺术设计学院&nbsp;&nbsp;马克思主义学院&nbsp;&nbsp;应用技术学院&nbsp;&nbsp;电气与电子工程学院&nbsp;&nbsp;化学工程学院&nbsp;&nbsp;信息传播工程学院&nbsp;&nbsp;数学与统计学院
+										{{allsone.object}}
 									</div>
 								</div>
 							</div>
@@ -116,14 +116,7 @@
 								<h2>学校简介</h2>
 							</div>
 							<div class="col-lg-12 paragraph">
-								<p>长春工业大学是一所以工为主，工、管、文、理、经、法、艺术等多学科相互支撑、协调发展的省属重点大学，始建于1952年，建校初期是国家为筹建中国第一汽车制造厂而创力的长春汽车工业学校，先后经历了长春工业专科学校、吉林理工学院、吉林工学院等发展阶段。1970年6月吉林工学院与吉林工业大学合井，1978年10月复校。203年9月，长春模炭工业学校、长春牒炭管理干部学院、吉林省轻工业设计学校并入。204年3月，更名为长春工业大学。192年被吉林省政府确定为首批三所之一的省属重点高校，204年再次被确定大省国重点大学，21016年入选“中西的高枚盖砒能力建设工程”院快，2O0年3月入选吉林省特色高水平应用研究型大学。
-								</p>
-								<p>学校设南湖、北湖两个校区，坐落于长春南湖、北滋之滨。占地面和12.2万平方米，按同环境代难，是渎书治学的理想园地。学校设有15个学院。54个本科专业。现有1个博士后流动站，5个一级学科博士学位投权点，2个一级学科土学位被权点;吉林省一波学科3个，吉林省特色高水平学科15个;国家级一该本科专业建设点5个，省级一流本科专业建设点10个，国家级“卓越计划”试点专业3个;具有推荐优秀应届本科毕业生免试攻谟硕士学位研究生资格。
-								</p>
-								<p>学校现有在背学生2061。其中本科生1875人，专科生3E56人。硕士研究生2876人，博士研究生17人，留学生27人。现有教职工I754人，其中专任教师1234人，正高级职称教间125人，副高级职称教师⒁45人。现有梁性引进院士5人，人社都“百千万人才工程”入选者3人，国家级有突出贡献中青年专家4人，国务院政府特院津E的5人，全国优秀教师人，全国模范教师1，国家优秀教学团队1个，吉林省管优秀专家6人，吉林省有突出贡献中青年专家37人，吉林省拔尖创新人才35人，吉林省教学名师11人，长白山学者10人。
-								</p>
-								<p>学校现有国家级实验教学示范中心1个，国家级工程实践教育中心5个，国家级大学生校外实豉教育基地1个。现有国家及省部级科研平台A4个，学校技术转移中心被科技部批准为“国家级技术转移示范机构”。2019年自然指数国内高校持名191位。近五年，学校承祖科秤课题120余项，获得科技经费45亿余元。其中，国家级项目129项、省市“双十工程”项目h项，科研成果获奖149项，省部级一等奖10项、二等奖1项。学校始终坚持科技研发工作与国家重大需求、吉林省地方经济社会发展紧密结合，围绕制约传统产业发展和新兴产业培育的关键科学和科技问题，通过不断创斯产学谎合作模式和机剧，在联纤维、搜拌廖排焊、4ABS刘指、微纳与超精含加工，汽车安全气囊生产线、冶金节能、金属材科强韧化、功能高分子材料、机电设备故殚诊断以及智能机器人等领域取得了一系列重大成果。并在省内相应企业实现了成果转化和产业化，为支撑和引领我省传统产业的核术升经改造和产业结构调整做出了重要贡献。
-								</p>
+								{{allsone.introduce}}
 							</div>
 						</div>
 						<div class="col-lg-12">
@@ -131,7 +124,8 @@
 								<span></span>
 								<h2>合作历程</h2>
 							</div>
-							<div class="col-lg-12 cooper">
+							{{allsone.course}}
+							<!-- <div class="col-lg-12 cooper">
 								<div class="cooperation">
 									<div>2021-04-08</div>
 									<div></div>
@@ -152,51 +146,9 @@
 									<div>学生培训内容:</div>
 									<div>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div>
 								</div>
-							</div>
-							<div class="col-lg-12 cooper">
-								<div class="cooperation">
-									<div>2021-04-08</div>
-									<div></div>
-								</div>
-								<div class="cooperation">
-									<div>合作院校:</div>
-									<div>机电工程系计算机科学与工程学院艺术设计学院信息传播工程学院电气与电子工程学院</div>
-								</div>
-								<div class="cooperation">
-									<div>实训工场:</div>
-									<div>某某某某实训工程某某某某实训工程某某某某实训工程</div>
-								</div>
-								<div class="cooperation">
-									<div>培训科目:</div>
-									<div>8000000000000005003006000000.00000000</div>
-								</div>
-								<div class="cooperation">
-									<div>学生培训内容:</div>
-									<div>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div>
-								</div>
-							</div>
-							<div class="col-lg-12 cooper">
-								<div class="cooperation">
-									<div>2021-04-08</div>
-									<div></div>
-								</div>
-								<div class="cooperation">
-									<div>合作院校:</div>
-									<div>机电工程系计算机科学与工程学院艺术设计学院信息传播工程学院电气与电子工程学院</div>
-								</div>
-								<div class="cooperation">
-									<div>实训工场:</div>
-									<div>某某某某实训工程某某某某实训工程某某某某实训工程</div>
-								</div>
-								<div class="cooperation">
-									<div>培训科目:</div>
-									<div>8000000000000005003006000000.00000000</div>
-								</div>
-								<div class="cooperation">
-									<div>学生培训内容:</div>
-									<div>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div>
-								</div>
-							</div>
+							</div> -->
+							
+							
 						</div>
 					</div>
 
@@ -258,25 +210,10 @@
 				this.getone();
 			},
 			mounted() {
-				console.log(localStorage.getItem("key"))
+				this.allsone = JSON.parse(localStorage.getItem("data"))
+				console.log(this.allsone)
 			},
 			methods: {
-
-				getone() {
-					var that = this;
-					axios.post('http://192.168.3.5:8082/web/findAllCompany').then(function(res) {
-						that.allsone = res.data.data;
-						//						console.log("合作企业")
-						console.log(that.allsone);
-						//						console.log("合作企业")
-					});
-					axios.get('http://192.168.3.5:8082/web/findByCooperativeAll').then(function(res) {
-						that.allsthree = res.data.data;
-						//						console.log("合作部门");
-						//						console.log(that.allsthree);
-						//						console.log("合作部门");
-					})
-				},
 				click(e, ind) {
 					console.log(e.id);
 					sessionStorage.setItem("idqy", e.id);
@@ -285,31 +222,6 @@
 
 
 			}
-		});
-		$(document).ready(function($) {
-			$('.ulone').paginathing({
-				perPage: 6,
-				containerClass: 'boxone',
-				limitPagination: 3,
-				pageNumbers: false,
-			});
-			$('.ultwo').paginathing({
-				perPage: 3,
-				containerClass: 'boxtwo',
-				limitPagination: 3,
-				pageNumbers: false,
-			});
-			$('.ulthree').paginathing({
-				perPage: 8,
-				containerClass: 'boxthree',
-				limitPagination: 3,
-				pageNumbers: false,
-			})
-		});
-		$(".center .top li").click(function() {
-			var cl = $(this).index();
-			$(".center .top li").removeClass("active").eq(cl).addClass("active");
-			$(".company .center .boxs").removeClass("active").eq(cl).addClass("active");
 		});
 	</script>
 

@@ -313,32 +313,7 @@
 		</div>
 	</body>
 	<script type="text/javascript">
-		var mySwiper = new Swiper('.swipers1', {
-			direction: 'horizontal', // 垂直切换选项
-			loop: true, // 循环模式选项
-			speed: 1000,
-			autoplay: {
-				delay: 2000,
-				disableOnInteraction: false,
-			},
-
-			
-		})
-		var mySwiper = new Swiper('.swipers2', {
-			direction: 'horizontal', // 垂直切换选项
-			loop: true, // 循环模式选项
-			speed: 1000,
-			autoplay: {
-				delay: 2000,
-				disableOnInteraction: false,
-			},
-
-			// 如果需要分页器
-			pagination: {
-				el: '.swiper-pagination',
-				clickable: true,
-			},
-		})
+		
 		var ve = new Vue({
 			el:"#wrap",
 			data:{
@@ -347,6 +322,32 @@
 			},
 			created(){
 				this.getgongc();
+			},
+			updated() {
+				var mySwiper = new Swiper('.swipers1', {
+					direction: 'horizontal', // 垂直切换选项
+					loop: true, // 循环模式选项
+					speed: 1000,
+					autoplay: {
+						delay: 2000,
+						disableOnInteraction: false,
+					},
+				})
+				var mySwiper = new Swiper('.swipers2', {
+					direction: 'horizontal', // 垂直切换选项
+					loop: true, // 循环模式选项
+					speed: 1000,
+					autoplay: {
+						delay: 2000,
+						disableOnInteraction: false,
+					},
+				
+					// 如果需要分页器
+					pagination: {
+						el: '.swiper-pagination',
+						clickable: true,
+					},
+				})
 			},
 			methods: {
 				getgongc() {
