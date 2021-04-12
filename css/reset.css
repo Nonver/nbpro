@@ -8,6 +8,26 @@ ul,li {
 html,body{
 	font-size: 63.5%;
 }
+@media (max-width: 1400px) {
+	html,body{
+		font-size: 50%;
+	}
+	.mechanism .box3 ul {
+		
+		left: 12% !important;
+		top: 18% !important;
+	}
+}
+@media screen and (min-width:1400px) and (max-width:1900px) {
+	html,body{
+		font-size: 52%;
+	}
+	.mechanism .box3 ul {
+		
+		left: 12% !important;
+		top: 25% !important;
+	}
+}
 a{
 	text-decoration: none;
 }

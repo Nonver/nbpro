@@ -4,6 +4,7 @@
 
 }
 
+
 a:hover {
 	text-decoration: none;
 }
@@ -225,7 +226,7 @@ p {
 .banner .title p {
 	font-size: 3.6rem;
 	line-height: 1.6;
-	margin-bottom: 30%;
+	margin-bottom:8rem;
 }
 
 .banner .title span {
@@ -237,7 +238,12 @@ p {
 	margin: auto;
 	margin-top: 70px;
 }
-
+.footerwenzi{
+	
+}
+.footerwenzi img{
+	width: 60% !important;
+}
 
 /*关于学院页面css*/
 .about-t>h3 {
