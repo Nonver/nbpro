@@ -7,7 +7,14 @@
 a:hover {
 	text-decoration: none;
 }
-
+.ist{
+	width: 34%;
+	margin: auto;
+	margin-bottom: 80px;
+}
+.ist img{
+	width: 100%;
+}
 p {
 	margin: 0;
 	padding: 0;
@@ -462,7 +469,9 @@ textarea {
 	margin: 20px 0;
 	border-radius: 3px;
 }
-
+.btns{
+	cursor: pointer;
+}
 .aboutyx .box3 .forms .right ul li {
 	margin: 20px 0;
 }
@@ -2041,9 +2050,11 @@ textarea {
 	display: flex;
 	justify-content: space-around;
 	align-items: top;
-	height: 450px;
+	flex-wrap: wrap;
 	width: 90%;
 	margin: auto;
+	margin-bottom: 70px;
+	
 }
 
 .mechanism .center {
@@ -2060,7 +2071,8 @@ textarea {
 	width: 30%;
 	text-align: center;
 	border: 2px solid blue;
-	height: 100%;
+	height: 260px;
+	margin: 30px 0;
 }
 
 .mechanism .center .box1 ul li h3 {
@@ -2107,6 +2119,27 @@ textarea {
 
 .mechanism .box1 ul li:nth-child(3) h3 {
 	background: #36A779;
+}
+.mechanism .box1 ul li:nth-child(4) {
+	border: 1px solid #CC7630;
+}
+
+.mechanism .box1 ul li:nth-child(4) h3 {
+	background: #CC7630;
+}
+.mechanism .box1 ul li:nth-child(5) {
+	border: 1px solid #20A339;
+}
+
+.mechanism .box1 ul li:nth-child(5) h3 {
+	background: #20A339;
+}
+.mechanism .box1 ul li:nth-child(6) {
+	border: 1px solid #9B5195;
+}
+
+.mechanism .box1 ul li:nth-child(6) h3 {
+	background: #9B5195;
 }
 
 .mechanism .center .titles {
@@ -2328,7 +2361,7 @@ textarea {
 }
 
 .mechanism .box6 ul {
-	width: 60%;
+	width: 72%;
 	margin: auto;
 	overflow: hidden;
 }
@@ -2356,8 +2389,15 @@ textarea {
 
 .mechanism .box6 ul li img {
 	width: 100%;
+	box-sizing: border-box;
+	padding:30px ;
 }
-
+.op1{
+	opacity: 0;
+}
+.tus img{
+	width: 100%;
+}
 .mechanism .box6 ul li .btns {
 	background: #1EB4B1;
 	color: #fff;
@@ -2637,6 +2677,12 @@ textarea {
 
 .news .center .boxtwo ul .litwo:not(:first-child) .right .btns a {
 	color: #1EB4B1;
+}
+.news .center .boxtwo ul .litwo:not(:first-child) .left{
+	height: 300px;
+}
+.news .center .boxtwo ul .litwo:not(:first-child) .left img{
+	height: 100%;
 }
 
 .news .center .boxtwo ul .litwo {
