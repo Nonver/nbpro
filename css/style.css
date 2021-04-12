@@ -7,7 +7,14 @@
 a:hover {
 	text-decoration: none;
 }
-
+.ist{
+	width: 34%;
+	margin: auto;
+	margin-bottom: 80px;
+}
+.ist img{
+	width: 100%;
+}
 p {
 	margin: 0;
 	padding: 0;
