@@ -462,7 +462,9 @@ textarea {
 	margin: 20px 0;
 	border-radius: 3px;
 }
-
+.btns{
+	cursor: pointer;
+}
 .aboutyx .box3 .forms .right ul li {
 	margin: 20px 0;
 }
@@ -2328,7 +2330,7 @@ textarea {
 }
 
 .mechanism .box6 ul {
-	width: 60%;
+	width: 72%;
 	margin: auto;
 	overflow: hidden;
 }
@@ -2356,8 +2358,15 @@ textarea {
 
 .mechanism .box6 ul li img {
 	width: 100%;
+	box-sizing: border-box;
+	padding:30px ;
 }
-
+.op1{
+	opacity: 0;
+}
+.tus img{
+	width: 100%;
+}
 .mechanism .box6 ul li .btns {
 	background: #1EB4B1;
 	color: #fff;
@@ -2637,6 +2646,12 @@ textarea {
 
 .news .center .boxtwo ul .litwo:not(:first-child) .right .btns a {
 	color: #1EB4B1;
+}
+.news .center .boxtwo ul .litwo:not(:first-child) .left{
+	height: 300px;
+}
+.news .center .boxtwo ul .litwo:not(:first-child) .left img{
+	height: 100%;
 }
 
 .news .center .boxtwo ul .litwo {

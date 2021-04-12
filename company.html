@@ -9,13 +9,7 @@
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/reset.css" />
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
-		<script src="js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/paginathing.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/paginathing.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 	</head>
-
 	<body>
 		<div class="company" id="company">
 			<div class="ding">
@@ -78,10 +72,8 @@
 						<li>
 							<p>合作部门</p>
 						</li>
-
 					</ul>
 				</div>
-				
 				<div class="boxs boxone">
 					<ul class="ulone">
 						<li class="lione" v-for="(items,vals) in allsone" @click="click(items,vals)">
@@ -102,7 +94,6 @@
 							</div>
 							</a>
 						</li>
-						
 					</ul>
 				</div>
 				<div class="boxtwo boxs active">
@@ -130,10 +121,8 @@
 								<p>{{item.name}}</p>
 							</div>
 						</li>
-
 					</ul>
 				</div>
-
 			</div>
 			<div class="footer">
 				<img src="img/footer.png" />
@@ -165,12 +154,6 @@
 						</li>
 					</ul>
 				</div>
-				<!--<div style="width:300px;margin:0 auto; padding:20px 0;">
-						<a target="_blank" href=" " style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
-							< img src="" style="float:left;" />
-							<p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">浙公网安备 33022602000429号</p>
-							</ a>
-					</div>-->
 				<div class="down">
 					<div class="text">
 						<a href="###" target="_blank">版权所有 © 宁波软通教育科技公司</a>
@@ -180,6 +163,11 @@
 			</div>
 		</div>
 	</body>
+	<script src="js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/paginathing.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/paginathing.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/axios.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/wyq.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
 		var ve = new Vue({
@@ -199,11 +187,10 @@
 					let key = e.path[2].dataset.key;
 					for(let i=0;i<this.allsone.length;i++){
 						if(this.allsone[i].id == key){
-							console.log(this.allsone[i])
+							// console.log(this.allsone[i])
 							localStorage.setItem("data", JSON.stringify(this.allsone[i]));
 						}
 					}
-					
 				},
 				getone(){
 					var that = this;
@@ -214,15 +201,12 @@
 					wyq.ajax(function(ret, err, dat) {
 						that.allsthree = ret
 					}, "findByCooperativeAll", "get", {}, {});
-					
 				},
 				click(e,ind){
-					console.log(e.id);
+					// console.log(e.id);
 					sessionStorage.setItem("idqy", e.id);
 					sessionStorage.setItem("xiabiao", ind);
 				},
-
-				
 			}
 		});
 		$(document).ready(function($) {

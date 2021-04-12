@@ -7,7 +7,7 @@ wyq.ajax(function(ret, err, dat) {
 var wyq = {
 	//配置文件
 	config: {
-		url: "http://192.168.3.5:8082/web/",
+		url: "http://8.136.184.238:8082/web/",
 	},
 	//请求函数封装ajax
 	ajax: function(fun, cmd, pos, data, opt) {
