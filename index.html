@@ -255,7 +255,7 @@
 				<ul>
 					<li v-for="(item,val) in alls.slice(0,6)" @click="clickgongc(val)" >
 						<video width="100%" controls="controls">
-									<source :src="item.video" type="video/mp4"></source>
+								<source :src="item.video" type="video/mp4"></source>
 						</video>
 						<a href="trainingCopXiangqing.html">
 						<p>{{item.companyName}}</p>
@@ -325,6 +325,9 @@
 			created(){
 				this.getgongc();
 			},
+			mounted(){
+				this.vi()
+			},
 			updated() {
 				var mySwiper1 = new Swiper('.swipers1', {
 					direction: 'horizontal', // 垂直切换选项
@@ -355,17 +358,6 @@
 				getgongc() {
 					var that = this;
 					wyq.ajax(function(ret, err, dat) {
-						for(var j = 0;j <ret.length; j++) {
-							var data = new Date(ret[j].foundTime);
-							var Y = data.getFullYear() + '-'
-							var M = (data.getMonth()+1 < 10 ? '0'+(data.getMonth()+1) : data.getMonth()+1) + '-';
-							var D = data.getDate() + ' ';
-							var tit = Y+M+D;
-							ret[j].foundTime = tit;
-						};
-						that.alls = ret;
-					}, "findByTrainingFactoryAll", "get", {}, {});
-					wyq.ajax(function(ret, err, dat) {
 						that.arrs = ret;
 						that.name = ret[0].name;
 						console.log(ret)
@@ -376,6 +368,20 @@
 					sessionStorage.setItem("xiabiao", e);
 
 				},
+				vi(){
+					var that = this;
+					wyq.ajax(function(ret, err, dat) {
+						for(var j = 0;j <ret.length; j++) {
+							var data = new Date(ret[j].foundTime);
+							var Y = data.getFullYear() + '-'
+							var M = (data.getMonth()+1 < 10 ? '0'+(data.getMonth()+1) : data.getMonth()+1) + '-';
+							var D = data.getDate() + ' ';
+							var tit = Y+M+D;
+							ret[j].foundTime = tit;
+						};
+						that.alls = ret;
+					}, "findByTrainingFactoryAll", "get", {}, {});
+				}
 			}
 			
 		})
