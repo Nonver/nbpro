@@ -76,7 +76,7 @@
 				</div>
 				<div class="boxs boxone">
 					<ul class="ulone">
-						<li class="lione" v-for="(items,vals) in allsone" @click="click(items,vals)">
+						<li class="lione" v-for="(items,vals) in allsthree" @click="click(items,vals)">
 							<a href="EmployerXiangqing.html">
 							<div class="left">
 								<video width="100%" height="300" controls="controls">
@@ -89,7 +89,7 @@
 									<span>
 										<img src="img/companypeople.png"/>{{items.size}}
 									</span>
-									<span v-if="items.type == 1">
+									<span v-if="items.type == 2">
 									<img src="img/companyqiye.png"/>民营企业</span><span v-else><img src="img/companyqiye.png"/>国营企业</span><span><img src="img/companyhangye.png"/>{{items.industry}}</span></p>
 							</div>
 							</a>
@@ -113,7 +113,7 @@
 				</div>
 				<div class="boxs boxthree">
 					<ul class="ulthree">
-						<li class="lithree" v-for="(item,val) in allsthree">
+						<li class="lithree" v-for="(item,val) in allstwo">
 							<div class="left">
 								<img :src="item.img"/>
 							</div>
@@ -196,12 +196,16 @@
 				},
 				getone(){
 					var that = this;
-					// 合作高校
+					
 					wyq.ajax(function(ret, err, dat) {
 						that.allsone = ret
 					}, "findByPartnerAll", "get", {}, {});
+					
 					wyq.ajax(function(ret, err, dat) {
 						that.allsthree = ret
+					}, "findAllCompany", "post", {}, {});
+					wyq.ajax(function(ret, err, dat) {
+						that.allstwo = ret
 					}, "findByCooperativeAll", "get", {}, {});
 				},
 				click(e,ind){

@@ -62,12 +62,12 @@
 			<div class="center">
 				<div class="box1">
 					<div class="left">
-						<img src="img/companyoneimg.png" />
+						<img :src="img" >
 					</div>
 					<div class="right">
 						<div class="box1s">
 							<div class="boxl">
-
+								<img :src="allsone.logo">
 							</div>
 							<div class="boxr">
 								<p>{{allsone.name}}</p>
@@ -169,24 +169,30 @@
 			data: {
 				alls: '',
 				allsone: '',
-				arr: ""
+				arr: "",
+				img:''
 			},
 			methods: {
 				getgs() {
 					var that = this;
 					wyq.ajax(function(ret, err, dat) {
 						that.alls = ret;
-					}, "CompanyIdByJob/" + sessionStorage.getItem("idqy"), "get", {}, {});
+					}, "CompanyIdByJob/" + sessionStorage.getItem("idqy"), "get", {
+						
+					}, {});
 					wyq.ajax(function(ret, err, dat) {
 						that.allsone = ret[sessionStorage.getItem("xiabiao")];
+						that.img = JSON.parse(that.allsone.imgs)[0];
+						console.log(that.allsone)
 					}, "findAllCompany", "post", {}, {});
 
 					//					请求的所有数据
-
+					
 				}
 			},
 			created() {
 				this.getgs();
+				
 			},
 
 		})
