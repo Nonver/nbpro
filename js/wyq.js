@@ -8,6 +8,7 @@ var wyq = {
 	//配置文件
 	config: {
 		url: "http://8.136.184.238:8084/web/",
+		// url:"http://192.168.3.5:8084/web/"
 	},
 	//请求函数封装ajax
 	ajax: function(fun, cmd, pos, data, opt) {

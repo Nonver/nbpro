@@ -3,7 +3,15 @@
 	padding: 0;
 
 }
-
+.swiper-slide{
+	
+	height: 450px;
+	overflow: hidden;
+}
+.swiper-slide>img{
+	width: 100%;
+	height: 100%
+}
 
 a:hover {
 	text-decoration: none;
@@ -1564,7 +1572,11 @@ textarea {
 }
 
 .tranCopXq .boxs .uls2 {
-	margin-top: 30px;
+	margin-top: 50px;
+}
+.tranCopXq .boxs .uls2 p{
+	font-size: 1.6rem;
+	    color: #787878;
 }
 
 .tranCopXq .boxs .uls2 ul li {
@@ -1578,12 +1590,15 @@ textarea {
 	margin: auto;
 }
 
-.tranCopXq .boxs .uls2 ul li p {}
+.tranCopXq .boxs .uls2 ul li p {
+	
+}
 
 .tranCopXq .boxs .uls2 h4 {
 	position: relative;
 	font-size: 2rem;
 	margin-left: 10px;
+	margin-bottom: 30px;
 }
 
 .tranCopXq .boxs .uls2 h4::after {
@@ -1905,12 +1920,17 @@ textarea {
 .employer .box1s .boxl {
 	width: 120px;
 	height: 120px;
-	background: #1EB4B1;
+	
 	border-radius: 10px;
 }
 
 .employer .box1s .boxr {
 	margin-left: 20px;
+}
+.employer .box1s .boxl img{
+	width: 100%;
+	margin-top: 50%;
+	transform: translateY(-50%);
 }
 
 .employer .box1s .boxr p:nth-child(1) {
@@ -1919,7 +1939,12 @@ textarea {
 	font-weight: bold;
 	margin-bottom: 40px;
 }
-
+.xianzhi{
+	display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 5;
+		overflow: hidden;
+}
 .employer .box1s .boxr p span {
 	color: #787878;
 	font-size: 1.6rem;
@@ -2656,6 +2681,10 @@ textarea {
 	text-indent: 2em;
 	line-height: 1.6;
 	letter-spacing: 1px;
+	display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 6;
+		overflow: hidden;
 }
 
 .news .center .boxtwo ul .litwo:nth-child(1) .right .btns {
@@ -2991,6 +3020,10 @@ textarea {
 	line-height: 1.6;
 	letter-spacing: 1px;
 	text-indent: 2em;
+	display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 5; 
+		overflow: hidden;
 }
 
 #wrap .box4 .right .btns {

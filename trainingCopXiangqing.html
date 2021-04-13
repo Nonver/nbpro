@@ -57,9 +57,9 @@
 			<div class="banner">
 				<img src="img/trainingbanner.png" />
 				<div class="title">
-					<h2>实训工厂</h2>
+					<h2>实训工场</h2>
 					<p>TRAINING WORKSHOP</p>
-					<span>实训工厂</span>
+					<span>实训工场</span>
 				</div>
 			</div>
 			<div class="center">
@@ -74,7 +74,7 @@
 							<div class="txts">
 								<div class="txts2">
 									<h6><img src="img/menuwhite.png"/>工场信息</h6>
-									<p>公司名称：<span>{{alls.name}}</span></p>
+									<p>公司名称：<span>{{alls.companyName}}</span></p>
 									<p>公司规模：<span>{{alls.size}}</span></p>
 									<p>实训专业：<span>{{alls.speciality}}</span></p>
 									<p>教职人员：<span>{{alls.personnel}}</span></p>
@@ -170,6 +170,7 @@
 						var D = data.getDate() + ' ';
 						var tit = Y+M+D;
 						that.alls.foundTime = tit;
+						console.log(that.alls)
 					}, "findByTrainingFactoryAll", "get", {
 						
 					}, {});
