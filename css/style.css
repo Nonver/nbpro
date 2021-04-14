@@ -3056,7 +3056,7 @@ strong {
 	right: 12%;
 	top: 50%;
 	padding: 30px 80px;
-
+	height: 560px;
 	transform: translateY(-50%);
 	background: #fff;
 }
