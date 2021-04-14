@@ -63,7 +63,7 @@
 				<!--//人文景观-->
 				<div class="boxtwo">
 					<ul class="ultwo">
-						<li class="litwo" v-for="(items,vals) in alls">
+						<li class="litwo litwo_bannr" v-for="(items,vals) in alls">
 							<div class="left">
 								<img :src="items.imgs" />
 							</div>
@@ -77,34 +77,13 @@
 								<div class="txts">
 									<p v-html="items.introduce">{{items.introduce}}</p>
 								</div>
-								<div class="btns">
+								<div class="btns btns_btn">
 									<a href="newsXiangqing.html" @click="clickxq(items)">
 										<p>更&nbsp;多</p>
 									</a>
 								</div>
 							</div>
 						</li>
-						<!--<li class="litwo">
-							<div class="left">
-								<img src="img/news2.png" />
-							</div>
-							<div class="right">
-								<div class="title">
-									<p>宁海产业学院集训基地启用暨汉峘教育第六期大学生实训开班仪式顺利召开</p>
-								</div>
-								<div class="times">
-									<p>DATE：2020-11-14 </p>
-								</div>
-								<div class="txts">
-									<p>2020年11月13日，宁海产业学院集训基地启用暨汉峘教育第六期大学生实训开班仪式在浙江汉峘模具产业学院（宁海县技工学校）顺利召开。中共宁海县（以下简称县）委组织部副部长、县人力资源和社会保障局（以下简称人社局）党委书记、局长胡小锋、县人社局副局长周必正、县教育副局长...</p>
-								</div>
-								<div class="btns">
-									<a href="###">
-										<p>READ MORE</p>
-									</a>
-								</div>
-							</div>
-						</li>-->
 					</ul>
 				</div>
 			</div>

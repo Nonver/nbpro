@@ -3,15 +3,19 @@
 	padding: 0;
 
 }
-#wrap .box4 .right p>img{
+
+#wrap .box4 .right p>img {
 	display: none;
 }
-#wrap .box4 .right p>p:nth-child(1){
+
+#wrap .box4 .right p>p:nth-child(1) {
 	display: block;
 }
-#wrap .box4 .right p>p{
+
+#wrap .box4 .right p>p {
 	display: none;
 }
+
 .swiper-slide {
 	overflow: hidden;
 }
@@ -1542,14 +1546,14 @@ textarea {
 }
 
 .tranCopXq .center .uls .lis .txts {
-    width: 35%;
-    box-sizing: border-box;
-    padding: 0 20px;
-    background: rgba(0, 0, 0, 0.6);
-    height: 400px;
-    margin-top: -29px;
-    position: relative;
-    left: -11px;
+	width: 35%;
+	box-sizing: border-box;
+	padding: 0 20px;
+	background: rgba(0, 0, 0, 0.6);
+	height: 417px;
+	margin-top: -4px;
+	position: relative;
+	left: 0px;
 }
 
 .tranCopXq .txts2 {}
@@ -1790,6 +1794,7 @@ textarea {
 
 .company .center .boxone .ulone .lione .left {
 	width: 100%;
+	height: 300px;
 }
 
 .company .boxone .ulone .lione .left img {
@@ -2633,6 +2638,7 @@ textarea {
 
 .news .center .boxtwo ul .litwo:nth-child(1) .left img {
 	width: 100%;
+	height: 100%;
 }
 
 .news .center .boxtwo ul .litwo:nth-child(1) .right {
@@ -2658,7 +2664,9 @@ textarea {
 .news .center .boxtwo ul .litwo:nth-child(1) .right {
 	padding: 0;
 	padding: 30px;
+	height: 100%;
 	position: relative;
+	background-color: #E6E6E6;
 }
 
 .news .center .boxtwo ul .litwo:nth-child(1) .right .title {
@@ -2675,9 +2683,11 @@ textarea {
 .news .center .boxtwo ul .litwo:nth-child(1) .right .times {
 	margin: 30px 0;
 }
-
-.news .center .boxtwo ul .litwo .right .txts {
+.news .center .boxtwo ul .litwo:nth-child(2) .right .txts{
 	text-indent: 2em;
+}
+.news .center .boxtwo ul .litwo .right .txts {
+	
 	color: #787878;
 	font-size: 1.6rem;
 	letter-spacing: 1px;
@@ -2688,7 +2698,7 @@ textarea {
 	overflow: hidden;
 	text-overflow: ellipsis;
 	display: -webkit-box;
-	-webkit-line-clamp: 2;
+	-webkit-line-clamp: 3;
 	-webkit-box-orient: vertical;
 }
 
@@ -2750,17 +2760,17 @@ textarea {
 }
 
 .news .center .boxtwo ul .litwo:nth-child(1) .right .btns::after {
-	content: "";
-	position: absolute;
-	width: 8px;
-	height: 8px;
-	border-left: 8px solid #787878;
-	border-top: 8px solid #fff;
-	border-right: 8px solid #fff;
-	border-bottom: 8px solid #fff;
-	left: 120px;
-	top: 50%;
-	transform: translateY(-50%);
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-left: 8px solid #787878;
+    border-top: 8px solid #e6e6e6;
+    border-right: 8px solid #e6e6e6;
+    border-bottom: 8px solid #e6e6e6;
+    left: 50px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .news .center .boxtwo ul .litwo:nth-child(1) .right .btns a {
@@ -3115,7 +3125,7 @@ textarea {
 	width: 76%;
 	position: absolute;
 	left: 50%;
-	top: 50%;
+	top: 61%;
 	transform: translate(-50%, -50%);
 	display: flex;
 	justify-content: space-between;
@@ -3135,7 +3145,7 @@ textarea {
 	font-size: 6.6rem;
 	color: #fff;
 	font-weight: bold;
-	margin-top: 30px;
+	margin-top: 70px;
 	letter-spacing: 2px;
 }
 
@@ -3276,7 +3286,7 @@ textarea {
 }
 
 .newsxq .txts img {
-	height: 500px;
+	height: 400px;
 	margin: 20px 0;
 
 
@@ -3546,8 +3556,32 @@ audio,
 canvas,
 progress,
 video {
-	margin-top: -25px;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
 }
 
 .video-bg {}
 
+#wrap .box5 ul li p>span {
+	font-size: 30px;
+}
+
+.video_s {
+	width: 100%;
+	height: 300px;
+}
+/* 新闻动态 */
+.litwo_bannr:nth-child(1) {
+	height: 500px;
+	overflow: hidden;
+}
+.litwo_bannr>div{
+	height: 100%;
+}
+.right:nth-child(1){
+	background: #E6E6E6;
+}
+.btns_btn{
+	
+}
