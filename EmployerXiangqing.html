@@ -62,7 +62,7 @@
 			<div class="center">
 				<div class="box1">
 					<div class="left">
-						<img :src="img" >
+						<img :src="img">
 					</div>
 					<div class="right">
 						<div class="box1s">
@@ -101,10 +101,46 @@
 									<p><img src="img/dizhihei.png" /><img src="img/dizhibai.png" />{{item.address}}</p>
 								</div>
 								<div class="right">
-									<p><span><img src="img/jinglihei.png" /><img
-												src="img/jinglibai.png" />{{item.workYear}}年</span><span><img
-												src="img/xuelihei.png" /><img
-												src="img/xuelibai.png" />{{item.education}}</span></p>
+									<p v-if="item.education == 1">
+										<span>
+											<img src="img/jinglihei.png" />
+											<img src="img/jinglibai.png" />{{item.workYear}}年
+										</span>
+										<span>
+											<img src="img/xuelihei.png" />
+											<img src="img/xuelibai.png" />大专
+										</span>
+									</p>
+									<p v-if="item.education == 2">
+										<span>
+											<img src="img/jinglihei.png" />
+											<img src="img/jinglibai.png" />{{item.workYear}}年
+										</span>
+										<span>
+											<img src="img/xuelihei.png" />
+											<img src="img/xuelibai.png" />本科
+										</span>
+									</p>
+									<p v-if="item.education == 3">
+										<span>
+											<img src="img/jinglihei.png" />
+											<img src="img/jinglibai.png" />{{item.workYear}}年
+										</span>
+										<span>
+											<img src="img/xuelihei.png" />
+											<img src="img/xuelibai.png" />职专
+										</span>
+									</p>
+									<p v-if="item.education == 4">
+										<span>
+											<img src="img/jinglihei.png" />
+											<img src="img/jinglibai.png" />{{item.workYear}}年
+										</span>
+										<span>
+											<img src="img/xuelihei.png" />
+											<img src="img/xuelibai.png" />不限
+										</span>
+									</p>
 								</div>
 							</div>
 						</li>
@@ -116,7 +152,7 @@
 				<img src="img/footer.png" />
 				<div class="left">
 					<div class="footerwenzi">
-						<img src="img/footerwenzi.png" >
+						<img src="img/footerwenzi.png">
 					</div>
 					<ul>
 						<li>
@@ -143,11 +179,12 @@
 						</li>
 					</ul>
 				</div>
-				
+
 				<div class="down">
 					<div class="text">
 						<a href="###" target="_blank">版权所有 © 宁波软通教育科技公司</a>
-						<a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank"><img src="img/beian.png" />浙公网安备 33022602000429号</a>
+						<a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank"><img
+								src="img/beian.png" />浙公网安备 33022602000429号</a>
 					</div>
 				</div>
 			</div>
@@ -170,7 +207,7 @@
 				alls: '',
 				allsone: '',
 				arr: "",
-				img:''
+				img: ''
 			},
 			methods: {
 				getgs() {
@@ -178,7 +215,7 @@
 					wyq.ajax(function(ret, err, dat) {
 						that.alls = ret;
 					}, "CompanyIdByJob/" + sessionStorage.getItem("idqy"), "get", {
-						
+
 					}, {});
 					wyq.ajax(function(ret, err, dat) {
 						that.allsone = ret[sessionStorage.getItem("xiabiao")];
@@ -187,12 +224,12 @@
 					}, "findAllCompany", "post", {}, {});
 
 					//					请求的所有数据
-					
+
 				}
 			},
 			created() {
 				this.getgs();
-				
+
 			},
 
 		})
