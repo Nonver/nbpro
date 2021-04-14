@@ -3531,14 +3531,16 @@ strong {
 }
 
 .is {
-	position: absolute;
-	display: inline-block;
+	display: block;
+	width: 75px;
+	height: 40px;
 	padding: 10px 20px;
 	border-radius: 20px;
 	border: 1px solid #1EB4B1;
 	color: #1EB4B1;
 	right: 0;
 	bottom: 0;
+	text-align: center;
 }
 
 /*  */
@@ -3605,7 +3607,7 @@ video {
 	color: #787878 !important;
 }
 
-.txts p>span {
+.txts>p>p>span {
 	color: #787878 !important;
 }
 
@@ -3616,7 +3618,8 @@ video {
 	background-position-x: center;
 	background-position-y: center;
 }
-.news .center .boxtwo ul .litwo:not(:first-child) .right .btns:hover>a>p{
+
+.news .center .boxtwo ul .litwo:not(:first-child) .right .btns:hover>a>p {
 	display: none;
 	color: #1eb4b1;
 }
@@ -3639,4 +3642,50 @@ video {
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
+}
+
+.text_span {
+	color: #FFFFFF !important;
+}
+
+/* 乐看宁海 */
+.lookNing {
+	display: flex;
+	flex-direction: revert;
+	height: 250px;
+	margin: 0 0 50px 0;
+}
+
+.lookNing>.left {
+	height: 100% !important;
+}
+
+.lookNing>.left>img {
+	height: 100%;
+
+}
+
+.lookNing>.right {
+	margin-left: 20px;
+}
+
+.is_div {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.lookNing>.right>p>p {
+	display: none;
+}
+
+.lookNing>.right>p>p:nth-child(1) {
+	display: block;
+}
+
+.lookNing>.right {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }

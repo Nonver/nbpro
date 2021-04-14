@@ -77,7 +77,6 @@
 							<div class="imgboxs">
 								<img :src="item.img" />
 							</div>
-							
 							<div class="texts">
 								<a href="scenicXiangqing.html">
 									<p>{{item.name}}</p>
@@ -94,14 +93,18 @@
 					</div>
 					<ul>
 						<li v-for="(items,vals) in allsfood.slice(0,4)" @click="clickmeishi(items)">
-							<div class="left">
-								<img :src="items.img" />
-							</div>
-							<div class="right">
-								<h4>{{items.name}}</h4>
-								<p v-html="items.text">{{items.text}}</p>
-								<strong><span>1512浏览</span></strong>
-								<a class="is" href="foodHappyXiangqing.html">更多</a>
+							<div class="lookNing">
+								<div class="left">
+									<img :src="items.img" />
+								</div>
+								<div class="right">
+									<h4>{{items.name}}</h4>
+									<p v-html="items.text">{{items.text}}</p>
+									<div class="is_div">
+										<strong><span>1512浏览</span></strong>
+										<a class="is" href="foodHappyXiangqing.html">更多</a>
+									</div>
+								</div>
 							</div>
 						</li>
 					</ul>
