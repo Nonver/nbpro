@@ -334,8 +334,9 @@
 				this.getgongc();
 			},
 			mounted() {
-				setInterval(function(){
-					this.vi()
+				let that = this;
+				setTimeout(function(){
+					that.vi()
 				},500)
 				
 			},

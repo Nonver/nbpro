@@ -2924,7 +2924,7 @@ textarea {
 	transform: scale(1.05);
 }
 
-#wrap .box2 ul li:hover p {
+#wrap .box2 ul li p {
 	/*transform: scale(1.1);*/
 	opacity: 1;
 }

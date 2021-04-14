@@ -181,7 +181,7 @@
 				gongcim(){
 					var that = this;
 					wyq.ajax(function(ret, err, dat) {
-						that.alls = ret;
+						that.alls = ret.reverse();
 						for(var j = 0;j <that.alls.length; j++) { 
 							var data = new Date(that.alls[j].uploadTime);
 							var Y = data.getFullYear() + '-'
