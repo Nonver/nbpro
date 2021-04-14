@@ -7,28 +7,29 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/reset.css" />
-		
+
 		<link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<style type="text/css">
 			.swiper-container {
 				width: 100%;
 			}
-			
+
 			.swiper-container {
 				--swiper-pagination-color: #1EB4B1;
 			}
-			
+
 			.swiper-pagination-bullet {
 				border-radius: 0;
 				width: 50px;
-				height: 5px;
+				height: 2px;
 				background: #fff;
 				opacity: 1;
 			}
-			
+
 			.swiper-pagination-bullet-active {
 				width: 70px;
+				height: 5px;
 				background: #1EB4B1;
 			}
 		</style>
@@ -86,8 +87,8 @@
 						<div class="swiper-slide"><img src="img/wrapbanner2.png" /></div>
 						<div class="swiper-slide"><img src="img/wrapbanner3.png" /></div>
 					</div>
-					
-					
+
+
 				</div>
 			</div>
 			<div class="center">
@@ -155,7 +156,9 @@
 					</div>
 					<div class="right">
 						<h3>"1+3N"模式的产业人才培养体系</h3>
-						<p>宁海产业人才学院，构筑聚焦培养宁海“365”产业发展的高技能人才摇篮 利用“1+3N”模式（1个产业学院加一批高校、一批产业、一批人力资 源服务机构） 打造集学习、生活、实训、展示、宣传为一体的产教融合综合场所，计划建造1个集训基地、10个实训工厂和10个高校合作基地 3年内培养5000个学生，着力构建技能人才新高地，打造支撑县域经济 高质量发展的新引擎
+						<p>宁海产业人才学院，构筑聚焦培养宁海“365”产业发展的高技能人才摇篮 利用“1+3N”模式（1个产业学院加一批高校、一批产业、一批人力资 源服务机构）
+							打造集学习、生活、实训、展示、宣传为一体的产教融合综合场所，计划建造1个集训基地、10个实训工厂和10个高校合作基地 3年内培养5000个学生，着力构建技能人才新高地，打造支撑县域经济
+							高质量发展的新引擎
 						</p>
 					</div>
 				</div>
@@ -165,7 +168,7 @@
 				<div class="masks">
 					<div class="swiper-container swipers2">
 						<div class="swiper-wrapper">
-							<div class="swiper-slide" v-for="(item,key) in arrs">
+							<div class="swiper-slide swiper-bouttm" v-for="(item,key) in arrs.slice(0,5)">
 								<img :src="item.imgs" />
 							</div>
 						</div>
@@ -180,101 +183,103 @@
 					</p>
 					<a href="news.html">
 						<div class="btns">
-							<span>MORE</span>
+							<span>更多</span>
 						</div>
 					</a>
 				</div>
 			</div>
 			<div class="box5">
-				<img src="img/wrapbox5bg.png"/>
+				<img src="img/wrapbox5bg.png" />
 				<div class="titles">
 					<h2>职业数据统计</h2>
 					<p>平台数据信息自2015至2021年 定期更新数据 确保数据实时更新准确</p>
 				</div>
 				<ul>
 					<li>
-						<img src="img/wrapbox5img1.png"/>
+						<img src="img/wrapbox5img1.png" />
 						<p>5800+</p>
 					</li>
 					<li>
-						<img src="img/wrapbox5img2.png"/>
+						<img src="img/wrapbox5img2.png" />
 						<p>200+</p>
 					</li>
 					<li>
-						<img src="img/wrapbox5img3.png"/>
+						<img src="img/wrapbox5img3.png" />
 						<p>100+</p>
 					</li>
 					<li>
-						<img src="img/wrapbox5img4.png"/>
+						<img src="img/wrapbox5img4.png" />
 						<p>75%</p>
 					</li>
-					
+
 				</ul>
 			</div>
 			<div class="box6">
-				<a href="company.html"><ul>
-					<li>
-						<img src="img/school1.png"/>
-					</li>
-					<li>
-						<img src="img/school2.png"/>
-					</li>
-					<li>
-						<img src="img/school3.png"/>
-					</li>
-					<li>
-						<img src="img/school4.png"/>
-					</li>
-					<li>
-						<img src="img/school5.png"/>
-					</li>
-					<li>
-						<img src="img/school6.png"/>
-					</li>
-					<li>
-						<img src="img/school7.png"/>
-					</li>
-					<li>
-						<img src="img/school8.png"/>
-					</li>
-				</ul>
+				<a href="company.html">
+					<ul>
+						<li>
+							<img src="img/school1.png" />
+						</li>
+						<li>
+							<img src="img/school2.png" />
+						</li>
+						<li>
+							<img src="img/school3.png" />
+						</li>
+						<li>
+							<img src="img/school4.png" />
+						</li>
+						<li>
+							<img src="img/school5.png" />
+						</li>
+						<li>
+							<img src="img/school6.png" />
+						</li>
+						<li>
+							<img src="img/school7.png" />
+						</li>
+						<li>
+							<img src="img/school8.png" />
+						</li>
+					</ul>
 				</a>
 			</div>
 			<div class="box7">
-				<img src="img/wrapbox4bg.png"/>
+				<img src="img/wrapbox4bg.png" />
 				<div class="masks">
-					<img src="img/wrapbox7imgs.png"/>
+					<img src="img/wrapbox7imgs.png" />
 				</div>
 			</div>
 			<div class="box8">
 				<div class="titles">
 					<h2>实训工场</h2>
-<<<<<<< HEAD:index.html
 					<p>TRAINING FACTOR</p>
-=======
-					
 					<p>TRAINING WORKSHOP</p>
->>>>>>> 9067ebd34c74e9020c05b4e34dd1956970c89152:wrap.html
 				</div>
 				<ul>
-					<li v-for="(item,val) in alls.slice(0,6)" @click="clickgongc(val)" >
-						<video width="100%" controls="controls">
-								<source :src="item.video" type="video/mp4"></source>
+					<li v-for="(item,val) in alls.slice(0,6)" @click="clickgongc(val)">
+						<video poster="img/fengm.jpg" width="100%" controls="controls">
+							<source :src="item.video" type="video/mp4">
+							</source>
 						</video>
+						<div class="video-bg"></div>
 						<a href="trainingCopXiangqing.html">
-						<p>{{item.companyName}}</p>
-						<span><img src="img/detastimes.png"/>{{item.foundTime}}</span>
+							<p>{{item.companyName}}</p>
+							<span class="li-sp">
+								<img src="img/detastimes.png" />
+								<span>{{item.foundTime}}</span>
+							</span>
 						</a>
 					</li>
-					
-					
+
+
 				</ul>
 			</div>
 			<div class="footer">
 				<img src="img/footer.png" />
 				<div class="left">
 					<div class="footerwenzi">
-						<img src="img/footerwenzi.png" >
+						<img src="img/footerwenzi.png">
 					</div>
 					<ul>
 						<li>
@@ -301,11 +306,12 @@
 						</li>
 					</ul>
 				</div>
-				
+
 				<div class="down">
 					<div class="text">
 						<a href="###" target="_blank">版权所有 © 宁波软通教育科技公司</a>
-						<a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank"><img src="img/beian.png" />浙公网安备 33022602000429号</a>
+						<a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank"><img
+								src="img/beian.png" />浙公网安备 33022602000429号</a>
 					</div>
 				</div>
 			</div>
@@ -320,17 +326,18 @@
 	<script src="js/wyq.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
 		var ve = new Vue({
-			el:"#wrap",
-			data:{
-				alls:"",
-				arrs:"",
-				name:""
+			el: "#wrap",
+			data: {
+				alls: "",
+				arrs: "",
+				name: ""
 			},
-			created(){
+			created() {
 				this.getgongc();
 			},
-			mounted(){
+			mounted() {
 				this.vi()
+				
 			},
 			updated() {
 				var mySwiper1 = new Swiper('.swipers1', {
@@ -350,7 +357,7 @@
 						delay: 2000,
 						disableOnInteraction: false,
 					},
-				
+
 					// 如果需要分页器
 					pagination: {
 						el: '.swiper-pagination',
@@ -372,22 +379,23 @@
 					sessionStorage.setItem("xiabiao", e);
 
 				},
-				vi(){
+				vi() {
 					var that = this;
 					wyq.ajax(function(ret, err, dat) {
-						for(var j = 0;j <ret.length; j++) {
+						for (var j = 0; j < ret.length; j++) {
 							var data = new Date(ret[j].foundTime);
 							var Y = data.getFullYear() + '-'
-							var M = (data.getMonth()+1 < 10 ? '0'+(data.getMonth()+1) : data.getMonth()+1) + '-';
+							var M = (data.getMonth() + 1 < 10 ? '0' + (data.getMonth() + 1) : data
+							.getMonth() + 1) + '-';
 							var D = data.getDate() + ' ';
-							var tit = Y+M+D;
+							var tit = Y + M + D;
 							ret[j].foundTime = tit;
 						};
 						that.alls = ret;
 					}, "findByTrainingFactoryAll", "get", {}, {});
 				}
 			}
-			
+
 		})
 	</script>
 

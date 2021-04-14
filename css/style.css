@@ -680,9 +680,7 @@ textarea {
 	position: relative;
 }
 
-.looks .center .box2 ul li .right a {
-
-}
+.looks .center .box2 ul li .right a {}
 
 .looks .center .box2 {
 	margin-bottom: 100px;
@@ -831,6 +829,7 @@ textarea {
 }
 
 .scenicXq .center .box1 .right p {
+	margin: 10px 0;
 	font-size: 1.4rem;
 	color: #000;
 }
@@ -1524,7 +1523,6 @@ textarea {
 	justify-content: space-between;
 	align-items: center;
 	margin: 30px 0;
-	background: rgba(0, 0, 0, 0.6);
 }
 
 .tranCopXq .center .uls .lis .imgbox {
@@ -1536,9 +1534,14 @@ textarea {
 }
 
 .tranCopXq .center .uls .lis .txts {
-	width: 35%;
-	box-sizing: border-box;
-	padding: 0 20px;
+    width: 35%;
+    box-sizing: border-box;
+    padding: 0 20px;
+    background: rgba(0, 0, 0, 0.6);
+    height: 400px;
+    margin-top: -29px;
+    position: relative;
+    left: -11px;
 }
 
 .tranCopXq .txts2 {}
@@ -1852,6 +1855,7 @@ textarea {
 
 .company .center .boxthree .ulthree .lithree .left {
 	width: 100%;
+	height: 280px;
 }
 
 .company .boxthree .ulthree .lithree .left img {
@@ -2106,6 +2110,8 @@ textarea {
 	border: 2px solid blue;
 	height: 260px;
 	margin: 30px 0;
+	border-radius: 10px;
+	overflow: hidden;
 }
 
 .mechanism .center .box1 ul li h3 {
@@ -2714,7 +2720,7 @@ textarea {
 	right: 0;
 	bottom: 30px;
 	height: 60px;
-	line-height: 30px;
+	line-height: 60px;
 	color: #1EB4B1;
 }
 
@@ -3109,7 +3115,7 @@ textarea {
 }
 
 #wrap .box5 ul li {
-	width: 20%;
+	width: 15%;
 }
 
 #wrap .box5 ul li img {
@@ -3118,7 +3124,7 @@ textarea {
 
 #wrap .box5 ul li p {
 	text-align: center;
-	font-size: 5rem;
+	font-size: 6.6rem;
 	color: #fff;
 	font-weight: bold;
 	margin-top: 30px;
@@ -3212,14 +3218,13 @@ textarea {
 	width: 32%;
 	margin-left: 1%;
 	float: left;
-	margin-bottom: 1%;
+	margin-bottom: 5%;
 	background: #fff;
 }
 
 #wrap .box8 ul li span img {
-	width: 20px;
+	width: 15px;
 	vertical-align: middle;
-	margin-right: 20px;
 }
 
 #wrap .box8 ul li img {
@@ -3227,20 +3232,20 @@ textarea {
 }
 
 #wrap .box8 ul li p {
-	font-size: 2rem;
+	font-size: 2.1rem;
 	color: #000;
-	padding: 10px;
-	margin-bottom: 18px;
-	margin-top: 10px;
+	padding-left: 10px;
+	/* margin-bottom: 18px; */
+	margin-top: 5px;
 }
 
 #wrap .box8 ul li span {
-	padding: 10px;
-	font-size: 2.4rem;
+	/* padding: 10px; */
+	/* font-size: 2.4rem; */
 	color: #787878;
 	display: inline-block;
 	line-height: 2;
-	margin-bottom: 30px;
+	margin-bottom: 5px;
 }
 
 .newsxq .titles {
@@ -3435,7 +3440,8 @@ textarea {
 
 .newsxq .txts p {
 	text-indent: 2em;
-	line-height: 1.6;
+	line-height: 2.6;
+	font-size: 16px;
 
 }
 
@@ -3503,3 +3509,37 @@ textarea {
 	right: 0;
 	bottom: 0;
 }
+
+/*  */
+
+.swiper-bouttm {
+	height: 560px;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+	bottom: 30px;
+}
+
+.swiper-pagination-bullet {
+	height: 3px;
+}
+
+.li-sp {
+	margin-left: 10px;
+}
+
+.li-sp>span {
+	margin-left: 5px;
+}
+
+audio,
+canvas,
+progress,
+video {
+	margin-top: -25px;
+}
+
+.video-bg {}
+

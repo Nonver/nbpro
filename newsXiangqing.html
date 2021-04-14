@@ -153,18 +153,22 @@
 				arrs: [],
 			},
 			created() {
-				this.xwxq();
 				this.gongcim();
 			},
 			mounted() {
-			
+				let that = this;
+				setTimeout(function(){
+					that.xwxq();
+				},500)
 			},
-			
+			updated() {
+				
+				
+			},
 			methods: {
 				xwxq() {
 					var that = this;
 					wyq.ajax(function(ret, err, dat) {
-						console.log(ret)
 						that.alls = ret[0];
 						console.log(that.alls)
 						var data = new Date(that.alls.uploadTime);
@@ -174,9 +178,7 @@
 						var D = data.getDate();
 						var tit = Y + M + D;
 						that.alls.uploadTime = tit;
-					}, "getIdByCollegeNews/" + sessionStorage.getItem("xwid") , "post", {
-						
-					}, {});
+					}, "getIdByCollegeNews/" + sessionStorage.getItem("xwid") , "post", {}, {});
 					
 				},
 				clicks(e){
