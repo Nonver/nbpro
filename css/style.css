@@ -3,7 +3,15 @@
 	padding: 0;
 
 }
-
+#wrap .box4 .right p>img{
+	display: none;
+}
+#wrap .box4 .right p>p:nth-child(1){
+	display: block;
+}
+#wrap .box4 .right p>p{
+	display: none;
+}
 .swiper-slide {
 	overflow: hidden;
 }
