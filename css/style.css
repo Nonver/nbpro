@@ -602,7 +602,7 @@ textarea {
 
 
 .looks .center .box1 ul li .texts p {
-
+color: #FFFFFF;
 	font-size: 2rem;
 	line-height: 1.6;
 }
@@ -1146,7 +1146,10 @@ textarea {
 strong {
 	color: #787878 !important;
 }
-
+.TpContent>div:nth-child(2)>div>div:hover{
+	background-color: #689895;
+	color: #FFF;
+}
 .TpContent>div:nth-child(2)>div>div {
 	cursor: pointer;
 	font-size: 15px;
@@ -1207,14 +1210,16 @@ strong {
 
 .TpContent:nth-child(2)>div:nth-child(2)>div>div:hover {
 	cursor: pointer;
+	background-color: #f98219;
 	border: 1px solid #f98219;
-	color: #f98219 !important;
+	color: #FFF !important;
 }
 
 .TpContent:nth-child(3)>div:nth-child(2)>div>div:hover {
 	cursor: pointer;
 	border: 1px solid #feb815;
-	color: #feb815 !important;
+	background-color: #feb815;
+	color: #FFF !important;
 }
 
 /*产业人才*/
@@ -2750,6 +2755,7 @@ strong {
 	height: 60px;
 	line-height: 60px;
 	color: #1EB4B1;
+	transition: .3s all;
 }
 
 .news .center .boxtwo ul .litwo:not(:first-child) .right .btns a {
@@ -3409,12 +3415,11 @@ strong {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	height: 80px;
 	border-bottom: 1px solid #e6e6e6;
 }
 
 .bs-callout>h2 {
-	margin-left: 20px;
+	margin: 0 0 0 20px;
 }
 
 .bs-callout>span {
@@ -3424,7 +3429,10 @@ strong {
 	background: #1eb1b8;
 }
 
-.paragraph {}
+.paragraph {
+	font-size: 15px;
+	line-height: 26px;
+}
 
 .paragraph>p {
 	text-indent: 2rem;
@@ -3529,8 +3537,11 @@ strong {
 	font-size: 2.1rem;
 	color: #000;
 }
-
+.is:hover{
+	color: #1EB4B1;
+}
 .is {
+	font-size: 15px;
 	display: block;
 	width: 75px;
 	height: 40px;
@@ -3617,6 +3628,7 @@ video {
 	background-repeat: no-repeat;
 	background-position-x: center;
 	background-position-y: center;
+	transition: .3s all;
 }
 
 .news .center .boxtwo ul .litwo:not(:first-child) .right .btns:hover>a>p {
@@ -3688,4 +3700,19 @@ video {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+}
+
+/* 伪类 */
+#wrap .box6 ul li {
+	transition: all .8s;
+}
+
+#wrap .box6 ul li:hover {
+	transition: all .8s;
+	border: 2px solid #f2f0f1;
+	transform: rotate(1deg);
+	-ms-transform: rotate(1deg);
+	/* IE 9 */
+	-webkit-transform: rotate(1deg);
+	/* Safari and Chrome */
 }

@@ -74,14 +74,14 @@
 
 					<ul>
 						<li v-for="(item,val) in alls.slice(0,8)" @click="clickmeishi(item)">
-							<div class="imgboxs">
-								<img :src="item.img" />
-							</div>
-							<div class="texts">
-								<a href="scenicXiangqing.html">
+							<a href="scenicXiangqing.html">
+								<div class="imgboxs">
+									<img :src="item.img" />
+								</div>
+								<div class="texts">
 									<p>{{item.name}}</p>
-								</a>
-							</div>
+								</div>
+							</a>
 						</li>
 					</ul>
 				</div>
