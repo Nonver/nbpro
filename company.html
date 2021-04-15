@@ -79,18 +79,18 @@
 						<li class="lione" v-for="(items,vals) in allsthree" @click="click(items,vals)">
 							<a href="EmployerXiangqing.html">
 							<div class="left">
-								<video poster="img/fengm.jpg" width="100%" height="300" controls="controls">
+								<video poster="img/fengmV2.jpg" width="100%" height="300" controls="controls">
 									<source :src="items.video" type="video/mp4"></source>
 								</video>
 							</div>
 							<div class="right">
 								<p>{{items.name}}</p>
 								<p>
-									<span>
-										<img src="img/companypeople.png"/>{{items.size}}
-									</span>
-									<span v-if="items.type == 2">
-									<img src="img/companyqiye.png"/>民营企业</span><span v-else><img src="img/companyqiye.png"/>国营企业</span><span><img src="img/companyhangye.png"/>{{items.industry}}</span></p>
+									<span><img src="img/companypeople.png"/>{{items.size}}</span>
+									<span v-if="items.enterpriseType == 2"><img src="img/companyqiye.png"/>民营企业</span>
+									<span v-if="items.enterpriseType == 1"><img src="img/companyqiye.png"/>国营企业</span>
+									<span><img src="img/companyhangye.png"/>{{items.industry}}</span>
+									</p>
 							</div>
 							</a>
 						</li>
@@ -128,17 +128,17 @@
 				<img src="img/footer.png" />
 				<div class="left">
 					<div class="footerwenzi">
-						<img src="img/footerwenzi.png" >
+						<img src="img/footerwenzi.png">
 					</div>
 					<ul>
 						<li>
-							<p><img src="img/footerphone.png" />0574-88888888</p>
+							<p><img src="img/footerphone.png" />18701830309</p>
 						</li>
 						<li>
-							<p><img src="img/footeremil.png" />webmaster@tsinghua.edu.cn</p>
+							<p><img src="img/footeremil.png" />xiaotuizi0220@126.com</p>
 						</li>
 						<li>
-							<p><img src="img/footerdizhi.png" />宁海县技工学校</p>
+							<p><img src="img/footerdizhi.png" />浙江省宁波市宁海县越溪乡工匠路99号</p>
 						</li>
 					</ul>
 				</div>
@@ -155,11 +155,12 @@
 						</li>
 					</ul>
 				</div>
-				
 				<div class="down">
 					<div class="text">
-						<a href="###" target="_blank">版权所有 © 宁波软通教育科技公司</a>
-						<a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank"><img src="img/beian.png" />浙公网安备 33022602000429号</a>
+						<a href="###" target="_blank">版权所有 © 宁海产业人才学院</a>
+						<a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">
+							<img src="img/beian.png" />浙公网安备 33022602000429号
+						</a>
 					</div>
 				</div>
 			</div>
@@ -203,6 +204,7 @@
 					
 					wyq.ajax(function(ret, err, dat) {
 						that.allsthree = ret
+						console.log(ret)
 					}, "findAllCompany", "post", {}, {});
 					wyq.ajax(function(ret, err, dat) {
 						that.allstwo = ret

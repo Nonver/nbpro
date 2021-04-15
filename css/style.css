@@ -3709,10 +3709,30 @@ video {
 
 #wrap .box6 ul li:hover {
 	transition: all .8s;
-	border: 2px solid #f2f0f1;
-	transform: rotate(1deg);
-	-ms-transform: rotate(1deg);
-	/* IE 9 */
-	-webkit-transform: rotate(1deg);
-	/* Safari and Chrome */
+	transform: scale(1.05);
+}
+/* 小于1680px执行 */
+@media screen and (max-width: 1680px) {
+	.tranCopXq .center .uls .lis .txts{
+	    height: 364px;
+	    left: -1px;
+	}
+}
+@media screen and (max-width: 1650px) {
+	.tranCopXq .center .uls .lis .txts{
+	    height: 355px;
+	    left: 0px;
+	}
+}
+@media screen and (max-width: 1550px) {
+	.tranCopXq .center .uls .lis .txts{
+	    height: 341px;
+	    left: 0px;
+	}
+}
+@media screen and (max-width: 1500px) {
+	.tranCopXq .center .uls .lis .txts{
+	    height: 322px;
+	    left: 0px;
+	}
 }
