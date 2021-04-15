@@ -88,13 +88,14 @@
 					</ol>
 					<div class="carousel-inner" role="listbox">
 						<div class="item active">
-							<div class="item_bg_1 item_bg"></div>
+							<img class="lazyload" width="1000" height="60" data-original="img/wrapbanner1.png" />
+							
 						</div>
 						<div class="item">
-							<div class="item_bg_2 item_bg"></div>
+							<img src="img/wrapbanner2.png" />
 						</div>
 						<div class="item">
-							<div class="item_bg_3 item_bg"></div>
+							<img src="img/wrapbanner3.png" />
 						</div>
 					</div>
 					<!-- Controls -->
@@ -172,9 +173,9 @@
 					<div class="left">
 						<div><img src="img/wrapbox_1.png" alt=""></div>
 						<div>
-							<div><a href="#"><img src="img/wrapbox_2.png" alt=""></a></div>
-							<div><a href="#"><img src="img/wrapbox_3.png" alt=""></a></div>
-							<div><a href="#"><img src="img/wrapbox_4.png" alt=""></a></div>
+							<div><a href="mechanism.html"><img src="img/wrapbox_2.png" alt=""></a></div>
+							<div><a href="company.html"><img src="img/wrapbox_3.png" alt=""></a></div>
+							<div><a href="company.html"><img src="img/wrapbox_4.png" alt=""></a></div>
 						</div>
 					</div>
 					<div class="right">
@@ -350,6 +351,7 @@
 		</div>
 	</body>
 	<script src="js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/lazyload.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/swiper-bundle.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
@@ -358,6 +360,8 @@
 	<script src="js/axios.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/wyq.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
+		$(function() {
+		    $("img.lazyload").lazyload()});
 		var ve = new Vue({
 			el: "#wrap",
 			data: {
