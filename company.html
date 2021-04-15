@@ -48,7 +48,7 @@
 						<a href="lookNinghai.html">乐看宁海</a>
 					</li>
 					<li>
-						<a href="aboutXueyuan.html" >关于学院</a>
+						<a href="aboutXueyuan.html">关于学院</a>
 					</li>
 				</ul>
 			</div>
@@ -63,10 +63,10 @@
 			<div class="center">
 				<div class="top">
 					<ul>
-						<li>
+						<li :class="clssIs">
 							<p>用人单位</p>
 						</li>
-						<li class="active">
+						<li :class="clssIsr">
 							<p>合作高校</p>
 						</li>
 						<li>
@@ -74,29 +74,32 @@
 						</li>
 					</ul>
 				</div>
-				<div class="boxs boxone">
+				<div :class="boxs">
 					<ul class="ulone">
 						<li class="lione" v-for="(items,vals) in allsthree" @click="click(items,vals)">
 							<a href="EmployerXiangqing.html">
-							<div class="left">
-								<video poster="img/fengmV2.jpg" width="100%" height="300" controls="controls">
-									<source :src="items.video" type="video/mp4"></source>
-								</video>
-							</div>
-							<div class="right">
-								<p>{{items.name}}</p>
-								<p>
-									<span><img src="img/companypeople.png"/>{{items.size}}</span>
-									<span v-if="items.enterpriseType == 2"><img src="img/companyqiye.png"/>民营企业</span>
-									<span v-if="items.enterpriseType == 1"><img src="img/companyqiye.png"/>国营企业</span>
-									<span><img src="img/companyhangye.png"/>{{items.industry}}</span>
+								<div class="left">
+									<video poster="img/fengmV2.jpg" width="100%" height="300" controls="controls">
+										<source :src="items.video" type="video/mp4">
+										</source>
+									</video>
+								</div>
+								<div class="right">
+									<p>{{items.name}}</p>
+									<p>
+										<span><img src="img/companypeople.png" />{{items.size}}</span>
+										<span v-if="items.enterpriseType == 2"><img
+												src="img/companyqiye.png" />民营企业</span>
+										<span v-if="items.enterpriseType == 1"><img
+												src="img/companyqiye.png" />国营企业</span>
+										<span><img src="img/companyhangye.png" />{{items.industry}}</span>
 									</p>
-							</div>
+								</div>
 							</a>
 						</li>
 					</ul>
 				</div>
-				<div class="boxtwo boxs active">
+				<div :class="boxr">
 					<div class="title">
 						<h2>合作高校接洽培训</h2>
 						<p>与多所高校达成长期合作 学院培训</p>
@@ -115,7 +118,7 @@
 					<ul class="ulthree">
 						<li class="lithree" v-for="(item,val) in allstwo">
 							<div class="left">
-								<img :src="item.img"/>
+								<img :src="item.img" />
 							</div>
 							<div class="right">
 								<p>{{item.name}}</p>
@@ -173,44 +176,55 @@
 	<script src="js/axios.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/wyq.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
+
 		var ve = new Vue({
-			el:"#company",
-			data:{
-				allsone:"",
-				allsthree:"",
+			el: "#company",
+			data: {
+				allsone: "",
+				allsthree: "",
+				clssIs:"",
+				clssIsr:"active",
+				boxr:"boxtwo boxs active",
+				boxs:"boxs boxone",
 			},
-			created(){
+			created() {
 				this.getone();
-			},
-			mounted() {
 				
 			},
-			methods:{
-				an(e){
+			mounted() {
+				let path = window.location.href.split("?") //分割url
+				let key = path[1].substring(4,5);
+				if(key == 1){
+					this.clssIs = "active"
+					this.clssIsr = ""
+					this.boxr="boxtwo boxs"
+					this.boxs="boxs boxone active"
+				}
+			},
+			methods: {
+				an(e) {
 					let key = e.path[2].dataset.key;
-					for(let i=0;i<this.allsone.length;i++){
-						if(this.allsone[i].id == key){
+					for (let i = 0; i < this.allsone.length; i++) {
+						if (this.allsone[i].id == key) {
 							// console.log(this.allsone[i])
 							localStorage.setItem("data", JSON.stringify(this.allsone[i]));
 						}
 					}
 				},
-				getone(){
+				getone() {
 					var that = this;
-					
 					wyq.ajax(function(ret, err, dat) {
 						that.allsone = ret
 					}, "findByPartnerAll", "get", {}, {});
-					
+
 					wyq.ajax(function(ret, err, dat) {
 						that.allsthree = ret
-						console.log(ret)
 					}, "findAllCompany", "post", {}, {});
 					wyq.ajax(function(ret, err, dat) {
 						that.allstwo = ret
 					}, "findByCooperativeAll", "get", {}, {});
 				},
-				click(e,ind){
+				click(e, ind) {
 					// console.log(e.id);
 					sessionStorage.setItem("idqy", e.id);
 					sessionStorage.setItem("xiabiao", ind);
@@ -242,7 +256,6 @@
 			$(".center .top li").removeClass("active").eq(cl).addClass("active");
 			$(".company .center .boxs").removeClass("active").eq(cl).addClass("active");
 		});
-		
 	</script>
 
 </html>
