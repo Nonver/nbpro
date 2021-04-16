@@ -59,8 +59,21 @@
 	display: flex;
 	color: #FFF;
 	align-items: center;
+}
 
-	justify-content: space-between;
+/* 时光轴 */
+.soft_fluid>div:nth-child(3)>div>span:nth-child(1) {}
+
+.soft_fluid>div:nth-child(3)>div>span:nth-child(2) {
+	margin-left: 224px;
+}
+
+.soft_fluid>div:nth-child(3)>div>span:nth-child(3) {
+	margin-left: 350px;
+}
+
+.soft_fluid>div:nth-child(3)>div>span:nth-child(4) {
+	margin-left: 230px;
 }
 
 .soft_fluid>div>div>div {
@@ -74,15 +87,25 @@
 	left: 54%;
 }
 
+.soft_fluid>div>div>div>h5 {
+	font-size: 32px;
+}
+
+.soft_fluid>div>div>div>p {
+	font-size: 17px;
+}
+
 .soft_fluid {
-	height: 62rem;
+	height: 70rem;
 	background-image: url(../img/mechanisimgbox3.png);
 	background-size: 100% 100%;
 }
 
+.alir {}
+
 .soft_fluid>div:nth-child(4) {
 	position: relative;
-	top: 38%;
+	top: 35%;
 }
 
 .soft_fluid>div:nth-child(3) {
@@ -93,22 +116,22 @@
 
 .soft_fluid>div:nth-child(2)>div:nth-child(1) {
 	position: absolute;
-	left: 14.5%;
+	left: 18.5%;
 }
 
 .soft_fluid>div:nth-child(2)>div:nth-child(2) {
 	position: absolute;
-	left: 56.2%;
+	left: 50.2%;
 }
 
 .soft_fluid>div:nth-child(4)>div:nth-child(1) {
 	position: absolute;
-	left: 35%;
+	left: 31%;
 }
 
 .soft_fluid>div:nth-child(4)>div:nth-child(2) {
 	position: absolute;
-	left: 73%;
+	left: 62%;
 }
 
 /* ------------------------------------------------------- */
@@ -196,6 +219,7 @@
 .kc {
 	padding-left: 0 !important;
 	padding-right: 0 !important;
+	margin-top: 20px;
 }
 
 .kc-header {
@@ -214,7 +238,7 @@
 
 .kc_img {
 	position: absolute;
-	top: 15%;
+	top: 18%;
 }
 
 /* 开发 */
@@ -222,34 +246,58 @@
 	color: #000000;
 	text-align: center;
 }
-.java{
+
+.java {
 	margin: 70px 0;
 	background-image: url(../img/mechanisimgbox3.png);
 	background-size: 100% 100%;
 }
-.java img{
+
+.java img {
 	padding: 30px 0 60px 0;
 }
+
 .kf>a {
-display: block;
-    background: #1EB4B1;
-    color: #fff;
-    width: 70%;
-    margin: auto;
-    padding: 10px 0;
-    margin-top: 20px;
-    border-radius: 5px;
+	display: block;
+	background: #1EB4B1;
+	color: #fff;
+	width: 70%;
+	margin: auto;
+	padding: 10px 0;
+	margin-top: 20px;
+	border-radius: 5px;
+}
+
+.alir-1 {
+	position: relative;
+	top: 52px;
 }
 
 /* 媒体查询 */
 @media screen and (max-width: 1680px) {
+	.soft_fluid>div:nth-child(1) {
+		position: relative;
+		top: 26px;
+	}
+	.soft_fluid>div>div>div>h5 {
+		font-size: 27px;
+	}
+
+	.soft_fluid>div>div>div>p {
+		font-size: 17px;
+	}
+
+	.soft_fluid>div:nth-child(2)>div:nth-child(1) {
+		left: 17%;
+	}
+
 	.soft_fluid>div:nth-child(4) {
 		position: relative;
-		top: 33%;
+		top: 40%;
 	}
 
 	.soft_fluid {
-		height: 50rem;
+		height: 70rem;
 	}
 
 	.container-fluid {
@@ -258,29 +306,29 @@ display: block;
 		padding-right: 15px;
 	}
 
-	.img-rounded {
-		width: 25%;
-	}
-
 	.soft_fluid>div:nth-child(3) {
 		max-width: 1000px;
-		top: 24%;
+		top: 30%;
 		left: -2.5%;
 	}
 
 	.soft_fluid>div>div>div {
 		padding-left: 0;
 		position: relative;
-		left: -25px;
+		left: 20px;
+	}
+
+	.soft_fluid>div:nth-child(2)>div:nth-child(2) {
+		left: 53.3%;
 	}
 
 	.soft_fluid>div:nth-child(4)>div:nth-child(1) {
 		top: -49px;
-		left: 33%;
+		left: 31%;
 	}
 
 	.soft_fluid>div:nth-child(4)>div:nth-child(2) {
-		left: 74%;
+		left: 68%;
 		top: -49px;
 	}
 }
@@ -329,9 +377,10 @@ display: block;
 }
 
 @media screen and (max-width: 1000px) {
-	.kf{
+	.kf {
 		margin-top: 75px;
 	}
+
 	.sof_img {
 		display: flex;
 		flex-direction: column;
