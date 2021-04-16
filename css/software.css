@@ -1,0 +1,364 @@
+/* 百分比布局 */
+.container-fluid {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.img-rounded {
+	border-radius: 0;
+}
+
+.img {
+	width: 100%;
+}
+
+.software {
+	position: relative;
+}
+
+.software>img {
+	width: 100%;
+	margin: 10px 0 0 0;
+}
+
+.sof_img {
+	display: flex;
+	flex-direction: column;
+	width: 535px;
+	position: absolute;
+	top: 110px;
+	right: -40px;
+}
+
+/* 图片 */
+.sof_img>img:nth-child(1) {}
+
+.sof_img>img:nth-child(2) {
+	width: 150px;
+	position: absolute;
+	top: 61px;
+}
+
+/* 第三屏 */
+
+.soft_fluid>div {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 20px auto;
+	position: relative;
+}
+
+.soft_fluid>div:nth-child(3) {
+	max-width: 1200px;
+	position: relative;
+	top: 33%;
+}
+
+.soft_fluid>div>div {
+	display: flex;
+	color: #FFF;
+	align-items: center;
+
+	justify-content: space-between;
+}
+
+.soft_fluid>div>div>div {
+	padding-left: 20px;
+}
+
+/* 媒体查询 适配 */
+.sof_ico {
+	position: absolute;
+	top: 51%;
+	left: 54%;
+}
+
+.soft_fluid {
+	height: 62rem;
+	background-image: url(../img/mechanisimgbox3.png);
+	background-size: 100% 100%;
+}
+
+.soft_fluid>div:nth-child(4) {
+	position: relative;
+	top: 38%;
+}
+
+.soft_fluid>div:nth-child(3) {
+	max-width: 1200px;
+	position: relative;
+	top: 33%;
+}
+
+.soft_fluid>div:nth-child(2)>div:nth-child(1) {
+	position: absolute;
+	left: 14.5%;
+}
+
+.soft_fluid>div:nth-child(2)>div:nth-child(2) {
+	position: absolute;
+	left: 56.2%;
+}
+
+.soft_fluid>div:nth-child(4)>div:nth-child(1) {
+	position: absolute;
+	left: 35%;
+}
+
+.soft_fluid>div:nth-child(4)>div:nth-child(2) {
+	position: absolute;
+	left: 73%;
+}
+
+/* ------------------------------------------------------- */
+.soft_fluid>div:nth-child(3)>div {
+	width: 100%;
+	transition: all .5s;
+	background: #FFF;
+	height: 1px;
+	animation: fluid .5s infinite;
+	/*Safari 和 Chrome:*/
+	-webkit-animation: fluid .5s infinite;
+	animation-iteration-count: 1;
+	-webkit-animation-iteration-count: 1;
+	/* Safari 和 Chrome */
+}
+
+@keyframes fluid {
+	0% {
+		width: 10%;
+	}
+
+	100% {
+		width: 100%;
+	}
+}
+
+.soft_fluid>div:nth-child(3)>div>span {
+	display: block;
+	width: 10px;
+	height: 10px;
+	background: #fff;
+	border-radius: 50%;
+}
+
+.soft_fluid>.The-header {
+	margin: auto;
+	color: #FFF;
+	padding: 20px 0;
+	justify-content: center;
+}
+
+/* span */
+.sof_span {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 340px;
+	position: absolute;
+	top: 230px;
+	right: 185px;
+}
+
+.sof_span>span {
+	display: block;
+	width: 73px;
+	text-align: center;
+}
+
+.The-tab {
+	width: 500px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: end;
+	position: absolute;
+	top: 48%;
+	left: 6%;
+}
+
+.The-tab>span {
+	display: inline-block;
+	width: 30%;
+	text-align: center;
+	border-radius: 10px;
+	background: #1EB4B1;
+	padding: 10px 0;
+	margin-right: 1%;
+	margin-bottom: 2%;
+	color: #fff;
+	font-size: 1.6rem;
+}
+
+/* 课程介绍 */
+.kc {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+.kc-header {
+	position: absolute;
+	top: 0;
+	border-bottom: 0;
+	width: 1000px;
+	color: #FFF;
+	text-align: center;
+}
+
+.kc-cont {
+	display: flex;
+	justify-content: center;
+}
+
+.kc_img {
+	position: absolute;
+	top: 15%;
+}
+
+/* 开发 */
+.kf {
+	color: #000000;
+	text-align: center;
+}
+.java{
+	margin: 70px 0;
+	background-image: url(../img/mechanisimgbox3.png);
+	background-size: 100% 100%;
+}
+.java img{
+	padding: 30px 0 60px 0;
+}
+.kf>a {
+display: block;
+    background: #1EB4B1;
+    color: #fff;
+    width: 70%;
+    margin: auto;
+    padding: 10px 0;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+/* 媒体查询 */
+@media screen and (max-width: 1680px) {
+	.soft_fluid>div:nth-child(4) {
+		position: relative;
+		top: 33%;
+	}
+
+	.soft_fluid {
+		height: 50rem;
+	}
+
+	.container-fluid {
+
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	.img-rounded {
+		width: 25%;
+	}
+
+	.soft_fluid>div:nth-child(3) {
+		max-width: 1000px;
+		top: 24%;
+		left: -2.5%;
+	}
+
+	.soft_fluid>div>div>div {
+		padding-left: 0;
+		position: relative;
+		left: -25px;
+	}
+
+	.soft_fluid>div:nth-child(4)>div:nth-child(1) {
+		top: -49px;
+		left: 33%;
+	}
+
+	.soft_fluid>div:nth-child(4)>div:nth-child(2) {
+		left: 74%;
+		top: -49px;
+	}
+}
+
+
+
+@media screen and (max-width: 1200px) {
+	.The-tab {
+		width: 410px;
+	}
+
+	.page-header.kc-header>h1 {
+		font-size: 32px;
+	}
+
+	.kc_img {
+		width: 68%;
+		position: absolute;
+		top: 24%;
+	}
+
+	.sof_ico {
+		position: absolute;
+		top: 54%;
+		left: 54%;
+		width: 230px;
+	}
+
+	.sof_ico>img {
+		width: 100%;
+	}
+
+	.sof_img {
+		display: flex;
+		flex-direction: column;
+		width: 450px;
+		position: absolute;
+		top: 90px;
+		right: -31px;
+	}
+
+	.sof_span {
+		top: 200px;
+		right: 110px;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.kf{
+		margin-top: 75px;
+	}
+	.sof_img {
+		display: flex;
+		flex-direction: column;
+		width: 315px;
+		position: absolute;
+		top: 70px;
+		right: -16px;
+	}
+
+	.sof_span {
+		top: 175px;
+		right: -7px;
+		font-size: 10px;
+	}
+
+	.sof_span>span {
+		width: 56px;
+	}
+
+	.The-header>h1 {
+		font-size: 2.55rem;
+	}
+
+	.sof_span {
+		top: 177px;
+		right: 68px;
+		font-size: 10px;
+		width: 240px;
+	}
+}
