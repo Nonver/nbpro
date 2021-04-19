@@ -1123,10 +1123,10 @@ textarea {
 }
 
 .TpContent>div:nth-child(2)>div {
-
 	display: flex;
-	flex-direction: row;
-	margin-top: -15px;
+	 flex-direction: row;
+	 margin-top: -15px;
+	 overflow: hidden;
 }
 
 .TpContent>div:nth-child(2)>div>p {
@@ -1975,9 +1975,10 @@ strong {
 
 .xianzhi {
 	display: -webkit-box;
-	-webkit-box-orient: vertical;
-	-webkit-line-clamp: 5;
-	overflow: hidden;
+	 -webkit-box-orient: vertical;
+	 -webkit-line-clamp: 5;
+	 overflow: hidden;
+	 height: 140px;
 }
 
 .employer .box1s .boxr p span {
@@ -3466,4 +3467,21 @@ width: 100%;
 	color: #787878;
 	font-size: 1.6rem;
 	line-height: 2;
+}
+.muju .center{
+ width: 70%;
+ margin: auto;
+}
+.muju .center img{
+ width: 100%;
+}
+.muju .center h2{
+ font-size: 40px;
+ text-align: center;
+ margin-top: 70px;
+ margin-bottom: 100px;
+ color: #000;
+}
+.muju .banner .title span a{
+ color: #fff;
 }
