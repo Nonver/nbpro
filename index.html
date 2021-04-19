@@ -6,7 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-		<link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/reset.css" />
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<style type="text/css">
@@ -171,9 +171,15 @@
 					<div class="left">
 						<div><img src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/wrapbox_1.png" alt=""></div>
 						<div>
-							<div><a href="mechanism.html"><img src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/wrapbox_2.png" alt=""></a></div>
-							<div><a href="company.html?key=1"><img src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/wrapbox_3.png" alt=""></a></div>
-							<div><a href="company.html"><img src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/wrapbox_4.png" alt=""></a></div>
+							<div><a href="mechanism.html"><img
+										src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/wrapbox_2.png"
+										alt=""></a></div>
+							<div><a href="company.html?key=1"><img
+										src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/wrapbox_3.png"
+										alt=""></a></div>
+							<div><a href="company.html"><img
+										src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/wrapbox_4.png"
+										alt=""></a></div>
 						</div>
 					</div>
 					<div class="right">
@@ -198,7 +204,7 @@
 						</div>
 					</div>
 					<div class="right">
-						
+
 						<div class="swiper-container swipers2">
 							<div class="swiper-wrapper">
 								<div class="swiper-slide swiper-bouttm" v-for="(item,key) in arrs.slice(0,5)">
@@ -227,21 +233,20 @@
 				<ul>
 					<li>
 						<img src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/wrapbox5img1.png" />
-						<p>1000<span>+</span></p>
+						<p class="tm1">0</p>
 					</li>
 					<li>
 						<img src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/wrapbox5img2.png" />
-						<p>100<span>+</span></p>
+						<p class="tm2">0</p>
 					</li>
 					<li>
 						<img src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/wrapbox5img3.png" />
-						<p>50<span>+</span></p>
+						<p class="tm3">0</p>
 					</li>
 					<li>
 						<img src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/wrapbox5img4.png" />
-						<p>90<span>%</span></p>
+						<p class="tm4">0</p>
 					</li>
-
 				</ul>
 			</div>
 			<div class="box6">
@@ -288,7 +293,8 @@
 				<ul>
 					<li v-for="(item,val) in alls.slice(0,6)" @click="clickgongc(val)">
 						<div class="video_s">
-							<video poster="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/fengm.jpg" width="100%" controls="controls">
+							<video poster="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/fengm.jpg" width="100%"
+								controls="controls">
 								<source :src="item.video" type="video/mp4">
 								</source>
 							</video>
@@ -302,8 +308,6 @@
 							</span>
 						</a>
 					</li>
-
-
 				</ul>
 			</div>
 			<div class="footer">
@@ -358,8 +362,61 @@
 	<script src="js/axios.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/wyq.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
+		var up1 = 0;
+		  var up2 = 0;
+		  var up3 = 0;
+		  var up4 = 0;
+		  $(window).scroll(function(){
+		   if($("#wrap .box5").offset().top - $(window).scrollTop()< ($(window).height()/6) ){
+		     var times1 = setInterval(function(){
+		      up1+=153;
+		      
+		      $(".tm1").text(up1+"+");
+		      if(up1 > 1000){
+		       up1 = 1000;
+		       clearInterval(times1)
+		       $(".tm1").text(up1+"+");
+		      }
+		      
+		     },270)
+		     var times2 = setInterval(function(){
+		      up2+=10;
+		      
+		      $(".tm2").text(up2+"+");
+		      if(up2 > 100){
+		       up2 = 100;
+		       clearInterval(times2)
+		       $(".tm2").text(up2+"+");
+		      }
+		      
+		     },270)
+		     var times3 = setInterval(function(){
+		      up3+=6;
+		      
+		      $(".tm3").text(up3+"+");
+		      if(up3 > 50){
+		       up3 = 50;
+		       clearInterval(times3)
+		       $(".tm3").text(up3+"+");
+		      }
+		      
+		     },270)
+		     var times4 = setInterval(function(){
+		      up4+=3;
+		      
+		      $(".tm4").text(up4+"+");
+		      if(up4 > 90){
+		       up4 = 90;
+		       clearInterval(times4)
+		       $(".tm4").text(up4+"%");
+		      }
+		      
+		     },270)
+		   }
+		  });
 		$(function() {
-		    $("img.lazyload").lazyload()});
+			$("img.lazyload").lazyload()
+		});
 		var ve = new Vue({
 			el: "#wrap",
 			data: {
@@ -379,7 +436,7 @@
 			},
 			updated() {
 				$('.carousel').carousel({
-				  interval: 3000
+					interval: 3000
 				})
 				var mySwiper2 = new Swiper('.swipers2', {
 					loop: true, // 循环模式选项
