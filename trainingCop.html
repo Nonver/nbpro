@@ -72,7 +72,7 @@
 					<ul class="uls">
 						<li class="lis" v-for="(item,val) in alls">
 							<div class="imgbox">
-								<video  poster="img/fengm.jpg" width="100%" height="100%" controls="controls">
+								<video  poster="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/fengm.jpg" width="100%" height="100%" controls="controls">
 									<source :src="item.video" type="video/mp4"></source>
 
 								</video>
@@ -104,7 +104,7 @@
 
 			</div>
 			<div class="footer">
-				<img src="img/footer.png" />
+				<img src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/footer.png" />
 				<div class="left">
 					<div class="footerwenzi">
 						<img src="img/footerwenzi.png">
@@ -125,11 +125,11 @@
 					<p>关注公众号</p>
 					<ul>
 						<li>
-							<img src="img/ewm.png" alt="" />
+							<img src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/ewm.png" alt="" />
 							<p>微信扫码关注订阅号</p>
 						</li>
 						<li>
-							<img src="img/ewm.png" alt="" />
+							<img src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/ewm.png" alt="" />
 							<p>微信扫码关注订阅号</p>
 						</li>
 					</ul>
@@ -138,7 +138,7 @@
 					<div class="text">
 						<a href="###" target="_blank">版权所有 © 宁海产业人才学院</a>
 						<a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">
-							<img src="img/beian.png" />浙公网安备 33022602000429号
+							<img src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/beian.png" />浙公网安备 33022602000429号
 						</a>
 					</div>
 				</div>
@@ -152,14 +152,6 @@
 	<script src="js/axios.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/wyq.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
-		$(document).ready(function($) {
-			$('.uls').paginathing({
-				perPage: 3,
-				containerClass: 'boxs',
-				limitPagination: 3,
-				pageNumbers: true,
-			})
-		});
 		var ve = new Vue({
 			el: "#tranCop",
 			data: {
@@ -171,6 +163,16 @@
 			},
 			created() {
 				this.getgongc();
+			},
+			updated() {
+				$('.uls').paginathing({
+					perPage: 5,
+					containerClass: 'boxone',
+					limitPagination: 2,
+					prevText: '上一页',
+					nextText: '下一页',
+					firstLast: false,  
+				})
 			},
 			methods: {
 				getgongc() {

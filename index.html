@@ -233,7 +233,7 @@
 				<ul>
 					<li>
 						<img src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/wrapbox5img1.png" />
-						<p class="tm1">0</p>
+						<p class="tm1">0<span>+</span></p>
 					</li>
 					<li>
 						<img src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/wrapbox5img2.png" />
@@ -253,28 +253,28 @@
 				<a href="company.html">
 					<ul>
 						<li>
-							<img src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/school1.png" />
+							<img src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/college1.jpg" />
 						</li>
 						<li>
-							<img src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/school2.png" />
+							<img src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/college2.jpg" />
 						</li>
 						<li>
-							<img src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/school3.png" />
+							<img src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/college3.jpg" />
 						</li>
 						<li>
-							<img src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/school4.png" />
+							<img src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/college4.jpg" />
 						</li>
 						<li>
-							<img src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/school5.png" />
+							<img src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/college5.jpg" />
 						</li>
 						<li>
-							<img src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/school6.png" />
+							<img src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/college6.jpg" />
 						</li>
 						<li>
-							<img src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/school7.png" />
+							<img src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/college7.jpg" />
 						</li>
 						<li>
-							<img src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/school8.png" />
+							<img src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/college8.jpg" />
 						</li>
 					</ul>
 				</a>
@@ -298,6 +298,8 @@
 								<source :src="item.video" type="video/mp4">
 								</source>
 							</video>
+							<!-- 播放图标 -->
+							<div class="video-img"></div>
 						</div>
 						<div class="video-bg"></div>
 						<a href="trainingCopXiangqing.html">
@@ -311,7 +313,7 @@
 				</ul>
 			</div>
 			<div class="footer">
-				<img src="img/footer.png" />
+				<img src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/footer.png" />
 				<div class="left">
 					<div class="footerwenzi">
 						<img src="img/footerwenzi.png">
@@ -332,11 +334,11 @@
 					<p>关注公众号</p>
 					<ul>
 						<li>
-							<img src="img/ewm.png" alt="" />
+							<img src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/ewm.png" alt="" />
 							<p>微信扫码关注订阅号</p>
 						</li>
 						<li>
-							<img src="img/ewm.png" alt="" />
+							<img src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/ewm.png" alt="" />
 							<p>微信扫码关注订阅号</p>
 						</li>
 					</ul>
@@ -363,57 +365,55 @@
 	<script src="js/wyq.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
 		var up1 = 0;
-		  var up2 = 0;
-		  var up3 = 0;
-		  var up4 = 0;
-		  $(window).scroll(function(){
-		   if($("#wrap .box5").offset().top - $(window).scrollTop()< ($(window).height()/6) ){
-		     var times1 = setInterval(function(){
-		      up1+=153;
-		      
-		      $(".tm1").text(up1+"+");
-		      if(up1 > 1000){
-		       up1 = 1000;
-		       clearInterval(times1)
-		       $(".tm1").text(up1+"+");
-		      }
-		      
-		     },270)
-		     var times2 = setInterval(function(){
-		      up2+=10;
-		      
-		      $(".tm2").text(up2+"+");
-		      if(up2 > 100){
-		       up2 = 100;
-		       clearInterval(times2)
-		       $(".tm2").text(up2+"+");
-		      }
-		      
-		     },270)
-		     var times3 = setInterval(function(){
-		      up3+=6;
-		      
-		      $(".tm3").text(up3+"+");
-		      if(up3 > 50){
-		       up3 = 50;
-		       clearInterval(times3)
-		       $(".tm3").text(up3+"+");
-		      }
-		      
-		     },270)
-		     var times4 = setInterval(function(){
-		      up4+=3;
-		      
-		      $(".tm4").text(up4+"+");
-		      if(up4 > 90){
-		       up4 = 90;
-		       clearInterval(times4)
-		       $(".tm4").text(up4+"%");
-		      }
-		      
-		     },270)
-		   }
-		  });
+		var up2 = 0;
+		var up3 = 0;
+		var up4 = 0;
+		$(window).scroll(function() {
+			if ($("#wrap .box5").offset().top - $(window).scrollTop() < ($(window).height() / 6)) {
+				var times1 = setInterval(function() {
+					up1 += 153;
+
+					$(".tm1").text(up1 + "+");
+					if (up1 > 1000) {
+						up1 = 1000;
+						clearInterval(times1)
+						$(".tm1")[0].innerHTML = '<span>'+ up1 +'</span><span>+</span>'
+					}
+
+				}, 50)
+				var times2 = setInterval(function() {
+					up2 += 10;
+
+					$(".tm2").text(up2 + "+");
+					if (up2 > 100) {
+						up2 = 100;
+						clearInterval(times2)
+						$(".tm2")[0].innerHTML = '<span>'+ up2 +'</span><span>+</span>'
+					}
+
+				}, 50)
+				var times3 = setInterval(function() {
+					up3 += 6;
+
+					$(".tm3").text(up3 + "+");
+					if (up3 > 50) {
+						up3 = 50;
+						clearInterval(times3)
+						$(".tm3")[0].innerHTML = '<span>'+ up3 +'</span><span>+</span>'
+					}
+
+				}, 50)
+				var times4 = setInterval(function() {
+					up4 += 3;
+					$(".tm4").text(up4 + "%");
+					if (up4 > 90) {
+						up4 = 90;
+						clearInterval(times4)
+						$(".tm4")[0].innerHTML = '<span>'+ up4 +'</span><span>%</span>'
+					}
+				}, 10)
+			}
+		});
 		$(function() {
 			$("img.lazyload").lazyload()
 		});
@@ -431,7 +431,7 @@
 				let that = this;
 				setTimeout(function() {
 					that.vi()
-				}, 500)
+				}, 1000)
 
 			},
 			updated() {

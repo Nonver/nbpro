@@ -88,7 +88,7 @@
 				</div>
 			</div>
 			<div class="footer">
-				<img src="img/footer.png" />
+				<img src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/footer.png" />
 				<div class="left">
 					<div class="footerwenzi">
 						<img src="img/footerwenzi.png">
@@ -109,11 +109,11 @@
 					<p>关注公众号</p>
 					<ul>
 						<li>
-							<img src="img/ewm.png" alt="" />
+							<img src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/ewm.png" alt="" />
 							<p>微信扫码关注订阅号</p>
 						</li>
 						<li>
-							<img src="img/ewm.png" alt="" />
+							<img src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/ewm.png" alt="" />
 							<p>微信扫码关注订阅号</p>
 						</li>
 					</ul>
@@ -136,15 +136,7 @@
 	<script src="js/axios.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/wyq.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
-		$(document).ready(function($) {
-			$('.ultwo').paginathing({
-				perPage: 3,
-				containerClass: 'boxtwo',
-				limitPagination: 3,
-				pageNumbers: false,
-			});
-
-		});
+		
 //		http://192.168.3.5:8082/web/findByCollegeNewsAll
 		var ve = new Vue({
 			el:"#news",
@@ -156,6 +148,16 @@
 			},
 			created(){
 				
+			},
+			updated() {
+				$('.ultwo').paginathing({
+					perPage: 4,
+					containerClass: 'boxone',
+					limitPagination: 3,
+					prevText: '上一页',
+					nextText: '下一页',
+					firstLast: false,  
+				});
 			},
 			methods:{
 //				xinwen

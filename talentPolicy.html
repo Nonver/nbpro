@@ -3,7 +3,7 @@
 
 	<head>
 		<meta charset="utf-8" />
-		<title>人才风采</title>
+		<title>人才政策</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
@@ -77,7 +77,7 @@
 				<div class="top_down">
 					<!-- 市级 -->
 					<div class="municipal boxs active">
-						<div class="TpContent" v-for="(items,vals) in allsone">
+						<div class="TpContent" v-for="(items,vals) in allsone" @click="clicks(items)">
 							<div class="box1s">
 								<span>{{items.time.day}}</span>
 								<span>{{items.time.mond}}</span>
@@ -93,7 +93,7 @@
 					</div>
 					<!-- 县级 -->
 					<div class="countyLevel boxs">
-						<div class="TpContent" v-for="(items,vals) in allstwo">
+						<div class="TpContent" v-for="(items,vals) in allstwo" @click="clicks(items)">
 							<div class="box1s">
 								<span>{{items.time.day}}</span>
 								<span>{{items.time.mond}}</span>
@@ -113,7 +113,7 @@
 			</div>
 
 			<div class="footer">
-				<img src="img/footer.png" />
+				<img src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/footer.png" />
 				<div class="left">
 					<div class="footerwenzi">
 						<img src="img/footerwenzi.png">
@@ -134,11 +134,11 @@
 					<p>关注公众号</p>
 					<ul>
 						<li>
-							<img src="img/ewm.png" alt="" />
+							<img src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/ewm.png" alt="" />
 							<p>微信扫码关注订阅号</p>
 						</li>
 						<li>
-							<img src="img/ewm.png" alt="" />
+							<img src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/ewm.png" alt="" />
 							<p>微信扫码关注订阅号</p>
 						</li>
 					</ul>

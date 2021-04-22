@@ -7,7 +7,6 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-		<link rel="stylesheet" type="text/css" href="css/reset.css" />
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 	</head>
 
@@ -134,7 +133,7 @@
 						<div class="left">
 							<div class="inps">
 								<p>姓名</p>
-								<input type="text" placeholder="请填写姓名" class="inp1" v-model="inp1" />
+								<input type="number" placeholder="填写姓名" class="inp1" v-model="inp1" />
 							</div>
 							<div class="inps">
 								<p>联系方式</p>
@@ -166,8 +165,8 @@
 									<p><img src="img/aboutweixin.png" />微信公众号:</p>
 								</li>
 								<li>
-									<img src="img/ewm.png" />
-									<img src="img/ewm.png" />
+									<img src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/ewm.png" />
+									<img src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/ewm.png" />
 								</li>
 							</ul>
 						</div>
@@ -175,7 +174,7 @@
 				</div>
 			</div>
 			<div class="footer">
-				<img src="img/footer.png" />
+				<img src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/footer.png" />
 				<div class="left">
 					<div class="footerwenzi">
 						<img src="img/footerwenzi.png">
@@ -196,21 +195,20 @@
 					<p>关注公众号</p>
 					<ul>
 						<li>
-							<img src="img/ewm.png" alt="" />
+							<img src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/ewm.png" alt="" />
 							<p>微信扫码关注订阅号</p>
 						</li>
 						<li>
-							<img src="img/ewm.png" alt="" />
+							<img src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/ewm.png" alt="" />
 							<p>微信扫码关注订阅号</p>
 						</li>
 					</ul>
 				</div>
-
 				<div class="down">
 					<div class="text">
 						<a href="###" target="_blank">版权所有 © 宁海产业人才学院</a>
 						<a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">
-							<img src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/beian.png" />浙公网安备 33022602000429号
+							<img src="img/beian.png" />浙公网安备 33022602000429号
 						</a>
 					</div>
 				</div>
@@ -220,7 +218,6 @@
 	<script src="js/wyq.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
-	<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/axios.min.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
 		var ve = new Vue({
@@ -234,6 +231,9 @@
 
 			},
 			methods: {
+				getValue(e){
+					console.log(e.target.checked)
+				},
 				btn() {
 					let phone = /^[1]([3-9])[0-9]{9}$/;
 					if (!(phone.test(this.inp2))) {
@@ -252,6 +252,7 @@
 					}
 					if ($(".inp1").val() == "" || $(".inp2").val() == "") {
 						alert("请填写完整信息")
+						return false;
 					} else {
 						var that = this;
 						var data = {
@@ -265,7 +266,6 @@
 							that.inp1 = "";
 							that.inp2 = "";
 							that.inp3 == "";
-							console.log(that.inp1)
 							alert("提交成功");
 
 

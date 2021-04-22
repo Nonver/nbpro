@@ -3,7 +3,7 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title>产业人才</title>
+		<title>人才风采</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
@@ -63,7 +63,7 @@
 			<div class="center">
 				<div class="top">
 					<ul>
-						<li>
+						<li @click="fun">
 							<p>在职员工</p>
 						</li>
 						<li class="active">
@@ -78,37 +78,41 @@
 				<!--//人文景观-->
 				<div class="boxs boxone">
 					<div class="tus">
-						<img src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/yuangong.png" >
+						<img src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/yuangong.png">
 					</div>
-					
+
 					<ul class="ulone">
 						<li class="lione" v-for="(itemone,valone) in allsone">
 							<div class="left">
-								<img :src="itemone.video"/>
+								<img :src="itemone.video" />
 							</div>
 							<div class="right">
 								<h4>{{itemone.name}}</h4>
 								<p class="right-p">所属职位：<span>{{itemone.speciality}}</span></p>
 								<p class="right-p">所属部门：<span>{{itemone.department}}</span></p>
 								<p class="right-p">工作年限：<span>{{itemone.workingSeniority}}</span></p>
-								<span><p v-html="itemone.introduce">{{itemone.introduce}}</p></span>
+								<span>
+									<p v-html="itemone.introduce">{{itemone.introduce}}</p>
+								</span>
 							</div>
 						</li>
 					</ul>
 				</div>
 				<div class="boxtwo boxs active">
 					<div class="tus">
-						<img src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/xuexiao.png" >
+						<img src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/xuexiao.png">
 					</div>
 					<ul class="ultwo">
 						<li class="litwo" v-for="(itemtwo,valtwo) in allstwo">
 							<div class="left">
-								<img :src="itemtwo.video"/>
+								<img :src="itemtwo.video" />
 							</div>
 							<div class="right">
 								<h4>{{itemtwo.name}}</h4>
 								<p>{{itemtwo.department}}</p>
-								<span><p v-html="itemtwo.introduce">{{itemtwo.introduce}}</p></span>
+								<span>
+									<p v-html="itemtwo.introduce">{{itemtwo.introduce}}</p>
+								</span>
 							</div>
 						</li>
 					</ul>
@@ -131,7 +135,7 @@
 				</div>-->
 			</div>
 			<div class="footer">
-				<img src="img/footer.png" />
+				<img src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/footer.png" />
 				<div class="left">
 					<div class="footerwenzi">
 						<img src="img/footerwenzi.png">
@@ -152,11 +156,11 @@
 					<p>关注公众号</p>
 					<ul>
 						<li>
-							<img src="img/ewm.png" alt="" />
+							<img src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/ewm.png" alt="" />
 							<p>微信扫码关注订阅号</p>
 						</li>
 						<li>
-							<img src="img/ewm.png" alt="" />
+							<img src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/ewm.png" alt="" />
 							<p>微信扫码关注订阅号</p>
 						</li>
 					</ul>
@@ -180,27 +184,40 @@
 	<script src="js/wyq.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
 		var ve = new Vue({
-			el:"#cyTalent",
-			data:{
-				allsone:"",
-				allstwo:"",
-//				allsthree:"",
+			el: "#cyTalent",
+			data: {
+				allsone: "",
+				allstwo: "",
+				//				allsthree:"",
 			},
-			mounted(){
+			mounted() {
 				this.getone();
 				this.gettwo();
-//				this.getthree();
+				//				this.getthree();
 			},
-			created(){
+			created() {
+				let that = this;
+				setTimeout(function(){
+					$('.ultwo').paginathing({
+						perPage: 4,
+						containerClass: 'boxtwo',
+						limitPagination: 4,
+						prevText: '上一页',
+						nextText: '下一页',
+						firstLast: false,  
+					});
+				},500)
+			},
+			updated() {
 				
 			},
-			methods:{
+			methods: {
 				getone() {
 					var that = this;
 					wyq.ajax(function(ret, err, dat) {
 						that.allsone = ret;
 					}, "getByAllTalents/0", "get", {}, {});
-					
+
 				},
 				gettwo() {
 					var that = this;
@@ -209,44 +226,26 @@
 						console.log(ret)
 					}, "getByAllTalents/1", "get", {}, {});
 				},
-//				getthree() {
-//					var that = this;
-//					axios.get('http://192.168.3.5:8082/web/getByAllTalents/2').then(function(res) {
-//						var data = res.data;
-//						that.allsthree = res.data.data;
-//						console.log(that.allsthree)
-//						console.log("第三个数据")
-//					})
-//				},
+				// 在职员工
+				fun(){
+					$('.ulone').paginathing({
+						perPage: 4,
+						containerClass: 'boxone',
+						limitPagination: 3,
+						prevText: '上一页',
+						nextText: '下一页',
+						firstLast: false,  
+					});
+				},
 			}
-			
+
 		});
-		$(document).ready(function($) {
-			$('.ulone').paginathing({
-				perPage: 4,
-				containerClass: 'boxone',
-				limitPagination: 4,
-				pageNumbers: false,
-			});
-			$('.ultwo').paginathing({
-				perPage: 4,
-				containerClass: 'boxtwo',
-				limitPagination: 4,
-				pageNumbers: false,
-			});
-//			$('.ulthree').paginathing({
-//				perPage: 4,
-//				containerClass: 'boxthree',
-//				limitPagination: 4,
-//				pageNumbers: false,
-//			})
-		});
+
 		$(".center .top li").click(function() {
 			var cl = $(this).index();
 			$(".center .top li").removeClass("active").eq(cl).addClass("active");
 			$(".cyTalent .center .boxs").removeClass("active").eq(cl).addClass("active");
 		});
-		
 	</script>
 
 </html>

@@ -26,7 +26,7 @@
 	flex-direction: column;
 	width: 535px;
 	position: absolute;
-	top: 110px;
+	top: 100px;
 	right: -40px;
 }
 
@@ -36,7 +36,7 @@
 .sof_img>img:nth-child(2) {
 	width: 150px;
 	position: absolute;
-	top: 61px;
+	top: 85px;
 }
 
 /* 第三屏 */
@@ -97,7 +97,7 @@
 
 .soft_fluid {
 	height: 70rem;
-	background-image: url(../img/mechanisimgbox3.png);
+	background-image: url(https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/mechanisimgbox3.png);
 	background-size: 100% 100%;
 }
 
@@ -249,7 +249,7 @@
 
 .java {
 	margin: 70px 0;
-	background-image: url(../img/mechanisimgbox3.png);
+	background-image: url(https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/mechanisimgbox3.png);
 	background-size: 100% 100%;
 }
 

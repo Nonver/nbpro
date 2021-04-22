@@ -504,7 +504,7 @@ textarea {
 }
 
 .aboutyx .box3 .forms .right ul li {
-	margin: 10px 0;
+	margin: 23px 0;
 }
 
 .aboutyx .box3 .forms .right ul li p {
@@ -1124,9 +1124,9 @@ textarea {
 
 .TpContent>div:nth-child(2)>div {
 	display: flex;
-	 flex-direction: row;
-	 margin-top: -15px;
-	 overflow: hidden;
+	flex-direction: row;
+	margin-top: -15px;
+	overflow: hidden;
 }
 
 .TpContent>div:nth-child(2)>div>p {
@@ -1141,6 +1141,64 @@ textarea {
 	align-items: center;
 	flex-direction: row;
 	color: #787878 !important;
+	transition: all .3s;
+	position: relative;
+}
+
+.TpContent>div>span:nth-child(1) {
+	transition: all 3s;
+}
+
+.TpContent {
+	cursor: pointer;
+}
+
+.TpContent:hover>div>span:nth-child(1) {
+	animation: test 1s;
+	-webkit-animation: test 1s;
+}
+
+@keyframes test {
+	0% {
+		transition: all .3s;
+		font-size: 38px;
+	}
+
+	50% {
+		transition: all .3s;
+		font-size: 60px;
+	}
+
+	100% {
+		transition: all .3s;
+		font-size: 38px;
+	}
+}
+
+.TpContent>div:nth-child(1)>span:nth-child(1):hover {
+	animation: test 3s;
+	-webkit-animation: test 3s;
+}
+
+
+/* 播放图标 */
+/* .video-img {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	z-index: 999;
+	background: url(../img/bf.jpg) no-repeat;
+	background-size: 100% 100%;
+	cursor: pointe
+} */
+
+.news .center .boxtwo ul .litwo:not(:first-child) .right .txts>p img {
+	display: none;
+}
+
+.news .center .boxtwo ul .litwo:nth-child(1) .right .txts>p img {
+	display: none;
 }
 
 strong {
@@ -1161,6 +1219,7 @@ strong {
 	justify-content: center;
 	align-items: center;
 	margin-left: 40px;
+	transition: all .3s;
 }
 
 .tPolicy .center .top_down .boxs {
@@ -1281,7 +1340,7 @@ strong {
 .cyTalent .center .boxs ul li .right h4 {
 	font-size: 2.8rem;
 	margin: 0;
-	margin-top: 10px;
+	margin-bottom: 5px;
 }
 
 .cyTalent .center .boxs ul li .right span p {
@@ -1323,6 +1382,7 @@ strong {
 	color: #1EB4B1;
 	font-size: 1.8rem;
 	line-height: 2;
+	margin-bottom: 5px;
 }
 
 .cyTalent .center .boxtwo nav {
@@ -1714,7 +1774,6 @@ strong {
 .company .center .boxs .ultwo .litwo {
 	cursor: pointer;
 	width: 30%;
-	height: 330px;
 	box-sizing: border-box;
 	display: flex;
 	justify-content: flex-start;
@@ -1975,10 +2034,10 @@ strong {
 
 .xianzhi {
 	display: -webkit-box;
-	 -webkit-box-orient: vertical;
-	 -webkit-line-clamp: 5;
-	 overflow: hidden;
-	 height: 140px;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 5;
+	overflow: hidden;
+	height: 140px;
 }
 
 .employer .box1s .boxr p span {
@@ -2386,7 +2445,13 @@ strong {
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
+#wrap .box1 ul li:hover img {
+	transform: scale(1.05);
+	transition: all .5s;
+}
+
 #wrap .box1 ul li img {
+	transition: all .5s;
 	width: 100%;
 
 }
@@ -2932,15 +2997,16 @@ strong {
 .container-fluid {
 	margin-bottom: 20px;
 }
-
+li{
+	list-style: none;
+}
 .img-rounded {
 	border-radius: 0;
 	width: 100%;
-	height: 480px;
 }
 
 .bs-callout {
-	/* padding-left: 20px; */
+	padding-bottom: 5px;
 	margin: 20px 0;
 	display: flex;
 	flex-direction: row;
@@ -2949,13 +3015,14 @@ strong {
 }
 
 .bs-callout>h2 {
-	margin: 0 0 0 20px;
+	font-size: 21px!important;
+	margin: 0 0 0 10px;
 }
 
 .bs-callout>span {
 	display: block;
 	width: 5px;
-	height: 55px;
+	height: 23px;
 	background: #1eb1b8;
 }
 
@@ -3121,8 +3188,12 @@ video {
 
 .video-bg {}
 
-#wrap .box5 ul li p>span {
-	font-size: 30px;
+#wrap .box5 ul li p>span:nth-child(1) {
+	font-size: 6.6rem;
+}
+
+#wrap .box5 ul li p>span:nth-child(2) {
+	font-size: 4.6rem;
 }
 
 .video_s {
@@ -3216,7 +3287,7 @@ video {
 .is_div {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: flex-end;
 	align-items: center;
 }
 
@@ -3288,7 +3359,7 @@ video {
 }
 
 /* 赋能机构修改 */
-.mechanism .center .box1{
+.mechanism .center .box1 {
 	width: 76%;
 }
 
@@ -3298,160 +3369,195 @@ video {
 	border-radius: 10px;
 	overflow: hidden;
 	padding: 40px 30px;
-	
+
 }
-.mechanism .center .imgtitle{
+
+.mechanism .center .imgtitle {
 	width: 35%;
 }
-.mechanism .center .imgtitle img{
+
+.mechanism .center .imgtitle img {
 	width: 100%;
 }
-.mechanism .center .box1 ul li a{
+
+.mechanism .center .box1 ul li a {
 	color: #fff;
 }
-.mechanism .center .box1 ul li .mc_bts{
+
+.mechanism .center .box1 ul li .mc_bts {
 	text-align: right;
 	margin-top: 30px;
 	line-height: 20px;
 }
-.mechanism .center .box1 ul li .mc_bts p{
+
+.mechanism .center .box1 ul li .mc_bts p {
 	font-size: 15px;
 	line-height: 20px;
 }
-.mechanism .center .box1 ul li .mc_bts img{
+
+.mechanism .center .box1 ul li .mc_bts img {
 	height: 20px;
 	margin-left: 10px;
 }
-.mechanism .center .box1 ul li:nth-child(1){
-	background: url(../img/mcbg1.png) no-repeat center;
+
+.mechanism .center .box1 ul li:nth-child(1) {
+	background-image: url(https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/mcbg1.png) no-repeat center;
 	background-size: cover;
 }
-.mechanism .center .box1 ul li:nth-child(2){
-	background: url(../img/mcbg2.png) no-repeat center;
+
+.mechanism .center .box1 ul li:nth-child(2) {
+	background: url(https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/mcbg2.png) no-repeat center;
 	background-size: cover;
 }
-.mechanism .center .box1 ul li:nth-child(3){
-	background: url(../img/mcbg3.png) no-repeat center;
+
+.mechanism .center .box1 ul li:nth-child(3) {
+	background: url(https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/mcbg3.png) no-repeat center;
 	background-size: cover;
 }
-.mechanism .center .box1 ul li:nth-child(4){
-	background: url(../img/mcbg4.png) no-repeat center;
+
+.mechanism .center .box1 ul li:nth-child(4) {
+	background: url(https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/mcbg4.png) no-repeat center;
 	background-size: cover;
 }
-.mechanism .center .box1 ul li:nth-child(5){
-	background: url(../img/mcbg5.png) no-repeat center;
+
+.mechanism .center .box1 ul li:nth-child(5) {
+	background: url(https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/mcbg5.png) no-repeat center;
 	background-size: cover;
 }
-.mechanism .center .box1 ul li:nth-child(6){
-	background: url(../img/mcbg6.png) no-repeat center;
+
+.mechanism .center .box1 ul li:nth-child(6) {
+	background: url(https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/mcbg6.png) no-repeat center;
 	background-size: cover;
 }
-.mechanism .center .box2 .boxcenter{
+
+.mechanism .center .box2 .boxcenter {
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
-.mechanism .center .box2{
-	
-}
-.mechanism .center .box2 .boxcenter .left{
+
+.mechanism .center .box2 {}
+
+.mechanism .center .box2 .boxcenter .left {
 	width: 50%;
 }
-.mechanism .center .box2 .boxcenter .left p{
+
+.mechanism .center .box2 .boxcenter .left p {
 	text-align: center;
 	margin: 25px 0;
 	font-size: 22px;
 	font-weight: #000;
 	font-weight: bold;
 }
-.mechanism .center .box2 .boxcenter .right{
+
+.mechanism .center .box2 .boxcenter .right {
 	width: 45%;
-	
+
 }
-.mechanism .center .box2 .boxcenter .right img{
+
+.mechanism .center .box2 .boxcenter .right img {
 	width: 100%;
 }
-.mechanism .center .box3{
+
+.mechanism .center .box3 {
 	background: #E3E3E3;
 }
-.mechanism .center .box3 .boxcenter{
+
+.mechanism .center .box3 .boxcenter {
 	width: 100%;
 	margin: auto;
 	padding: 30px 100px;
 }
-.mechanism .center .box3 .boxcenter p{
+
+.mechanism .center .box3 .boxcenter p {
 	text-align: center;
 	margin-top: 20px;
 	font-size: 20px;
 	font-weight: bold;
-	color: rgba(0,0,0,0.4);
+	color: rgba(0, 0, 0, 0.4);
 }
-.mechanism .center .box3 .boxcenter p span{
+
+.mechanism .center .box3 .boxcenter p span {
 	margin: 20px;
 }
-.mechanism .center .box3 .boxcenter img{
+
+.mechanism .center .box3 .boxcenter img {
 	width: 100%;
 }
-.mechanism .center .box2{
+
+.mechanism .center .box2 {
 	width: 76%;
 }
-.mechanism .center .box3>div{
-	width: 76%;
-	margin: auto;
-	padding: 50px 0;
-}
-.mechanism .center .box4>div{
+
+.mechanism .center .box3>div {
 	width: 76%;
 	margin: auto;
 	padding: 50px 0;
 }
-.mechanism .center .box4 img{
-width: 100%;
+
+.mechanism .center .box4>div {
+	width: 76%;
+	margin: auto;
+	padding: 50px 0;
 }
-.mechanism .center .box4 p{
+
+.mechanism .center .box4 img {
+	width: 100%;
+}
+
+.mechanism .center .box4 p {
 	text-align: center;
 	margin-top: 10px;
 	font-size: 20px;
 	font-weight: bold;
-	color: rgba(0,0,0,0.4);
+	color: rgba(0, 0, 0, 0.4);
 }
-.mechanism .center .box4 p span{
+
+.mechanism .center .box4 p span {
 	margin: 0px 20px;
 }
-.mechanism .center .box4 .boxcenter{
+
+.mechanism .center .box4 .boxcenter {
 	margin-top: 20px;
 }
-.mechanism .center .box4 .boxcenter img{
+
+.mechanism .center .box4 .boxcenter img {
 	margin-top: 30px;
 }
-.mechanism .center .box5{
+
+.mechanism .center .box5 {
 	background: #E3E3E3;
 	padding: 50px 0;
 	margin-bottom: 0;
 }
-.mechanism .center .box5>div{
+
+.mechanism .center .box5>div {
 	width: 76%;
 	margin: auto;
 }
-.mechanism .center .box5 .boxcenter{
-	display: flex;justify-content: flex-start;
+
+.mechanism .center .box5 .boxcenter {
+	display: flex;
+	justify-content: flex-start;
 	align-items: center;
 	margin: 50px 0;
 }
-.mechanism .center .box5 .boxcenter .right{
+
+.mechanism .center .box5 .boxcenter .right {
 	margin-left: 50px;
 }
-.mechanism .center .box5 .boxcenter p{
-	
-	margin-top: 10px;
+
+.mechanism .center .box5 .boxcenter p {
 	font-size: 20px;
 	font-weight: bold;
-	
 	color: #000;
+	margin: 40px 0;
+	margin-left: 30px;
 }
-.mechanism .center .box5 .boxcenter p span{
-	color: rgba(0,0,0,0.4);
+
+.mechanism .center .box5 .boxcenter p span {
+	color: rgba(0, 0, 0, 0.4);
 }
 
 .mechanism .center .titles {
@@ -3468,20 +3574,33 @@ width: 100%;
 	font-size: 1.6rem;
 	line-height: 2;
 }
-.muju .center{
- width: 70%;
- margin: auto;
+
+.muju .center {
+	width: 70%;
+	margin: auto;
 }
-.muju .center img{
- width: 100%;
+
+.muju .center img {
+	width: 100%;
 }
-.muju .center h2{
- font-size: 40px;
- text-align: center;
- margin-top: 70px;
- margin-bottom: 100px;
- color: #000;
+
+.muju .center h2 {
+	font-size: 40px;
+	text-align: center;
+	margin-top: 70px;
+	margin-bottom: 100px;
+	color: #000;
 }
-.muju .banner .title span a{
- color: #fff;
+
+.muju .banner .title span a {
+	color: #fff;
+}
+
+.pagination>li>a,
+.pagination>li>span {
+	color: #C8C8C8;
+}
+
+.mechanism .center .box1 ul li a:hover {
+	color: rgb(255 255 255 / 0.6);
 }
