@@ -6,6 +6,7 @@
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/software.css" />
 		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/animate.min.css"/>
 	</head>
 	<body>
 		<div class="nav">
@@ -60,12 +61,12 @@
 				</div>
 			</div>
 			<div class="col-md-12 software">
-				<img src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/bgs.png">
-				<div class="sof_img">
+				<img class="animated  slideInLeft" src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/bgs.png">
+				<div class="sof_img animated slideInDown"><div class="sof_img">
 					<img src="img/yingwen.png" alt="">
 					<img src="img/wenzi.png">
-				</div>
-				<div class="sof_span">
+				</div></div>
+				<div class="sof_span animated slideInDown">
 					<span>界面设计</span>
 					<span>平面设计</span>
 					<span>视觉设计</span>
@@ -75,7 +76,7 @@
 					<span>网页制作</span>
 					<span>原型设计</span>
 				</div>
-				<div class="sof_ico">
+				<div class="sof_ico animated slideInRight">
 					<img src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/mechanismuis.png">
 				</div>
 			</div>
@@ -173,7 +174,7 @@
 						<h1>Web前端课程培训介绍</h1>
 					</div>
 					<div class="kc_img">
-						<img src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/qianduan.png" class="img">
+						<img id="animImg" src="https://nbrt-job.oss-cn-hangzhou.aliyuncs.com/webimg/qianduan.png" class="img">
 					</div>
 				</div>
 			</div>
@@ -290,5 +291,19 @@
 		</div>
 		<script src="js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			function gdjz(div,cssname,offset){
+			   var b = $(window).scrollTop(); //监控窗口已滚动的距离;
+			    if(b > 2800){
+			    	$('#animImg').addClass('animated flipInY')
+			    }else if(b > 2400){
+					$("#animImg").removeClass("animated flipInY");
+				}
+			}
+			    	
+			$(window).scroll(function(){
+			    gdjz("#segment",'active',60);
+			})
+		</script>
 	</body>
 </html>

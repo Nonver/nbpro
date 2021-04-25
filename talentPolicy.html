@@ -9,7 +9,7 @@
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/reset.css" />
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
-		
+		<link rel="stylesheet" type="text/css" href="css/animate.min.css"/>
 	</head>
 
 	<body>
@@ -78,11 +78,11 @@
 					<!-- 市级 -->
 					<div class="municipal boxs active">
 						<div class="TpContent" v-for="(items,vals) in allsone" @click="clicks(items)">
-							<div class="box1s">
+							<div class="box1s slideInLeft animated">
 								<span>{{items.time.day}}</span>
 								<span>{{items.time.mond}}</span>
 							</div>
-							<div class="box2s">
+							<div class="animated slideInRight box2s">
 								<h3>{{items.name}}</h3>
 								<div>
 									<p v-html="items.content">{{items.content}}</p>

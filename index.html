@@ -9,6 +9,7 @@
 		<link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/reset.css" />
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/animate.min.css"/>
 		<style type="text/css">
 			.swiper-container {
 				width: 100%;
@@ -182,7 +183,7 @@
 										alt=""></a></div>
 						</div>
 					</div>
-					<div class="right">
+					<div class="right swyt">
 						<h3>“三位一体、四方联动”产业人才培育的“宁海模式”</h3>
 						<p>“三位一体”，是将教育链、人才链、产业链融为一体，教育的目标是培养人才，人才的发展为产业服务；“四方联动”，是由政府主导，联合高校、企业、人力资源服务机构，协同共建人才培养体系，深化人才培养机制改革。具体做法就是引入第三方机构在校企合作中担当“融合提升者”的角色，构建政府、高校、企业、人力资源服务机构四方参与的事业发展共同体，将现有的“两面墙”彻底打通，同时帮助企业、高校完成了各自的利益诉求。
 						</p>
@@ -364,6 +365,16 @@
 	<script src="js/axios.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/wyq.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
+		
+		$(window).scroll(function(){
+		    var lan = $(window).scrollTop();
+			console.log(lan)
+		     if(lan > 2000){
+		     	$('.swyt').addClass('animated flipInY')
+		     }else if(lan<1600){
+				  $(".swyt").removeClass("animated flipInY");
+			 }
+		})
 		var up1 = 0;
 		var up2 = 0;
 		var up3 = 0;

@@ -1153,28 +1153,6 @@ textarea {
 	cursor: pointer;
 }
 
-.TpContent:hover>div>span:nth-child(1) {
-	animation: test 1s;
-	-webkit-animation: test 1s;
-}
-
-@keyframes test {
-	0% {
-		transition: all .3s;
-		font-size: 38px;
-	}
-
-	50% {
-		transition: all .3s;
-		font-size: 60px;
-	}
-
-	100% {
-		transition: all .3s;
-		font-size: 38px;
-	}
-}
-
 .TpContent>div:nth-child(1)>span:nth-child(1):hover {
 	animation: test 3s;
 	-webkit-animation: test 3s;

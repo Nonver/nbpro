@@ -24,14 +24,16 @@
 .sof_img {
 	display: flex;
 	flex-direction: column;
-	width: 535px;
-	position: absolute;
-	top: 100px;
-	right: -40px;
+    width: 535px;
+    position: absolute;
+    top: 55px;
+    right: -20px;
 }
 
 /* 图片 */
-.sof_img>img:nth-child(1) {}
+.sof_img>img:nth-child(1) {
+	width: 100%;
+}
 
 .sof_img>img:nth-child(2) {
 	width: 150px;
@@ -332,13 +334,26 @@
 	margin-left:0px!important;
 	margin-right:0px!important;
 }
-
+@media screen and (max-width: 950px) {
+	.sof_img>img:nth-child(2) {
+	    width: 150px;
+	    position: absolute;
+	    top: 27px;
+	}
+	.sof_span {
+	    top: 154px;
+	}
+}
 
 @media screen and (max-width: 1200px) {
 	.The-tab {
 		width: 410px;
 	}
-
+	.sof_img>img:nth-child(2) {
+	    width: 150px;
+	    position: absolute;
+	    top: 48px;
+	}
 	.page-header.kc-header>h1 {
 		font-size: 32px;
 	}
@@ -390,7 +405,7 @@
 	}
 
 	.sof_span {
-		top: 175px;
+		top: 155px;
 		right: -7px;
 		font-size: 10px;
 	}
@@ -404,7 +419,7 @@
 	}
 
 	.sof_span {
-		top: 177px;
+		top: 155px;
 		right: 68px;
 		font-size: 10px;
 		width: 240px;

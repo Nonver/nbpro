@@ -9,8 +9,7 @@
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/reset.css" />
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
-		
-
+		<link rel="stylesheet" type="text/css" href="css/animate.min.css"/>
 	</head>
 
 	<body>
@@ -157,6 +156,17 @@
 	<script src="js/axios.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/wyq.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
+		
+		$(window).scroll(function(){
+		    var lan = $(window).scrollTop();
+		     if(lan > 450){
+		     	$('.left').addClass('animated slideInLeft ')
+				$('.right').addClass('animated slideInRight')
+		     }else if(lan<300){
+				 $(".right").removeClass("animated slideInRight");
+				  $(".left").removeClass("animated slideInLeft");
+			 }
+		})
 		var ve = new Vue({
 			el: "#Looks",
 			data: {
@@ -203,7 +213,7 @@
 					sessionStorage.setItem("lng", e.lng);
 				}
 			}
-
+			
 		})
 	</script>
 

@@ -149,7 +149,7 @@ width: 100%;
 	margin: 0px 20px;
 }
 .mechanism .center .box4 .boxcenter{
-	margin-top: 20px;
+	margin-top: 30px;
 }
 .mechanism .center .box4 .boxcenter img{
 	margin-top: 30px;
@@ -166,7 +166,8 @@ width: 100%;
 .mechanism .center .box5 .boxcenter{
 	display: flex;justify-content: flex-start;
 	align-items: center;
-	margin: 50px 0;
+	margin: 50px auto;
+	    width: 87%;
 }
 .mechanism .center .box5 .boxcenter .right{
 	margin-left: 50px;
