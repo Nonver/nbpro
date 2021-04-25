@@ -300,11 +300,7 @@
 		height: 70rem;
 	}
 
-	.container-fluid {
 
-		padding-left: 15px;
-		padding-right: 15px;
-	}
 
 	.soft_fluid>div:nth-child(3) {
 		max-width: 1000px;
@@ -324,15 +320,18 @@
 
 	.soft_fluid>div:nth-child(4)>div:nth-child(1) {
 		top: -49px;
-		left: 31%;
+		left: 29%;
 	}
 
 	.soft_fluid>div:nth-child(4)>div:nth-child(2) {
-		left: 68%;
+		left: 66%;
 		top: -49px;
 	}
 }
-
+.row{
+	margin-left:0px!important;
+	margin-right:0px!important;
+}
 
 
 @media screen and (max-width: 1200px) {

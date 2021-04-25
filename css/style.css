@@ -3326,7 +3326,18 @@ video {
 		left: -1px;
 	}
 }
-
+@media screen and (max-width: 1585px) {
+	.tranCopXq .center .uls .lis .txts {
+		height: 347px;
+		left: 0px;
+	}
+}
+@media screen and (max-width: 1665px) {
+	.tranCopXq .center .uls .lis .txts {
+		height: 355px;
+		left: 0px;
+	}
+}
 @media screen and (max-width: 1650px) {
 	.tranCopXq .center .uls .lis .txts {
 		height: 355px;

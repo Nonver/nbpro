@@ -63,12 +63,12 @@
 				<div class="top">
 					<ul>
 						<li :class="clssIs">
-							<p>用人单位</p>
+							<p @click="ulone">用人单位</p>
 						</li>
 						<li :class="clssIsr">
 							<p>合作高校</p>
 						</li>
-						<li>
+						<li @click="ulthree()">
 							<p>合作部门</p>
 						</li>
 					</ul>
@@ -188,6 +188,18 @@
 			},
 			created() {
 				this.getone();
+				setTimeout(function(){
+					$('.ultwo').paginathing({
+						perPage: 12,
+						containerClass: 'boxtwo',
+						limitPagination: 3,
+						prevText: '上一页',
+						nextText: '下一页',
+						firstLast: false,
+					});
+				},500)
+			},
+			updated() {
 				
 			},
 			mounted() {
@@ -201,6 +213,26 @@
 				}
 			},
 			methods: {
+				ulone(){
+					$('.ulone').paginathing({
+						perPage: 6,
+						containerClass: 'boxone',
+						limitPagination: 2,
+						prevText: '上一页',
+						nextText: '下一页',
+						firstLast: false,
+					});
+				},
+				ulthree(){
+					$('.ulthree').paginathing({
+						perPage: 9,
+						containerClass: 'boxthree',
+						limitPagination: 1,
+						prevText: '上一页',
+						nextText: '下一页',
+						firstLast: false,
+					})
+				},
 				an(e) {
 					let key = e.path[2].dataset.key;
 					for (let i = 0; i < this.allsone.length; i++) {
@@ -229,26 +261,6 @@
 					sessionStorage.setItem("xiabiao", ind);
 				},
 			}
-		});
-		$(document).ready(function($) {
-			$('.ulone').paginathing({
-				perPage: 2,
-				containerClass: 'boxone',
-				limitPagination: 3,
-				pageNumbers: true,
-			});
-			$('.ultwo').paginathing({
-				perPage: 2,
-				containerClass: 'boxtwo',
-				limitPagination: 3,
-				pageNumbers: true,
-			});
-			$('.ulthree').paginathing({
-				perPage: 2,
-				containerClass: 'boxthree',
-				limitPagination: 3,
-				pageNumbers: true,
-			})
 		});
 		$(".center .top li").click(function() {
 			var cl = $(this).index();

@@ -1,6 +1,9 @@
 a{
 	color: #FFF;
 }
+li{
+	list-style: none;
+}
 a:hover{
 	color: #FFF;
 }
@@ -264,4 +267,39 @@ a:hover {
     align-items: center;
     justify-content: center;
     height: 100px;
+}
+
+.nav {
+	margin: 2px 0;
+}
+
+.nav ul {
+	width: 58%;
+	margin: auto;
+	display: flex;
+	justify-content: space-around;
+}
+
+.nav ul li:hover {
+	border-bottom: 2px solid #1EB4B1;
+	height: 80px;
+}
+
+.nav ul li:hover a {
+	color: #1EB4B1;
+	border-bottom: none;
+}
+
+.nav ul li a {
+	color: #000;
+	font-size: 2rem;
+	display: inline-block;
+	padding: 40px 0;
+	display: inline-block;
+	border-bottom: none !important;
+}
+
+.nav ul .active {
+	color: #1EB4B1;
+	border-bottom: 3px solid #1EB4B1;
 }
