@@ -205,7 +205,6 @@
 						</div>
 					</div>
 					<div class="right">
-
 						<div class="swiper-container swipers2">
 							<div class="swiper-wrapper">
 								<div class="swiper-slide swiper-bouttm" v-for="(item,key) in arrs.slice(0,5)">
@@ -415,6 +414,7 @@
 
 				}, 50)
 				var times4 = setInterval(function() {
+					
 					up4 += 3;
 					$(".tm4").text(up4 + "%");
 					if (up4 > 90) {
@@ -424,9 +424,6 @@
 					}
 				}, 10)
 			}
-		});
-		$(function() {
-			$("img.lazyload").lazyload()
 		});
 		var ve = new Vue({
 			el: "#wrap",
@@ -465,7 +462,7 @@
 				getgongc() {
 					var that = this;
 					wyq.ajax(function(ret, err, dat) {
-						that.arrs = ret;
+						that.arrs = ret.reverse();
 						that.name = ret[0].name;
 						console.log(ret)
 					}, "findByCollegeNewsAll", "get", {}, {});

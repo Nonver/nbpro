@@ -79,8 +79,6 @@
 								<a href="foodHappyXiangqing.html">MORE</a>
 							</div>
 						</li>
-
-
 					</ul>
 				</div>
 			</div>
@@ -133,15 +131,6 @@
 	<script src="js/axios.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/wyq.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
-		$(document).ready(function($) {
-			$('.ulfood').paginathing({
-				perPage: 4,
-				containerClass: 'box2',
-				limitPagination: 3,
-				pageNumbers: true,
-			});
-
-		});
 		var ve = new Vue({
 			el: "#foodHp",
 			data: {
@@ -154,6 +143,16 @@
 			},
 			created() {
 				this.getmeishi();
+				setTimeout(function(){
+					$('.ulfood').paginathing({
+						perPage: 4,
+						containerClass: 'box2',
+						limitPagination: 3,
+						prevText: '上一页',
+						nextText: '下一页',
+						firstLast: false,  
+					});
+				},500)
 			},
 			methods: {
 				//				美食娱乐数据
